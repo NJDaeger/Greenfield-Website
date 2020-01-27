@@ -25,41 +25,39 @@ header p {
 	transition: 1s;
 }
 
-.nav {
+.toolbar {
 	background-color: darkcyan;
-	height: 2.5em;
+	height:2.5em;
 }
 
-.nav ul {
-	margin: 0px 0px;
-	padding: 0px 10px 5px 10px;
+.toolbar ul {
+	margin:0px 0px;
+	padding: 0px 10px;
 }
 
-.nav ul li {
-	border: 1px solid #6A6A6A;
+.toolbar ul li {
 	display: inline-block;
-	list-style-type: none;
-	background: lightgray;
-	border-radius: 5px;
+	border-left-style: groove;
+	border-left-width: 5px;
+	border-left-color: darkorange;
+	background-color: #484848;
+	color: #DDDDDD;
 	padding: 5px;
 	margin-top: 5px;
 	transition: .3s;
 }
 
-.nav ul li:hover {
-	background: darkgray;
-	padding: 10px 5px;
-	margin-top: 0px;
-	border-radius: 3px;
+.toolbar ul li a {
+	color: #DDDDDD;
+	text-decoration: none;
+	padding:5px 10px;
 }
 
-.nav ul li a {
-	display: inline-block;
-	position:relative;
-	color: black;
-	text-decoration: none;
-	padding:5px;
-	margin:-5px;
+.toolbar ul li:hover {
+	background-color: #b36200;
+	box-shadow: 0px 0px 3px black;
+	padding: 10px 5px;
+	margin-top: 0px;
 }
 
 .content {
@@ -89,8 +87,9 @@ header p {
 }
 
 .content p a:hover {
-	transition: .5s;
+	transition: .3s;
 	text-shadow: 0px 0px 5px black;
+	object-position: 
 }
 
 
