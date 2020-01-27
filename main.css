@@ -1,0 +1,100 @@
+body {
+	background:#233332;
+	margin: 0;
+	font-family: arial;
+}
+
+header {
+	background-image: url("images/downtown2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 35vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+header p {
+	display: block;
+	font-size: 10vh;
+	font-family: Bebas;
+	color:white;
+	text-shadow: 0px 0px 20px black;
+	transition: 1s;
+}
+
+.nav {
+	background-color: darkcyan;
+	height: 2.5em;
+}
+
+.nav ul {
+	margin: 0px 0px;
+	padding: 0px 10px 5px 10px;
+}
+
+.nav ul li {
+	border: 1px solid #6A6A6A;
+	display: inline-block;
+	list-style-type: none;
+	background: lightgray;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 5px;
+	transition: .3s;
+}
+
+.nav ul li:hover {
+	background: darkgray;
+	padding: 10px 5px;
+	margin-top: 0px;
+	border-radius: 3px;
+}
+
+.nav ul li a {
+	display: inline-block;
+	position:relative;
+	color: black;
+	text-decoration: none;
+	padding:5px;
+	margin:-5px;
+}
+
+.content {
+	width: 50vw;
+	margin: 1em 25vw 0em 25vw;
+	background-color: darkslategray;
+	padding: 1vw;
+	box-shadow: 0px 0px 10px black;
+}
+
+.content h1 {
+	font-size: 3em;
+	font-family: Bebas;
+	color:white;
+	text-shadow: 0px 0px 10px black;
+	text-align: center;
+	scroll-behavior: smooth;
+}
+
+.content p {
+	color: #9A9A9A;
+}
+
+.content p a {
+	color: #DDDDDD;
+	text-decoration: none;
+}
+
+.content p a:hover {
+	transition: .5s;
+	text-shadow: 0px 0px 5px black;
+}
+
+
+@font-face {
+	font-family: Bebas;
+	src: url("BebasNeueBold.otf") format("opentype");
+}
