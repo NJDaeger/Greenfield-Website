@@ -40,7 +40,7 @@ header p {
 
 .toolbar ul li {
 	display: inline-block;
-	border-left-style: groove;
+	border-left-style: solid;
 	border-left-width: .25em;
 	border-left-color: darkorange;
 	background-color: #484848;
