@@ -7,7 +7,7 @@ body {
 header {
 	background-image: url("images/downtown2.png");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; 
 	background-position: center;
 	height: 35vh;
 	display: flex;
