@@ -4,15 +4,38 @@
 	<head>
 		<title>Greenfield Minecraft - Home (beta)</title>
 		<link rel="stylesheet" type="text/css" href="new-home.css">
+		<link rel="icon" href="images/logo.svg">
 	</head>
-	<body>
+	<body class="js-stop-transition">
+		<script type="text/javascript">
+			document.body.classList.remove('js-stop-transition')
+		</script>
 		<div class="toolbar">
 			<a href="dyn.html" target="_blank"> 
-				<img src = "images/greenfield-logo-small-transparent.png" >
-			</a>
+				<img src = "images/logo.svg" >
+			</a> 
+			<img id = "menu" src = "images/menu.png">
+			<div>
+				<ul>
+					<li><a href="http://map.greenfieldmc.net" target="_blank">Dynmap</a></li>
+					<li><a href="http://pmc.greenfieldmc.net" target="_blank">PlanetMinecraft</a></li>
+					<li><a href="https://www.youtube.com/channel/UCz2MGxUzFKoe4Djl1uhHf9w" target="_blank">YouTube</a></li>
+					<li><a href="http://patreon.greenfieldmc.net" target="_blank">Patreon</a></li>
+				</ul>
+			</div>
 		</div>
-		<div id="background">
-			<img src = "images/eaglepoint.png">
+		<div class="title">
+			<h3>Welcome to</h3>
+			<h1>Greenfield</h1>
 		</div>
 	</body>
+	<div class = "sidebar">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<footer>
+		<p>The Greenfield Minecraft Project © 2020 </p>
+	</footer>
 </html>
