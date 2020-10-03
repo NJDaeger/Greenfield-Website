@@ -6,16 +6,20 @@
 		<link rel="stylesheet" type="text/css" href="new-home.css">
 		<link rel="icon" href="images/logo.svg">
 	</head>
-	<body class="js-stop-transition">
+	<body>
 		<script type="text/javascript">
 			document.body.classList.remove('js-stop-transition')
 		</script>
-		<div class="toolbar">
+		<div class="toolbar" class="js-stop-transition">
 			<a href="dyn.html" target="_blank"> 
 				<img src = "images/logo.svg" >
-			</a> 
-			<img id = "menu" src = "images/menu.png">
-			<div>
+			</a>
+			<div id="menu">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div id="links">
 				<ul>
 					<li><a href="http://map.greenfieldmc.net" target="_blank">Dynmap</a></li>
 					<li><a href="http://pmc.greenfieldmc.net" target="_blank">PlanetMinecraft</a></li>
@@ -29,7 +33,7 @@
 			<h1>Greenfield</h1>
 		</div>
 	</body>
-	<div class = "sidebar">
+	<div class = "sidebar" class="js-stop-transition">
 		<div></div>
 		<div></div>
 		<div></div>

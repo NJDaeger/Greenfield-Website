@@ -46,8 +46,12 @@ footer p {
 }
 
 .title h1 {
+	opacity: 0;
+	animation: slideInFade ease 1s;
+	animation-delay: .75s;
+	animation-fill-mode: forwards;
 	position: relative;
-	text-shadow: 0px 0px 20px black;
+	text-shadow: 0px 0px 10px black;
 	color: white;
 	font-family: Bebas;
 	font-size: 6vw;
@@ -58,8 +62,12 @@ footer p {
 }
 
 .title h3 {
+	opacity: 0;
+	animation: slideInFade ease 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
 	position: relative;
-	text-shadow: 0px 0px 20px black;
+	text-shadow: 0px 0px 10px black;
 	color: white;
 	font-family: Bebas;
 	font-size: 2vw;
@@ -96,13 +104,13 @@ footer p {
 	height: 100%;
 }
 
-.toolbar div {
+.toolbar #links {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-.toolbar div ul {
+.toolbar #links ul {
 	margin: 0;
 	padding: 0;
 	position: absolute;
@@ -110,28 +118,17 @@ footer p {
 	top: 50%;
 	right: 50%;
 	z-index: 11;
-
 }
 
-.toolbar div ul li {
+.toolbar #links ul li {
 	display: inline-block;
-	color:white;
-	margin: 20px;
-	font-size: 100%;
-	font-weight: bold;
-	font-family: Arial;
-	text-align: center;
-	text-decoration: none;
-	transition: .2s;
-	letter-spacing: 1px;
-}
-
-.toolbar div ul li a {
-	display: inline-block;
-	color:white;
 	margin: 40px;
-	font-size: 100%;
-	font-weight: bold;
+	transition: .2s;
+}
+
+.toolbar #links ul li a {
+	color:white;
+	font-size: 150%;
 	font-family: Arial;
 	text-align: center;
 	text-decoration: none;
@@ -139,28 +136,47 @@ footer p {
 	letter-spacing: 1px;
 }
 
-.toolbar div ul li:hover {
+.toolbar #links ul li:hover {
 	transform: scale(1.05);
 	transition: .2s;
 }
 
-#menu {
+.toolbar #menu {
+	transition-duration: .2s;
 	z-index: 10;
-	margin-top: .75em;
-	margin-right: .75em;
-	transition: .2s;
-	right:0;
 	position: absolute;
-	height: 70%;
+	right: 0;
+	height: 100%;
+	margin: 0em .75em 0px 0px;
+	padding: 0;
 }
 
-#menu:hover {
-	margin-top: .75em;
-	margin-right: .75em;
+.toolbar #menu:hover {
 	transform: scale(1.05);
-	transition: .2s;
-	height: 70%;
+	transition-duration: .2s;
+	position: absolute;
+	right: 0;
+	height: 100%;
+	margin: 0em .75em 0px 0px;
 	cursor: pointer;
+}
+
+.toolbar #menu div {
+	transition-duration: .2s;
+	position: relative;
+	box-shadow: 0px 0px 5px black;
+	background-color: white;
+	padding: 5px 35px;
+	margin-top: .75em;
+}
+
+.toolbar #menu:hover div {
+	transition-duration: .2s;
+	position: relative;
+	box-shadow: 0px 0px 5px white;
+	background-color: white;
+	padding: 5px 35px;
+	margin-top: .75em;
 }
 
 .sidebar {
@@ -189,9 +205,7 @@ footer p {
 	cursor: pointer;
 }
 
-
-
-.js-stop-transition * { 
+.js-stop-transition { 
 	transition:none !important; 
 }
 
@@ -200,4 +214,13 @@ footer p {
 	src: url("BebasNeueBold.otf") format("opentype");
 }
 
-
+@keyframes slideInFade {
+	0% {
+		top:50%;
+		opacity: 0;
+	}
+	100% {
+		top:32%;
+		opacity: 1;
+	}
+}
