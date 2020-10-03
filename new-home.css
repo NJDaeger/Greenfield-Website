@@ -214,6 +214,11 @@ footer p {
 	src: url("BebasNeueBold.otf") format("opentype");
 }
 
+@font-face {
+	font-family: Whitney;
+	src: url("whitney-semibold.otf") format("opentype");
+}
+
 @keyframes slideInFade {
 	0% {
 		top:50%;
