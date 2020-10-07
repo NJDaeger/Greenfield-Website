@@ -149,11 +149,11 @@ footer p {
 .toolbar #links ul {
 	margin: 0;
 	padding: 0;
-	position: absolute;
-	transform: translate(50%, -50%);
-	top: 50%;
-	right: 50%;
+	position: relative;
 	z-index: 11;
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
 }
 
 .toolbar #links ul li {
