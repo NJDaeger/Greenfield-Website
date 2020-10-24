@@ -39,15 +39,16 @@ footer p {
 	position: fixed;
 	display: block;
 	height: 100%;
-	width: 0%;
-	right: 0;
+	width: 15%;
+	right: -16%;
 	top: 0;
 	opacity: 0;
-	background-color: white;
-	box-shadow: 0px 0px 3px white;
+	background-image: linear-gradient(90deg, rgba(255,255,255,.35), transparent);
+	box-shadow: 0px 0px 3px rgba(255,255,255,.35);
 }
 
 #menu hr {
+	margin: 2px 5% 3px 5%;
 	z-index: 11;
 	position: relative;
 	top:10%;
@@ -56,18 +57,33 @@ footer p {
 	justify-content: center;
 }
 
-#menu span {
+#menu div {
+	transition-duration: .2s;
 	z-index: 11;
-	padding: 15% 5%;
-	display: contents;
+	padding: 2% 0%;
+	margin: 0% 5%;
 	position: relative;
 	top:10%;
-	text-align: center;
-	position: absolute;
-	color: darkslategray;
+}
+
+#menu div:hover {
+	box-shadow: 0px 0px 3px white;
+	cursor: pointer;
+	z-index: 11;
+	padding: 2% 0%;
+	margin: 0% 5%;
+	position: relative;
+	top:10%;
+	transition-duration: .2s;
+	background-color: rgba(255,255,255,.35);
+}
+
+#menu div span {
+	padding: 0 5px;
 	font-family: Whitney;
-	text-align: center;
-	transform: translate(-50%, -50%);
+	font-size: 150%;
+	color: white;
+	text-shadow: 0px 0px 2px black;
 }
 
 .title {

@@ -14,15 +14,15 @@
 					var menu = $("#menu");
 					if (menu.hasClass("openMenu")) {
 						menu.animate({
-							width: "0",
+							right: "-16%",
 							opacity: "0"
 						}, 750, "easeInOutExpo");
 						menu.removeClass("openMenu");
 					} 
 					else {
 						menu.animate({
-							width: "15%",
-							opacity: ".75"
+							right: "0%",
+							opacity: "1"
 						}, 750, "easeInOutExpo");
 						menu.addClass("openMenu");
 					}
@@ -55,13 +55,22 @@
 			</div>
 			<div id="menu">
 				<hr>
-				<span>Photography</span>
+				<div>
+					<span>Photography</span>
+				</div>
 				<hr>
-				<span>Staff</span>
+				<div>
+					<span>Staff</span>
+				</div>
 				<hr>
-				<span>Previous Versions</span>
+				<div>
+					<span>Previous Versions</span>
+				</div>
 				<hr>
-				<span>Resource Pack</span>
+				<div>
+					<span>Resource Pack</span>
+				</div>
+				<hr>
 			</div>
 		</div>
 		<div class="title">
