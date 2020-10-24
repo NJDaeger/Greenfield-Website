@@ -27,7 +27,18 @@
 						menu.addClass("openMenu");
 					}
 				});
+
+				$(".sidebar label").click(function() {
+					var btn = $(this);
+					if (btn.hasClass("checked")) {
+
+					} else {
+						$('label[class="checked"]').removeClass("checked")
+						btn.addClass("checked")
+					}
+				});
 			});
+
 		</script>
 	</head>
 	<body>
@@ -79,18 +90,22 @@
 		</div>
 	</body>
 	<div class = "sidebar" class="js-stop-transition">
-		<div>
+		<label class="checked"><span>Welcome</span></label>
+		<label><span>Our Project</span></label>
+		<label><span>Our Resource Pack</span></label>
+		<label><span>Join our Team</span></label>
+		<!-- <input type="radio" checked="checked">
 			<span>Welcome</span>
-		</div>
-		<div>
+		</input> -->
+		<!-- <input input type="radio">
 			<span>Our Project</span>
-		</div>
-		<div>
+		</input>
+		<input input type="radio">
 			<span>Our Resource Pack</span>
-		</div>
-		<div>
+		</input>
+		<input input type="radio">
 			<span>Join our Team</span>
-		</div>
+		</input> -->
 	</div>
 	<footer>
 		<p>The Greenfield Minecraft Project © 2020 </p>
