@@ -198,6 +198,12 @@ footer p {
 	margin-left: 1%;
 	top:50%;
 	transform: translate(0%, -50%);
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
 .sidebar div {
