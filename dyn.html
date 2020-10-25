@@ -32,43 +32,43 @@
 
 				$(".sidebar div").click(function() {
 					var next = $(this);
-					if (next.hasClass("checked")) {
-
-					} else {
+					if (!next.hasClass("checked")) {
+						//Getting the currently selected page
 						var current = $('div[class="checked"]');
-						var currentPage = $("#" + current.attr('page'));
-						var nextPage = $("#" + next.attr('page'));
+
+						//Getting the ID names of the current page and the next page
+						var currentId = "#" + current.attr('page');
+						var nextId = "#" + next.attr('page')
+
+						//The current page and next page objects
+						var currentPage = $(currentId);
+						var nextPage = $(nextId);
+
+						//Get the indices of the current page and next page to determine their direction
 						var currentIndex = current.attr('index');
 						var nextIndex = next.attr('index');
+
+						//Determine the direction of the image animation and determine the where the next slide needs to come from
+						var animateDirection = currentIndex > nextIndex ? "100%" : "-100%";
+						var prevDirection = currentIndex > nextIndex ? "-100%" : "100%";
+
 						current.removeClass("checked")
 						next.addClass("checked");
 
+						currentPage.stop();
+						currentPage.animate({
+							top: animateDirection
+						}, 1000, "easeInOutExpo");
+						$(currentId + " .title h3").removeClass("animateFirst");
+						$(currentId + " .title h1").removeClass("animateSecond");
 
-						if (currentIndex > nextIndex) {
-							currentPage.stop();
-							currentPage.animate({
-								top: "100%",
-								opacity: "0"
-							}, 1000, "easeInOutExpo");
-							nextPage.css("top", "-100%");
-							nextPage.stop();
-							nextPage.animate({
-								top: "0%",
-								opacity: "1"
-							}, 1000, "easeInOutExpo");
-						} else {
-							currentPage.stop();
-							currentPage.animate({
-								top: "-100%",
-								opacity: "0"
-							}, 1000, "easeInOutExpo");
-							nextPage.css("top", "100%");
-							nextPage.stop();
-							nextPage.animate({
-								top: "0%",
-								opacity: "1"
-							}, 1000, "easeInOutExpo");
-						}
+						nextPage.css({"top":prevDirection, "opacity":"1"});
+						nextPage.stop();
+						nextPage.animate({
+							top: "0%"
+						}, 1000, "easeInOutExpo");
+						$(nextId + " .title h3").addClass("animateFirst");
+						$(nextId + " .title h1").addClass("animateSecond");
 					}
 				});
 			});
@@ -102,6 +102,10 @@
 			<div id="menu">
 				<hr>
 				<div>
+					<span>Downloads</span>
+				</div>
+				<hr>
+				<div>
 					<span>Photography</span>
 				</div>
 				<hr>
@@ -110,51 +114,51 @@
 				</div>
 				<hr>
 				<div>
-					<span>Previous Versions</span>
+					<span>Apply</span>
 				</div>
 				<hr>
 				<div>
-					<span>Resource Pack</span>
+					<span>Official Pages</span>
 				</div>
 				<hr>
 			</div>
 		</div>
 		<div class = "sidebar" class="js-stop-transition">
 			<div class="checked" page="welcome" index=0><span>Welcome</span></div>
-			<div page="project" index=1><span>Our Project</span></div>
-			<div page="resource" index=2><span>Our Resource Pack</span></div>
-			<div page="team" index=3><span>Join our Team</span></div>
+			<div page="project" index=1><span>The Project</span></div>
+			<div page="resource" index=2><span>The Resource Pack</span></div>
+			<div page="team" index=3><span>Join Us</span></div>
 		</div>
 
 		<div class="page" id="welcome">
 			<img src="images/skyline.png">
 			<div class="title">
-				<h3>Welcome to</h3>
-				<h1>Greenfield</h1>
+				<h3 class="animateFirst">Welcome to</h3>
+				<h1 class="animateSecond">Greenfield</h1>
 			</div>
 		</div>
 
 		<div class="page" id="project" style="opacity: 0">
 			<img src="images/stadium.png">
 			<div class="title">
-				<h3>The</h3>
-				<h1>Project</h1>
+				<h3>Current Release</h3>
+				<h1><span style="color: slateblue">v</span> 0.5.<span style="color: slateblue">3</span></h1>
 			</div>
 		</div>
 
 		<div class="page" id="resource" style="opacity: 0">
 			<img src="images/beachfront.png">
 			<div class="title">
-				<h3>The</h3>
-				<h1>Resource Pack</h1>
+				<h3>Current Release</h3>
+				<h1>1.16+</h1>
 			</div>
 		</div>
 
 		<div class="page" id="team" style="opacity: 0">
-			<img src="images/ballpark.png">
+			<img src="images/MartyStation.png">
 			<div class="title">
-				<h3>Join our</h3>
-				<h1>Team</h1>
+				<h3>Help us build!</h3>
+				<h1>Apply now</h1>
 			</div>
 		</div>
 
