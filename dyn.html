@@ -10,6 +10,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 		<script>
 
+			var lastScroll = 0;
 			var page = 0;
 			var pages = {
 				0: "#welcome",
@@ -19,6 +20,9 @@
 			};
 
 			function nextSlide(nextIndex, currentIndex) {
+				if (Date.now() - lastScroll < 1000) return;
+				else lastScroll = Date.now();
+				page = nextIndex;
 				var next = $("[index=" + nextIndex + "]");
 				//Getting the currently selected page
 				var current = $("[index=" + currentIndex + "]");
@@ -61,14 +65,11 @@
 					var dir = event.originalEvent.deltaY;
 					var curPage = page;
 					if (page > 0 && page < 3) {
-						page = dir < 0 ? page - 1 : page + 1;
-						nextSlide(page, curPage);
+						nextSlide(dir < 0 ? page - 1 : page + 1, page);
 					} else if (page == 0 && dir > 0) {
-						page = page + 1;
-						nextSlide(page, curPage);
+						nextSlide(page + 1, curPage);
 					} else if (page == 3 && dir < 0) {
-						page = page - 1;
-						nextSlide(page, curPage);
+						nextSlide(page - 1, curPage);
 					}
 				});
 
