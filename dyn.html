@@ -44,6 +44,7 @@
 				next.addClass("checked");
 
 				currentPage.stop();
+				currentPage.css({"opacity":"1"});
 				currentPage.animate({
 					top: animateDirection
 				}, 1000, "easeInOutExpo");
@@ -54,7 +55,7 @@
 				nextPage.stop();
 				nextPage.animate({
 					top: "0%"
-				}, 1000, "easeInOutExpo");
+				}, 950, "easeInOutExpo");
 				$(nextId + " .title h3").addClass("animateFirst");
 				$(nextId + " .title h1").addClass("animateSecond");
 					
@@ -63,6 +64,18 @@
 
 			$(document).ready(function() {
 				$(window).on('wheel', function(event) {
+					var dir = event.originalEvent.deltaY;
+					var curPage = page;
+					if (page > 0 && page < 3) {
+						nextSlide(dir < 0 ? page - 1 : page + 1, page);
+					} else if (page == 0 && dir > 0) {
+						nextSlide(page + 1, curPage);
+					} else if (page == 3 && dir < 0) {
+						nextSlide(page - 1, curPage);
+					}
+				});
+
+				$(window).on('touchscroll', function(event) {
 					var dir = event.originalEvent.deltaY;
 					var curPage = page;
 					if (page > 0 && page < 3) {
@@ -169,7 +182,7 @@
 			</div>
 		</div>
 
-		<div class="page" id="project" style="opacity: 0">
+		<div class="page" id="project" style="top: 100%">
 			<img src="images/stadium.png">
 			<div class="title">
 				<h3>Current Release</h3>
@@ -177,7 +190,7 @@
 			</div>
 		</div>
 
-		<div class="page" id="resource" style="opacity: 0">
+		<div class="page" id="resource" style="top: 100%">
 			<img src="images/railyard.png">
 			<div class="title">
 				<h3>Current Release</h3>
@@ -185,7 +198,7 @@
 			</div>
 		</div>
 
-		<div class="page" id="team" style="opacity: 0">
+		<div class="page" id="team" style="top: 100%">
 			<img src="images/MartyStation.png">
 			<div class="title">
 				<h3>Help us build!</h3>
