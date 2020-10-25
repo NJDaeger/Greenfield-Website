@@ -75,7 +75,7 @@
 					}
 				});
 
-				$(window).on('touchscroll', function(event) {
+				$(window).on('touchmove', function(event) {
 					var dir = event.originalEvent.deltaY;
 					var curPage = page;
 					if (page > 0 && page < 3) {
