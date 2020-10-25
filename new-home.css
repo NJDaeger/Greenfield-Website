@@ -195,6 +195,7 @@ footer p {
 	display: block;
 	position: absolute;
 	z-index: 4;
+	margin-left: 1%;
 }
 
 .sidebar div {
@@ -204,9 +205,11 @@ footer p {
 	box-shadow: 0px 0px 5px black;
 	background-color: lightgray;
 	transition: .2s;
-	padding: 30px 5px;
+	padding: 40px 1%;
 	top:40%;
 	margin: 50%;
+	width: 100%;
+	transform: translate(-50%, 0%);
 }
 
 .sidebar div span {
@@ -220,13 +223,13 @@ footer p {
 	left:100%;
 	transform: rotateY(90deg) translate(0%, -50%);
 	transform-origin: left;
-	padding: 20px 100%;
+	padding: 30px 100%;
 }
 
 .sidebar div:hover {
 	background-color: white;
 	box-shadow: 0px 0px 5px white;
-	transform: scale(1.1);
+	transform: scale(1.1) translate(-50%, 0%);
 	transition: .2s;
 	cursor: pointer;
 }
@@ -244,7 +247,7 @@ footer p {
 .sidebar .checked {
 	background-color: white;
 	box-shadow: 0px 0px 5px white;
-	transform: scale(1.1);
+	transform: scale(1.1) translate(-50%, 0%);
 	transition: .2s;
 }
 
@@ -280,7 +283,7 @@ footer p {
 	text-shadow: 0px 0px 10px black;
 	color: white;
 	font-family: Bebas;
-	font-size: 2vw;
+	font-size: calc((2vw + 2vh)/1.25);
 	text-align: center;
 	margin: 0;
 	padding:0;
@@ -292,7 +295,7 @@ footer p {
 	text-shadow: 0px 0px 10px black;
 	color: white;
 	font-family: Bebas;
-	font-size: 6vw;
+	font-size: calc(4vw + 4vh);
 	text-align: center;
 	top: 32%;
 	padding: 0;
