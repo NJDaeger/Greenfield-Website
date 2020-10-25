@@ -248,46 +248,6 @@ footer p {
 	transition: .2s;
 }
 
-/*.title {
-	width: 100%;
-	height: 100%;
-	display: block;
-	position: relative;
-	z-index: 1;
-}
-
-.title h1 {
-	opacity: 0;
-	animation: slideInFade ease 1s;
-	animation-delay: .75s;
-	animation-fill-mode: forwards;
-	position: relative;
-	text-shadow: 0px 0px 10px black;
-	color: white;
-	font-family: Bebas;
-	font-size: 6vw;
-	text-align: center;
-	top: 32%;
-	padding: 0;
-	margin: 0;
-}
-
-.title h3 {
-	opacity: 0;
-	animation: slideInFade ease 1s;
-	animation-delay: .5s;
-	animation-fill-mode: forwards;
-	position: relative;
-	text-shadow: 0px 0px 10px black;
-	color: white;
-	font-family: Bebas;
-	font-size: 2vw;
-	text-align: center;
-	margin: 0;
-	padding:0;
-	top: 32%;
-}*/
-
 .page {
 	position: fixed;
 	align-content: center;
@@ -300,12 +260,11 @@ footer p {
 
 .page img {
 	z-index: 1;
-	height: auto;
-	max-width: 100%;
+	width: 100%;
+	height: 100%;
 	display: block;
 	position: absolute;
 	object-fit: cover;
-	object-position: center;
 }
 
 .page .title {
@@ -346,32 +305,6 @@ footer p {
 	padding: 0;
 	margin: 0;
 }
-
-/*.hide {
-	top: 100%;
-}*/
-
-/*#welcome {
-	position: relative;
-	background-image: url("images/skyline.png");
-	background-position: center;
-	background-size: cover;
-	height: 100vh;
-	align-content: center;
-	margin: 0;
-	z-index: 1;
-}
-
-#project {
-	position: relative;
-	background-image: url("images/stadium.png");
-	background-position: center;
-	background-size: cover;
-	height: 100vh;
-	align-content: center;
-	margin: 0;
-	z-index: 1;
-}*/
 
 .js-stop-transition { 
 	transition:none !important; 
