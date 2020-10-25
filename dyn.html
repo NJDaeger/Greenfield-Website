@@ -13,6 +13,7 @@
 				$("#menuButton").click(function() {
 					var menu = $("#menu");
 					if (menu.hasClass("openMenu")) {
+						menu.stop();
 						menu.animate({
 							right: "-16%",
 							opacity: "0"
@@ -20,6 +21,7 @@
 						menu.removeClass("openMenu");
 					} 
 					else {
+						menu.stop();
 						menu.animate({
 							right: "0%",
 							opacity: "1"
@@ -28,19 +30,50 @@
 					}
 				});
 
-				$(".sidebar label").click(function() {
-					var btn = $(this);
-					if (btn.hasClass("checked")) {
+				$(".sidebar div").click(function() {
+					var next = $(this);
+					if (next.hasClass("checked")) {
 
 					} else {
-						$('label[class="checked"]').removeClass("checked")
-						btn.addClass("checked")
+						var current = $('div[class="checked"]');
+						var currentPage = $("#" + current.attr('page'));
+						var nextPage = $("#" + next.attr('page'));
+						var currentIndex = current.attr('index');
+						var nextIndex = next.attr('index');
+						current.removeClass("checked")
+						next.addClass("checked");
+
+
+						if (currentIndex > nextIndex) {
+							currentPage.stop();
+							currentPage.animate({
+								top: "100%",
+								opacity: "0"
+							}, 1000, "easeInOutExpo");
+							nextPage.stop();
+							nextPage.animate({
+								top: "0%",
+								opacity: "1"
+							}, 1000, "easeInOutExpo");
+						} else {
+							currentPage.stop();
+							currentPage.animate({
+								top: "-100%",
+								opacity: "0"
+							}, 1000, "easeInOutExpo");
+							nextPage.stop();
+							nextPage.animate({
+								top: "0%",
+								opacity: "1"
+							}, 1000, "easeInOutExpo");
+						}
 					}
 				});
 			});
 
 		</script>
 	</head>
+	<!-- Overlay for basic things. toolbar/sidebar/menu -->
 	<body>
 		<script type="text/javascript">
 			document.body.classList.remove('js-stop-transition')
@@ -84,29 +117,49 @@
 				<hr>
 			</div>
 		</div>
-		<div class="title">
-			<h3>Welcome to</h3>
-			<h1>Greenfield</h1>
+		<div class = "sidebar" class="js-stop-transition">
+			<div class="checked" page="welcome" index=0><span>Welcome</span></div>
+			<div page="project" index=1><span>Our Project</span></div>
+			<div page="resource" index=2><span>Our Resource Pack</span></div>
+			<div page="team" index=3><span>Join our Team</span></div>
 		</div>
+
+		<div class="page" id="welcome">
+			<img src="images/skyline.png">
+			<div class="title">
+				<h3>Welcome to</h3>
+				<h1>Greenfield</h1>
+			</div>
+		</div>
+
+		<div class="page" id="project" style="opacity: 0">
+			<img src="images/stadium.png">
+			<div class="title">
+				<h3>The</h3>
+				<h1>Project</h1>
+			</div>
+		</div>
+
+		<div class="page" id="resource" style="opacity: 0">
+			<img src="images/beachfront.png">
+			<div class="title">
+				<h3>The</h3>
+				<h1>Resource Pack</h1>
+			</div>
+		</div>
+
+		<div class="page" id="team" style="opacity: 0">
+			<img src="images/ballpark.png">
+			<div class="title">
+				<h3>Join our</h3>
+				<h1>Team</h1>
+			</div>
+		</div>
+
+
 	</body>
-	<div class = "sidebar" class="js-stop-transition">
-		<label class="checked"><span>Welcome</span></label>
-		<label><span>Our Project</span></label>
-		<label><span>Our Resource Pack</span></label>
-		<label><span>Join our Team</span></label>
-		<!-- <input type="radio" checked="checked">
-			<span>Welcome</span>
-		</input> -->
-		<!-- <input input type="radio">
-			<span>Our Project</span>
-		</input>
-		<input input type="radio">
-			<span>Our Resource Pack</span>
-		</input>
-		<input input type="radio">
-			<span>Join our Team</span>
-		</input> -->
-	</div>
+
+
 	<footer>
 		<p>The Greenfield Minecraft Project © 2020 </p>
 	</footer>

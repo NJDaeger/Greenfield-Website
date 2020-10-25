@@ -2,16 +2,6 @@ body {
 	margin: 0px;
 }
 
-body {
-	background-image: url("images/skyline.png");
-	background-position: center;
-	background-size: cover;
-	height: 100vh;
-	align-content: center;
-	margin: 0;
-	z-index: 1;
-}
-
 footer {
 	margin: 0px;
 	position: fixed;
@@ -84,46 +74,6 @@ footer p {
 	font-size: 150%;
 	color: white;
 	text-shadow: 0px 0px 2px black;
-}
-
-.title {
-	width: 100%;
-	height: 100%;
-	display: block;
-	position: absolute;
-	z-index: 1;
-}
-
-.title h1 {
-	opacity: 0;
-	animation: slideInFade ease 1s;
-	animation-delay: .75s;
-	animation-fill-mode: forwards;
-	position: relative;
-	text-shadow: 0px 0px 10px black;
-	color: white;
-	font-family: Bebas;
-	font-size: 6vw;
-	text-align: center;
-	top: 32%;
-	padding: 0;
-	margin: 0;
-}
-
-.title h3 {
-	opacity: 0;
-	animation: slideInFade ease 1s;
-	animation-delay: .5s;
-	animation-fill-mode: forwards;
-	position: relative;
-	text-shadow: 0px 0px 10px black;
-	color: white;
-	font-family: Bebas;
-	font-size: 2vw;
-	text-align: center;
-	margin: 0;
-	padding:0;
-	top: 32%;
 }
 
 .toolbar {
@@ -247,7 +197,7 @@ footer p {
 	z-index: 4;
 }
 
-.sidebar label {
+.sidebar div {
 	display: block;
 	z-index: 4;
 	position: relative;
@@ -259,7 +209,7 @@ footer p {
 	margin: 50%;
 }
 
-.sidebar label span {
+.sidebar div span {
 	white-space: nowrap;
 	opacity: 0;
 	position: absolute;
@@ -273,7 +223,7 @@ footer p {
 	padding: 20px 100%;
 }
 
-.sidebar label:hover {
+.sidebar div:hover {
 	background-color: white;
 	box-shadow: 0px 0px 5px white;
 	transform: scale(1.1);
@@ -281,7 +231,7 @@ footer p {
 	cursor: pointer;
 }
 
-.sidebar label:hover span {
+.sidebar div:hover span {
 	text-shadow: 0px 0px 2px black;
 	white-space: nowrap;
 	opacity: 1;
@@ -297,6 +247,131 @@ footer p {
 	transform: scale(1.1);
 	transition: .2s;
 }
+
+/*.title {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+
+.title h1 {
+	opacity: 0;
+	animation: slideInFade ease 1s;
+	animation-delay: .75s;
+	animation-fill-mode: forwards;
+	position: relative;
+	text-shadow: 0px 0px 10px black;
+	color: white;
+	font-family: Bebas;
+	font-size: 6vw;
+	text-align: center;
+	top: 32%;
+	padding: 0;
+	margin: 0;
+}
+
+.title h3 {
+	opacity: 0;
+	animation: slideInFade ease 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	position: relative;
+	text-shadow: 0px 0px 10px black;
+	color: white;
+	font-family: Bebas;
+	font-size: 2vw;
+	text-align: center;
+	margin: 0;
+	padding:0;
+	top: 32%;
+}*/
+
+.page {
+	position: fixed;
+	align-content: center;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	display: inline-block;
+}
+
+.page img {
+	z-index: 1;
+	height: auto;
+	max-width: 100%;
+	display: block;
+	position: absolute;
+	object-fit: cover;
+	object-position: center;
+}
+
+.page .title {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	z-index: 1;
+}
+
+.page .title h3 {
+	opacity: 0;
+	animation: slideInFade ease 1s;
+	animation-delay: .5s;
+	animation-fill-mode: forwards;
+	position: relative;
+	color: white;
+	font-family: Bebas;
+	font-size: 2vw;
+	text-align: center;
+	margin: 0;
+	padding:0;
+	top: 32%;
+}
+
+.page .title h1 {
+	opacity: 0;
+	animation: slideInFade ease 1s;
+	animation-delay: .75s;
+	animation-fill-mode: forwards;
+	position: relative;
+	text-shadow: 0px 0px 10px black;
+	color: white;
+	font-family: Bebas;
+	font-size: 6vw;
+	text-align: center;
+	top: 32%;
+	padding: 0;
+	margin: 0;
+}
+
+/*.hide {
+	top: 100%;
+}*/
+
+/*#welcome {
+	position: relative;
+	background-image: url("images/skyline.png");
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	align-content: center;
+	margin: 0;
+	z-index: 1;
+}
+
+#project {
+	position: relative;
+	background-image: url("images/stadium.png");
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	align-content: center;
+	margin: 0;
+	z-index: 1;
+}*/
 
 .js-stop-transition { 
 	transition:none !important; 
