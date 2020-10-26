@@ -316,6 +316,41 @@ footer p {
 	margin: 0;
 }
 
+.page .title div {
+	position: relative;
+	width: max(15vw, 20vh);
+	transform: translateX(-50%);
+	left: 50%;
+	height:40px;
+	top:32%;
+}
+
+.page .title div button {
+	white-space: nowrap;
+	justify-content: center;
+	width: 100%;
+	font-family: Whitney;
+	font-size: 125%;
+	color: white;
+	text-shadow: 0px 0px 2px black;
+	height: 100%;
+	position: relative;
+	transform: translateX(0%);
+	transform-origin: center;
+	background-color: rgba(0, 0, 0, .35);
+	border-color: white;
+	border-style: solid;
+	border-width: 3px;
+	transition-duration: .2s;
+}
+
+.page .title div button:hover {
+	box-shadow: 0px 0px 2px white;
+	transition-duration: .2s;
+	transform: scale(1.025) translateX(0%);
+	cursor: pointer;
+}
+
 .animateFirst {
 	opacity: 0;
 	animation: slideInFade ease 1s;
@@ -326,7 +361,14 @@ footer p {
 .animateSecond {
 	opacity: 0;
 	animation: slideInFade ease 1s;
-	animation-delay: .75s;
+	animation-delay: .65s;
+	animation-fill-mode: forwards;
+}
+
+.animateThird {
+	opacity: 0;
+	animation: slideInFade ease 1s;
+	animation-delay: .8s;
 	animation-fill-mode: forwards;
 }
 

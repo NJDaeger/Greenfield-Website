@@ -50,6 +50,7 @@
 				}, 1000, "easeInOutExpo");
 				$(currentId + " .title h3").removeClass("animateFirst");
 				$(currentId + " .title h1").removeClass("animateSecond");
+				$(currentId + " .title div").removeClass("animateThird");
 
 				nextPage.css({"top":prevDirection});
 				nextPage.stop();
@@ -58,7 +59,7 @@
 				}, 975, "easeInOutExpo");
 				$(nextId + " .title h3").addClass("animateFirst");
 				$(nextId + " .title h1").addClass("animateSecond");
-					
+				$(nextId + " .title div").addClass("animateThird");
 			}
 
 
@@ -176,6 +177,7 @@
 			<div class="title">
 				<h3>Current Map Release</h3>
 				<h1><span style="color: slateblue">v</span> 0.5.<span style="color: slateblue">3</span></h1>
+				<div><button type="button">View Downloads</button></div>
 			</div>
 		</div>
 
@@ -184,7 +186,7 @@
 			<div class="title">
 				<h3>Current Pack Release</h3>
 				<h1>1.16+</h1>
-				<div><span>View Downloads</span></div>
+				<div><button type="button">View Downloads</button></div>
 			</div>
 		</div>
 
@@ -193,6 +195,7 @@
 			<div class="title">
 				<h3>Help us build!</h3>
 				<h1>Apply now</h1>
+				<div><button type="button">Application Form</button></div>
 			</div>
 		</div>
 
