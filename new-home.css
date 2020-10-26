@@ -342,13 +342,21 @@ footer p {
 	border-color: white;
 	border-style: solid;
 	border-width: 3px;
+	outline: none;
 	transition-duration: .2s;
 }
 
-.page .title div button:hover {
+.page .title div button:hover, button:visited, button:focus {
 	box-shadow: 0px 0px 2px white;
 	transition-duration: .2s;
 	transform: scale(1.025) translateX(0%);
+	cursor: pointer;
+}
+
+.page .title div button:active {
+	box-shadow: 0px 0px 2px white;
+	transition-duration: .2s;
+	transform: scale(1.0) translateX(0%);
 	cursor: pointer;
 }
 
