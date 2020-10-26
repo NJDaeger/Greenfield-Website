@@ -47,10 +47,11 @@
 				currentPage.stop();
 				currentPage.animate({
 					top: animateDirection
-				}, 750, "easeInOutExpo");
-				$(currentId + " .title h3").removeClass("animateFirst");
-				$(currentId + " .title h1").removeClass("animateSecond");
-				$(currentId + " .title div").removeClass("animateThird");
+				}, 750, "easeInOutExpo", function() {
+					$(currentId + " .title h3").removeClass("animateFirst");
+					$(currentId + " .title h1").removeClass("animateSecond");
+					$(currentId + " .title div").removeClass("animateThird");
+				});
 
 				nextPage.css({"top":prevDirection});
 				nextPage.stop();
