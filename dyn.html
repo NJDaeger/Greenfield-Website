@@ -6,11 +6,11 @@
 		<title>Greenfield Minecraft - Home (beta)</title>
 		<link rel="stylesheet" type="text/css" href="new-home.css">
 		<link rel="icon" href="images/logo.svg">
+		<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 		<script>
-
 			var lastScroll = 0;
 			var page = 0;
 			var pages = {
@@ -178,7 +178,7 @@
 		</div>
 
 		<div class="page" id="welcome">
-			<img src="images/skyline.png">
+			<img class="lozad" data-src="images/skyline.png">
 			<div class="title">
 				<h3 class="animateFirst">Welcome to</h3>
 				<h1 class="animateSecond">Greenfield</h1>
@@ -186,7 +186,7 @@
 		</div>
 
 		<div class="page" id="project" style="top: 100%">
-			<img src="images/stadium.png">
+			<img data-src="images/stadium.png" class="lozad">
 			<div class="title">
 				<h3>Current Map Release</h3>
 				<h1><span style="color: slateblue">v</span> 0.5.<span style="color: slateblue">3</span></h1>
@@ -195,7 +195,7 @@
 		</div>
 
 		<div class="page" id="resource" style="top: 100%">
-			<img src="images/railyard.png">
+			<img data-src="images/railyard.png" class="lozad">
 			<div class="title">
 				<h3>Current Pack Release</h3>
 				<h1>1.16+</h1>
@@ -204,14 +204,17 @@
 		</div>
 
 		<div class="page" id="team" style="top: 100%">
-			<img src="images/MartyStation.png">
+			<img data-src="images/MartyStation.png" class="lozad">
 			<div class="title">
 				<h3>Help us build!</h3>
 				<h1>Apply now</h1>
 				<div><button type="button">Application Form</button></div>
 			</div>
 		</div>
-
+		<script type="text/javascript">
+			const observer = lozad();
+			observer.observe();
+		</script>
 
 	</body>
 
