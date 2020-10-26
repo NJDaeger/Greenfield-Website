@@ -21,7 +21,7 @@
 			};
 
 			function nextSlide(nextIndex, currentIndex) {
-				if (Date.now() - lastScroll < 500) return;
+				if (Date.now() - lastScroll < 600) return;
 				else lastScroll = Date.now();
 				page = parseInt(nextIndex);
 
@@ -63,6 +63,18 @@
 				$(nextId + " .title div").addClass("animateThird");
 			}
 
+			$(document).keydown(function(e) {
+				var dir = e.which == 38 ? -100 : (e.which == 40 ? 100 : 0);
+				if (dir != 0) {
+					if (page > 0 && page < 3) {
+						nextSlide(dir < 0 ? page - 1 : page + 1, page);
+					} else if (page == 0 && dir > 0) {
+						nextSlide(page + 1, page);
+					} else if (page == 3 && dir < 0) {
+						nextSlide(page - 1, page);
+					}
+				}
+			});
 
 			$(document).ready(function() {
 				$(window).on('wheel', function(event) {
