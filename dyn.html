@@ -21,9 +21,10 @@
 			};
 
 			function nextSlide(nextIndex, currentIndex) {
-				if (Date.now() - lastScroll < 1000) return;
+				if (Date.now() - lastScroll < 1500) return;
 				else lastScroll = Date.now();
-				page = nextIndex;
+				page = parseInt(nextIndex);
+
 				var next = $("[index=" + nextIndex + "]");
 				//Getting the currently selected page
 				var current = $("[index=" + currentIndex + "]");
@@ -44,14 +45,13 @@
 				next.addClass("checked");
 
 				currentPage.stop();
-				currentPage.css({"opacity":"1"});
 				currentPage.animate({
 					top: animateDirection
 				}, 1000, "easeInOutExpo");
 				$(currentId + " .title h3").removeClass("animateFirst");
 				$(currentId + " .title h1").removeClass("animateSecond");
 
-				nextPage.css({"top":prevDirection, "opacity":"1"});
+				nextPage.css({"top":prevDirection});
 				nextPage.stop();
 				nextPage.animate({
 					top: "0%"
@@ -65,25 +65,12 @@
 			$(document).ready(function() {
 				$(window).on('wheel', function(event) {
 					var dir = event.originalEvent.deltaY;
-					var curPage = page;
 					if (page > 0 && page < 3) {
 						nextSlide(dir < 0 ? page - 1 : page + 1, page);
 					} else if (page == 0 && dir > 0) {
-						nextSlide(page + 1, curPage);
+						nextSlide(page + 1, page);
 					} else if (page == 3 && dir < 0) {
-						nextSlide(page - 1, curPage);
-					}
-				});
-
-				$(window).on('touchmove', function(event) {
-					var dir = event.originalEvent.deltaY;
-					var curPage = page;
-					if (page > 0 && page < 3) {
-						nextSlide(dir < 0 ? page - 1 : page + 1, page);
-					} else if (page == 0 && dir > 0) {
-						nextSlide(page + 1, curPage);
-					} else if (page == 3 && dir < 0) {
-						nextSlide(page - 1, curPage);
+						nextSlide(page - 1, page);
 					}
 				});
 
@@ -107,12 +94,12 @@
 					}
 				});
 
-				$(".sidebar div").click(function() {
+				$(".sidebar div div").click(function() {
 					var next = $(this);
 					var current = $('div[class="checked"]');
 					var currentIndex = current.attr('index');
 					var nextIndex = next.attr('index');
-					nextSlide(nextIndex, currentIndex);
+					if (currentIndex != nextIndex) nextSlide(nextIndex, currentIndex);
 				});
 			});
 
@@ -168,10 +155,12 @@
 			</div>
 		</div>
 		<div class = "sidebar" class="js-stop-transition">
-			<div class="checked" page="welcome" index=0><span>Welcome</span></div>
-			<div page="project" index=1><span>The Project</span></div>
-			<div page="resource" index=2><span>The Resource Pack</span></div>
-			<div page="team" index=3><span>Join Us</span></div>
+			<div>
+				<div class="checked" page="welcome" index=0><span>Welcome</span></div>
+				<div page="project" index=1><span>The Project</span></div>
+				<div page="resource" index=2><span>The Resource Pack</span></div>
+				<div page="team" index=3><span>Join Us</span></div>
+			</div>
 		</div>
 
 		<div class="page" id="welcome">
@@ -185,7 +174,7 @@
 		<div class="page" id="project" style="top: 100%">
 			<img src="images/stadium.png">
 			<div class="title">
-				<h3>Current Release</h3>
+				<h3>Current Map Release</h3>
 				<h1><span style="color: slateblue">v</span> 0.5.<span style="color: slateblue">3</span></h1>
 			</div>
 		</div>
@@ -193,8 +182,9 @@
 		<div class="page" id="resource" style="top: 100%">
 			<img src="images/railyard.png">
 			<div class="title">
-				<h3>Current Release</h3>
+				<h3>Current Pack Release</h3>
 				<h1>1.16+</h1>
+				<div><span>View Downloads</span></div>
 			</div>
 		</div>
 
