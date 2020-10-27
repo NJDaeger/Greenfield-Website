@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<title>Greenfield Minecraft - Home (beta)</title>
+		<link rel="stylesheet" type="text/css" href="css/downloads.css">
+		<link rel="stylesheet" type="text/css" href="css/overlay.css">
+		<link rel="icon" href="images/logo.svg">
+		<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<script src="js/home.js"></script>
+		<script src="js/overlay.js"></script>
+	</head>
+	<!-- Overlay for basic things. toolbar/sidebar/menu -->
+	<body class="lozad" data-background-image="images/IkeaWarehouse.jpg">
+		<script type="text/javascript">
+			document.body.classList.remove('js-stop-transition')
+		</script>
+		<div class="toolbar" class="js-stop-transition">
+			<div id="homeButton">
+				<a href="dyn.html"> 
+					<img src = "images/logo.svg" >
+				</a>
+			</div>
+			<div id="menuButton">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div id="links">
+				<ul>
+					<li ><a href="http://map.greenfieldmc.net" target="_blank">Dynmap</a></li>
+					<li id="large"><a href="http://pmc.greenfieldmc.net" target="_blank">Apply</a></li>
+					<li id="large"><a href="https://www.youtube.com/channel/UCz2MGxUzFKoe4Djl1uhHf9w" target="_blank">Downloads</a></li>
+					<li id="medium"><a href="http://patreon.greenfieldmc.net" target="_blank">Patreon</a></li>
+					<li id="medium"><a href="http://pmc.greenfieldmc.net" target="_blank">About</a></li>
+				</ul>
+			</div>
+			<div id="menu">
+				<hr>
+				<div>
+					<span>Downloads</span>
+				</div>
+				<hr>
+				<div>
+					<span>Photography</span>
+				</div>
+				<hr>
+				<div>
+					<span>Staff</span>
+				</div>
+				<hr>
+				<div>
+					<span>Apply</span>
+				</div>
+				<hr>
+				<div>
+					<span>Official Pages</span>
+				</div>
+				<hr>
+			</div>
+		</div>
+
+		<div class="title" id="title-override">
+			<h1 class="animateFirst">Downloads</h1>
+			<div class="animateSecond"><button type="button">Download Latest</button></div>
+		</div>
+
+		<div id="downloads">
+			<table>
+				<tr>
+					<td class="map-version">
+						<div>Coming Soon!</div>
+						<span>v 0.5.4</span>
+					</td>
+					<td class="version">1.16</td>
+					<td rowspan="2" class="pack-version">Latest (2020)</td>
+				</tr>
+				<tr>
+					<td rowspan="2" class="map-version">
+						<div>Download Now!</div>
+						<span>v 0.5.3</span>
+					</td>
+					<td class="version">1.15</td>
+				</tr>
+				<tr>
+					<td class="version">1.14</td>
+					<td class="pack-version">Legacy (2019)</td>
+				</tr>
+				<tr>
+					<td class="map-version">
+						<div>Download Now!</div>
+						<span>v 0.5.2</span>
+					</td>
+					<td class="version">1.13</td>
+					<td class="pack-version">Legacy (2018)</td>
+				</tr>
+				<tr>
+					<td class="map-version">
+						<div>Download Now!</div>
+						<span>v 0.5.1</span>
+					</td>
+					<td class="version">1.12</td>
+					<td class="pack-version">Legacy (2017)</td>
+				</tr>
+				<tr>
+					<td class="map-version">
+						<div>Download Now!</div>
+						<span>v 0.5</span>
+					</td>
+					<td class="version">1.11</td>
+					<td class="pack-version">Legacy (2017)</td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="map-version">
+						<div>Download Now!</div>
+						<span>v 0.4.6</span>
+					</td>
+					<td class="version">1.10</td>
+					<td rowspan="2" class="pack-version">Legacy (2016)</td>
+				</tr>
+				<tr>
+					<td class="version">1.9</td>
+				</tr>
+				<tr>
+					<td class="version">1.8</td>
+					<td class="pack-version">Legacy (2015)</td>
+				</tr>
+				<tr>
+					<td class="map-version">
+						<div>Download Now!</div>
+						<span>v 0.4.5</span>
+					</td>
+					<td class="version">1.7</td>
+					<td class="pack-version">Legacy (----)</td>
+				</tr>
+				<tr>
+					<td class="map-version">
+						<div>Download Now!</div>
+						<span>v 0.4</span>
+					</td>
+					<td class="version">1.6</td>
+					<td class="pack-version">Legacy (----)</td>
+				</tr>
+			</table>
+		</div>
+
+		<script type="text/javascript">
+			const observer = lozad();
+			observer.observe();
+		</script>
+
+	</body>
+
+
+	<footer>
+		<p>The Greenfield Minecraft Project © 2020 </p>
+	</footer>
+</html>

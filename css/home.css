@@ -17,100 +17,79 @@
 	object-fit: cover;
 }
 
-.page .title {
-	width: 100%;
+.sidebar {
+	width: 10px;
 	height: 100%;
 	display: block;
 	position: absolute;
-	z-index: 1;
+	z-index: 4;
+	margin-left: 10px;
+
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
 
-.page .title h3 {
+.sidebar div {
 	position: relative;
-	text-shadow: 0px 0px 10px black;
-	color: white;
-	font-family: Bebas;
-	font-size: calc((2vw + 2vh)/1.25);
-	text-align: center;
-	margin: 0;
-	padding:0;
-	top: 32%;
-}
-
-.page .title h1 {
-	position: relative;
-	text-shadow: 0px 0px 10px black;
-	color: white;
-	font-family: Bebas;
-	font-size: calc(4vw + 4vh);
-	text-align: center;
-	top: 32%;
-	padding: 0;
-	margin: 0;
-}
-
-.page .title div {
-	position: relative;
-	width: max(15vw, 22vh);
-	transform: translateX(-50%);
-	left: 50%;
-	height:40px;
-	top:32%;
-}
-
-.page .title div button {
-	white-space: nowrap;
-	justify-content: center;
+	transform: translate(0%, -50%);
+	top:50%;
 	width: 100%;
-	font-family: Whitney;
-	font-size: calc(max(1vw, 2vh) * 1.25);
-	color: white;
-	text-shadow: 0px 0px 2px black;
-	height: 100%;
+}
+
+.sidebar div div {
+	z-index: 4;
+	display: block;
 	position: relative;
-	transform: translateX(0%);
+	box-shadow: 0px 0px 5px black;
+	background-color: lightgray;
+	transition: .2s;
+	transform: translate(0%, 0%);
+	padding: 3vh 0px;
+	margin: 1vh 0px;
+}
+
+.sidebar div div span {
+	opacity: 0;
+	white-space: nowrap;
+	position: relative;
+	font-family: Whitney;
+	color: white;
+	transition: .2s;
+	transform-origin: left;
+	transform: translate(0%, 0%);
+	padding: 3vh 10px;
+	margin-left: 100%;
+}
+
+.sidebar div div:hover {
+	background-color: white;
+	box-shadow: 0px 0px 5px white;
 	transform-origin: center;
-	background-color: rgba(0, 0, 0, .35);
-	border-color: white;
-	border-style: solid;
-	border-width: 3px;
-	outline: none;
-	transition-duration: .2s;
-}
-
-.page .title div button:hover, button:visited, button:focus {
-	box-shadow: 0px 0px 2px white;
-	transition-duration: .2s;
-	transform: scale(1.025) translateX(0%);
+	transform: scale(1.1) translate(0%, 0%);
+	transition: .2s;
 	cursor: pointer;
 }
 
-.page .title div button:active {
-	box-shadow: 0px 0px 2px white;
-	transition-duration: .2s;
-	transform: scale(1.0) translateX(0%);
+.sidebar div div:hover span {
+	text-shadow: 0px 0px 2px black;
+	white-space: nowrap;
+	opacity: 1;
+	background-image: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.05));
+	transition: .2s;
 	cursor: pointer;
 }
 
-.animateFirst {
-	opacity: 0;
-	animation: slideInFade ease 1s;
-	animation-delay: .25s;
-	animation-fill-mode: forwards;
-}
-
-.animateSecond {
-	opacity: 0;
-	animation: slideInFade ease 1s;
-	animation-delay: .4s;
-	animation-fill-mode: forwards;
-}
-
-.animateThird {
-	opacity: 0;
-	animation: slideInFade ease 1s;
-	animation-delay: .55s;
-	animation-fill-mode: forwards;
+.sidebar .checked {
+	background-color: white;
+	box-shadow: 0px 0px 5px white;
+	transform-origin: center;
+	transform: scale(1.1) translate(0%, 0%);
+	transition: .2s;
+	cursor: pointer;
 }
 
 .js-stop-transition { 
@@ -125,17 +104,4 @@
 @font-face {
 	font-family: Whitney;
 	src: url("../fonts/whitney-semibold.otf") format("opentype");
-}
-
-@keyframes slideInFade {
-	0% {
-		top:50%;
-		text-shadow: 0px 20px 10px black;
-		opacity: 0;
-	}
-	100% {
-		top:32%;
-		text-shadow: 0px 0px 10px black;
-		opacity: 1;
-	}
 }
