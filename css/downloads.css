@@ -8,22 +8,32 @@ body {
 }
 
 #downloads {
-	width:100%;
 	position: relative;
 	display: block;
-	top:50%;
+	top:45%;
 	z-index: 2;
-	/*background-image: linear-gradient(transparent, black);*/
-	/*transform: translateY(-50%);*/
+	width: 800px;
+	height: 45%;
+	left:50%;
+	overflow-y: auto;
+	transform: translateX(-50%);
+	scroll-behavior: 
 }
 
 #downloads table {
 	border-collapse: collapse;
 	table-layout: fixed;
-	width: 50%;
 	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
+	overflow: scroll;
+	width:100%;
+	height:100%;
+}
+
+#downloads table tr th {
+	position: sticky;
+	top:0
+	/*background-color:transparent;*/
+	/*TODO text behind header wont go away*/
 }
 
 #downloads table tr {
@@ -32,27 +42,70 @@ body {
 	font-size: 5vh;
 }
 
-#downloads table tr td {
+#downloads table tr th, td {
+	color: lightgray;
+	font-family: Bebas;
+	font-size: 5vh;
 	width: 33%;
-	border-bottom: solid;
-	border-bottom-width: 4px;
-	border-bottom-color: white;
+	border-bottom: solid 2px white;
+}
+
+#downloads table tr td div {
+	position: relative;
+}
+
+#downloads table tr td:hover {
 }
 
 #title-override {
-	height:60% !important
+	height:50% !important
 }
+
+::-webkit-scrollbar {
+	width:10px;
+	opacity: 0;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(50,50,50,.5);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: lightgray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: white;
+	box-shadow: 0px 0px 3px rgba(255,255,255,.35);
+}
+
+.map-version {
+	border-bottom: solid 2px white;
+}
+
+.map-version div {
+
+}
+/*.map-version:hover {
+	transform: scaleX(1);
+}*/
+
+/*.map-version:hover {
+	border-bottom: solid 4px white !important
+	transform-origin: left !important*/
+	/*transform: scaleX(1);*/
+/*}*/
 
 .map-version span {
 	text-align: left;
 }
 
-.map-version:hover span {
+/*.map-version:hover span {
 	transition-duration: .2s;
 	opacity: 0;
-}
+}*/
 
-.map-version div {
+/*.map-version div {
 	width: 33%;
 	height: inherit;
 	opacity: 0;
@@ -61,14 +114,14 @@ body {
 	transform-origin: right;
 	transition-duration: .2s;
 	transform: rotateY(-90deg);
-}
+}*/
 
-.map-version:hover div {
+/*.map-version:hover div {
 	opacity: 1;
 	background-color: rgb(255,255,255,.35);
 	transition-duration: .2s;
 	transform: rotateY(0deg);
-}
+}*/
 
 .pack-version {
 	text-align: right;
@@ -87,4 +140,15 @@ body {
 @font-face {
 	font-family: Whitney;
 	src: url("../fonts/whitney-semibold.otf") format("opentype");
+}
+
+@keyframes underlineLeft {
+	0% {
+		border-bottom: solid 4px white;
+		left: 0%; 
+	}
+	100% {
+		border-bottom: solid 4px white;
+		left: 100%; 
+	}
 }
