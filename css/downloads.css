@@ -9,6 +9,7 @@ body {
 	object-fit: cover;
 	color: black;
 	mix-blend-mode: multiply;
+	filter: brightness(.5);
 	/*background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
