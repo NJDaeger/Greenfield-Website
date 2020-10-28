@@ -7,13 +7,48 @@ body {
 	height:100vh;
 }
 
+#main-buttons {
+	display: inline-flex;
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	top:20%;
+}
+
+#main-buttons .button {
+	left:unset;
+	transform: unset;
+	margin: 0px 20px;
+	height: 80px;
+}
+
+#main-buttons .button button {
+	word-wrap: normal;
+	white-space: normal;
+}
+
+#header {
+	border-collapse: collapse;
+	table-layout: fixed;
+	position: relative;
+	width:400px;
+	height:100%;
+	left:50%;
+	top:40%;
+	transform: translateX(-50%);
+	color: lightgray;
+	font-family: Bebas;
+	font-size: 5vh;
+	border-bottom: solid 2px white;
+}
+
 #downloads {
 	position: relative;
 	display: block;
-	top:45%;
+	top:40%;
 	z-index: 2;
-	width: 800px;
-	height: 45%;
+	width: 400px;
+	height: 40%;
 	left:50%;
 	overflow-y: auto;
 	transform: translateX(-50%);
@@ -29,17 +64,11 @@ body {
 	height:100%;
 }
 
-#downloads table tr th {
-	position: sticky;
-	top:0
-	/*background-color:transparent;*/
-	/*TODO text behind header wont go away*/
-}
-
 #downloads table tr {
 	color: lightgray;
 	font-family: Bebas;
 	font-size: 5vh;
+	clip-path: all;
 }
 
 #downloads table tr th, td {
@@ -57,13 +86,9 @@ body {
 #downloads table tr td:hover {
 }
 
-#title-override {
-	height:50% !important
-}
-
 ::-webkit-scrollbar {
-	width:10px;
 	opacity: 0;
+	width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -72,6 +97,8 @@ body {
 
 ::-webkit-scrollbar-thumb {
 	background-color: lightgray;
+	background-clip: content-box;
+	border: 1px solid transparent;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -96,8 +123,10 @@ body {
 	/*transform: scaleX(1);*/
 /*}*/
 
-.map-version span {
-	text-align: left;
+.map-version {
+	text-align: right;
+	font-size: 4vh;
+	padding-right: 20px;
 }
 
 /*.map-version:hover span {
@@ -124,7 +153,9 @@ body {
 }*/
 
 .pack-version {
-	text-align: right;
+	text-align: left;
+	font-size: 4vh;
+	padding-left: 20px;
 }
 
 .version {

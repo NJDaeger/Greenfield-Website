@@ -223,7 +223,7 @@ footer p {
 	margin: 0;
 }
 
-.title div {
+.button {
 	position: relative;
 	width: max(15vw, 22vh);
 	transform: translateX(-50%);
@@ -232,7 +232,7 @@ footer p {
 	top:32%;
 }
 
-.title div button {
+.button button {
 	white-space: nowrap;
 	justify-content: center;
 	width: 100%;
@@ -252,14 +252,14 @@ footer p {
 	transition-duration: .2s;
 }
 
-.title div button:hover, button:visited, button:focus {
+.button button:hover, button:visited, button:focus {
 	box-shadow: 0px 0px 2px white;
 	transition-duration: .2s;
 	transform: scale(1.025) translateX(0%);
 	cursor: pointer;
 }
 
-.title div button:active {
+.button button:active {
 	box-shadow: 0px 0px 2px white;
 	transition-duration: .2s;
 	transform: scale(1.0) translateX(0%);
