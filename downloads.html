@@ -12,6 +12,32 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 		<script src="js/home.js"></script>
 		<script src="js/overlay.js"></script>
+		<script type="text/javascript">
+			function doStart(hovered, attrib) {
+				var map = hovered.attr(attrib);
+				var elem = $("[" + attrib + "=" + map + "]");
+				elem.stop();
+				elem.animate({
+					backgroundColor: "rgba(255,255,255,.8)",
+					color: "#000000"
+				}, 200, "easeInOutExpo");
+			}
+
+			function doFinish(hovered, attrib) {
+				var map = hovered.attr(attrib);
+				var elem = $("[" + attrib + "=" + map + "]");
+				elem.stop();
+				elem.animate({
+					backgroundColor: "rgba(0,0,0,0)",
+					color: "#D3D3D3"
+				}, 200, "easeInOutExpo");
+			}
+
+			$(document).ready(function() {
+				$(".map-version").hover(function() {doStart($(this), "map");},function() {doFinish($(this), "map");});
+				$(".pack-version").hover(function() {doStart($(this), "pack");},function() {doFinish($(this), "pack");});
+			});
+		</script>
 	</head>
 	<!-- Overlay for basic things. toolbar/sidebar/menu -->
 	<div id="background">
@@ -21,6 +47,7 @@
 		<script type="text/javascript">
 			document.body.classList.remove('js-stop-transition')
 		</script>
+
 		<div class="toolbar" class="js-stop-transition">
 			<div id="homeButton">
 				<a href="dyn.html"> 
@@ -44,7 +71,15 @@
 			<div id="menu">
 				<hr>
 				<div>
+					<span>About</span>
+				</div>
+				<hr>
+				<div>
 					<span>Downloads</span>
+				</div>
+				<hr>
+				<div>
+					<span>Apply</span>
 				</div>
 				<hr>
 				<div>
@@ -53,10 +88,6 @@
 				<hr>
 				<div>
 					<span>Staff</span>
-				</div>
-				<hr>
-				<div>
-					<span>Apply</span>
 				</div>
 				<hr>
 				<div>
@@ -70,6 +101,7 @@
 			<div class="animateFirst button"><button type="button">Latest Map Release Download</button></div>
 			<div class="animateFirst button"><button type="button">Latest Resource Pack Download</button></div>
 		</div>
+
 		<table id="header">
 			<thead>
 				<tr>
@@ -79,82 +111,105 @@
 				</tr>
 			</thead>
 		</table>
+
 		<div id="downloads">
 			<table>
 				<tr>
-					<td class="map-version">
-						<!-- <div class="message">Coming soon!</div>
-						<div class="line"></div> -->
-						<span>v 0.5.4</span>
-					</td>
-					<td class="version">1.16</td>
-					<td rowspan="2" class="pack-version">Latest</td>
+					<td rowspan="3" class="map-version" map="12"><span style="color:#7851a9">v </span><span>0.5.<span style="color:#7851a9">3</span></span></td>
+					<td rowspan="2" class="version" map="12" pack="10">1.16<br>1.15</td>
+					<td rowspan="2" class="pack-version" pack="10">2020</td>
 				</tr>
 				<tr>
-					<td rowspan="2" class="map-version">
-						<!-- <div>Download Now!</div> -->
-						<span>v 0.5.3</span>
-					</td>
-					<td class="version">1.15</td>
 				</tr>
 				<tr>
-					<td class="version">1.14</td>
-					<td class="pack-version">2019</td>
+					<td class="version" map="12" pack="9">1.14</td>
+					<td class="pack-version" pack="9">2019</td>
 				</tr>
 				<tr>
-					<td class="map-version">
-						<!-- <div>Download Now!</div> -->
-						<span>v 0.5.2</span>
-					</td>
-					<td class="version">1.13</td>
-					<td class="pack-version">2018</td>
+					<td class="map-version" map="10"><span style="color:#e74c3d">v </span><span>0.5.<span style="color:#e74c3d">2</span></span></td>
+					<td class="version" map="10" pack="8">1.13</td>
+					<td class="pack-version" pack="8">2018</td>
 				</tr>
 				<tr>
-					<td class="map-version">
-						<!-- <div>Download Now!</div> -->
-						<span>v 0.5.1</span>
-					</td>
-					<td class="version">1.12</td>
-					<td class="pack-version">2017</td>
+					<td class="map-version" map="9"><span style="color:#d0920b">v </span><span>0.5.<span style="color:#d0920b">1</span></span></td>
+					<td class="version" map="9" pack="7">1.12</td>
+					<td class="pack-version" pack="7">2017</td>
 				</tr>
 				<tr>
-					<td class="map-version">
-						<!-- <div>Download Now!</div> -->
-						<span>v 0.5</span>
-					</td>
-					<td class="version">1.11</td>
-					<td class="pack-version">2017</td>
+					<td class="map-version" map="8"><span style="color:#009795">v </span><span>0.5.<span style="color:#009795">1</span></span></td>
+					<td class="version" map="8" pack="6">1.11</td>
+					<td class="pack-version" pack="6">2017</td>
 				</tr>
 				<tr>
-					<td rowspan="3" class="map-version">
-						<!-- <div>Download Now!</div> -->
-						<span>v 0.4.6</span>
-					</td>
-					<td class="version">1.10</td>
-					<td rowspan="2" class="pack-version">2016</td>
+					<td rowspan="3" class="map-version" map="7"><span>v 0.4.6</span></td>
+					<td rowspan="2" class="version" map="7" pack="4">1.10<br>1.9</td>
+					<td rowspan="2" class="pack-version" pack="4">2016</td>
 				</tr>
 				<tr>
-					<td class="version">1.9</td>
 				</tr>
 				<tr>
-					<td class="version">1.8</td>
-					<td class="pack-version">2015</td>
+					<td class="version" map="7" pack="3">1.8</td>
+					<td class="pack-version" pack="3">2015</td>
 				</tr>
 				<tr>
-					<td class="map-version">
-						<!-- <div>Download Now!</div> -->
-						<span>v 0.4.5</span>
-					</td>
-					<td class="version">1.7</td>
-					<td class="pack-version">Legacy</td>
+					<td class="map-version" map="6"><span>v 0.4.5</span></td>
+					<td class="version" map="6" pack="2">1.7</td>
+					<td class="pack-version" pack="2">2013</td>
 				</tr>
 				<tr>
-					<td class="map-version">
-						<!-- <div>Download Now!</div> -->
-						<span>v 0.4</span>
-					</td>
-					<td class="version">1.6</td>
-					<td class="pack-version">Legacy</td>
+					<td class="map-version" map="5"><span>v 0.4.0</span></td>
+					<td class="version" map="5" pack="1">1.6</td>
+					<td class="pack-version" pack="1">2013</td>
+				</tr>
+				<tr>
+					<td class="map-version" map="4"><span>v 0.3.4</span></td>
+					<td class="version" map="4" pack="0">1.5</td>
+					<td rowspan="7" class="pack-version" pack="0">N/A</td>
+				</tr>
+				<tr>
+					<td class="map-version" map="3"><span>v 0.3.3</span></td>
+					<td class="version" map="3" pack="0">1.4</td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="map-version" map="2"><span>v 0.3.0</span></td>
+					<td rowspan="3" class="version" map="2" pack="0">1.3<br>1.2<br>1.1</td>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+				</tr>
+				<tr>
+					<td class="map-version" map="1"><span>v 0.2.0</span></td>
+					<td class="version" map="1" pack="0"><span style="font-size: calc(max(1vw, 2vh));">beta</span> 1.8</td>
+				</tr>
+				<tr>
+					<td class="map-version" map="0"><span>v 0.1.0</span></td>
+					<td class="version" map="0" pack="0"><span style="font-size: calc(max(1vw, 2vh));">beta</span> 1.8</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
 				</tr>
 			</table>
 		</div>
