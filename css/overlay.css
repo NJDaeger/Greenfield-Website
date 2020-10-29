@@ -228,7 +228,7 @@ footer p {
 	width: max(15vw, 22vh);
 	transform: translateX(-50%);
 	left: 50%;
-	height:40px;
+	height: max(3vw, 5vh);
 	top:32%;
 }
 

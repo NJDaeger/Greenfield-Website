@@ -3,20 +3,24 @@ body {
 }
 
 #background {
-	z-index: 0;
+	position: fixed;
+	align-content: center;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -10;
+	display: inline-block;
+}
+
+#background img {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
 	display: block;
-	position: absolute;
+	position: fixed;
 	object-fit: cover;
-	color: black;
 	mix-blend-mode: multiply;
 	filter: brightness(.5);
-	/*background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-color: rgba(0,0,0,.5);
-	background-blend-mode: multiply;*/
-	width:100%;
-	height:100vh;
 }
 
 #main-buttons {
@@ -30,8 +34,9 @@ body {
 #main-buttons .button {
 	left:unset;
 	transform: unset;
-	margin: 0px 20px;
-	height: 80px;
+	margin: 0px max(1vh, 1vw);
+	width: max(13vw, 20vh);
+	height: max(5vw, 10vh);
 }
 
 #main-buttons .button button {
@@ -43,14 +48,14 @@ body {
 	border-collapse: collapse;
 	table-layout: fixed;
 	position: relative;
-	width:400px;
+	width: max(25vw, 40vh);
 	height:100%;
 	left:50%;
 	top:40%;
 	transform: translateX(-50%);
-	color: lightgray;
+	color: white;
 	font-family: Bebas;
-	font-size: 5vh;
+	font-size: calc(max(1vw, 2vh) * 2.25);
 	border-bottom: solid 2px white;
 }
 
@@ -59,7 +64,7 @@ body {
 	display: block;
 	top:40%;
 	z-index: 2;
-	width: 400px;
+	width: max(25vw, 40vh);
 	height: 40%;
 	left:50%;
 	overflow-y: auto;
@@ -79,14 +84,11 @@ body {
 #downloads table tr {
 	color: lightgray;
 	font-family: Bebas;
-	font-size: 5vh;
+	font-size: calc(max(1vw, 2vh) * 2);
 	clip-path: all;
 }
 
-#downloads table tr th, td {
-	color: lightgray;
-	font-family: Bebas;
-	font-size: 5vh;
+#downloads table tr th {
 	width: 33%;
 	border-bottom: solid 2px white;
 }
@@ -137,8 +139,8 @@ body {
 
 .map-version {
 	text-align: right;
-	font-size: 4vh;
-	padding-right: 20px;
+	font-size: calc(max(1vw, 2vh) * 2);
+	padding-right: max(1vh, 1vw);
 }
 
 /*.map-version:hover span {
@@ -166,8 +168,8 @@ body {
 
 .pack-version {
 	text-align: left;
-	font-size: 4vh;
-	padding-left: 20px;
+	font-size: calc(max(1vw, 2vh) * 2.25);
+	padding-left: max(1vh, 1vw);
 }
 
 .version {
