@@ -19,8 +19,8 @@ body {
 	display: block;
 	position: fixed;
 	object-fit: cover;
-	mix-blend-mode: multiply;
-	filter: brightness(.5);
+	transform: scale(1.01);
+	filter: brightness(.5) blur(4px);
 }
 
 #main-buttons {
@@ -48,7 +48,7 @@ body {
 	border-collapse: collapse;
 	table-layout: fixed;
 	position: relative;
-	width: max(25vw, 40vh);
+	width: max(26vw, 41vh);
 	height:100%;
 	left:50%;
 	top:40%;
@@ -57,6 +57,22 @@ body {
 	font-family: Bebas;
 	font-size: calc(max(1vw, 2vh) * 2.25);
 	border-bottom: solid 2px white;
+}
+
+#header .map-version {
+	cursor: default;
+}
+
+#header .pack-version {
+	cursor: default;
+}
+
+#header .version {
+	cursor: default;
+}
+
+#header thead:nth-child(2) {
+	margin-right: -7px;
 }
 
 #downloads {
@@ -89,6 +105,7 @@ body {
 }
 
 ::-webkit-scrollbar {
+	overflow: hidden;
 	opacity: 0;
 	width: 7px;
 }
@@ -133,6 +150,10 @@ body {
 .version {
 	text-align: center;
 	border-bottom: solid 2px white;
+}
+
+.version:hover {
+	cursor: default;
 }
 
 @font-face {

@@ -10,34 +10,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		<script src="js/home.js"></script>
 		<script src="js/overlay.js"></script>
-		<script type="text/javascript">
-			function doStart(hovered, attrib) {
-				var map = hovered.attr(attrib);
-				var elem = $("[" + attrib + "=" + map + "]");
-				elem.stop();
-				elem.animate({
-					backgroundColor: "rgba(255,255,255,.75)",
-					color: "#000000"
-				}, 200, "easeInOutExpo");
-			}
-
-			function doFinish(hovered, attrib) {
-				var map = hovered.attr(attrib);
-				var elem = $("[" + attrib + "=" + map + "]");
-				elem.stop();
-				elem.animate({
-					backgroundColor: "rgba(0,0,0,0)",
-					color: "#D3D3D3"
-				}, 200, "easeInOutExpo");
-			}
-
-			$(document).ready(function() {
-				$(".map-version").hover(function() {doStart($(this), "map");},function() {doFinish($(this), "map");});
-				$(".pack-version").hover(function() {doStart($(this), "pack");},function() {doFinish($(this), "pack");});
-			});
-		</script>
+		<script src="js/downloads.js"></script>
 	</head>
 	<!-- Overlay for basic things. toolbar/sidebar/menu -->
 	<div id="background">
@@ -106,8 +80,8 @@
 			<thead>
 				<tr>
 					<th class="map-version"><span>Map&nbsp;</span></td>
-					<th>Version</td>
-					<th class="pack-version"><span>&nbsp;Pack</span></td>
+					<th class="version">Version</td>
+					<th class="pack-version"><span>Pack</span></td>
 				</tr>
 			</thead>
 		</table>
