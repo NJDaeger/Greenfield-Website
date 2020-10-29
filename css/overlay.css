@@ -224,6 +224,7 @@ footer p {
 }
 
 .button {
+	display: flex;
 	position: relative;
 	width: max(15vw, 22vh);
 	transform: translateX(-50%);
@@ -234,6 +235,7 @@ footer p {
 
 .button button {
 	white-space: nowrap;
+	align-items: center;
 	justify-content: center;
 	width: 100%;
 	font-family: Whitney;

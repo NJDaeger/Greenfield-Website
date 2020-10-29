@@ -71,10 +71,6 @@ body {
 	cursor: default;
 }
 
-#header thead:nth-child(2) {
-	margin-right: -7px;
-}
-
 #downloads {
 	position: relative;
 	display: block;
@@ -126,17 +122,28 @@ body {
 }
 
 .map-version {
+	color:lightgray;
+	transition-timing-function: linear;
 	text-align: right;
 	font-size: calc(max(1vw, 2vh) * 2);
 	padding-right: max(1vh, 1vw);
 	border-bottom: solid 2px white;
+	transition: background-position-x .1s, color .1s;
+	background-position-x: 0%;
+	background-image: linear-gradient(to right, transparent 50%,white 50%);
+	background-size: 200% 100%;
 }
 
 .map-version:hover {
 	cursor: pointer;
 }
 
+.map-version.slideFromRight {
+	background-position-x: -100%;
+}
+
 .pack-version {
+	color:lightgray;
 	text-align: left;
 	font-size: calc(max(1vw, 2vh) * 2);
 	padding-left: max(1vh, 1vw);
@@ -148,8 +155,21 @@ body {
 }
 
 .version {
+	transition-delay: 1s;
+	color:lightgray;
+	transition-timing-function: linear;
+	transition: background-position-x .1s, color .1s;
+	background-position-x: 0%;
+	background-image: linear-gradient(to right, transparent 50%,white 50%);
+	background-size: 200% 100%;
 	text-align: center;
 	border-bottom: solid 2px white;
+}
+
+.version.slideFromRight {
+	/*transition-delay: .1s;*/
+	color: black;
+	background-position-x: -100%;
 }
 
 .version:hover {
