@@ -195,14 +195,3 @@ body {
 	font-family: Whitney;
 	src: url("../fonts/whitney-semibold.otf") format("opentype");
 }
-
-@keyframes underlineLeft {
-	0% {
-		border-bottom: solid 4px white;
-		left: 0%; 
-	}
-	100% {
-		border-bottom: solid 4px white;
-		left: 100%; 
-	}
-}

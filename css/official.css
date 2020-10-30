@@ -1,0 +1,99 @@
+#background {
+	position: fixed;
+	align-content: center;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -10;
+	display: inline-block;
+}
+
+#background img {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	object-fit: cover;
+	transform: scale(1.01);
+	filter: brightness(.85) blur(3px);
+}
+
+.link {
+	display: inline-flex;
+	position: relative;
+	width:100%;
+	border-bottom: solid white 4px;
+
+	transition-timing-function: ease-in-out;
+	transition: background-position-x .2s, color .2s;
+	background-position-x: 0%;
+	background-image: linear-gradient(to right, transparent 50%, rgba(255,255,255,.7) 50%);
+	background-size: 200% 100%;
+}
+
+.link:hover {
+	background-position-x: -100%;
+	cursor: pointer;
+}
+
+.link:hover p {
+	color: black;
+}
+
+.link p {
+	padding-left: 30px;
+	margin: 0;
+	align-items: center;
+	display: flex;
+	position: relative;
+	width:100%;
+	font-family: Whitney;
+	font-size: 45px;
+	color:white;
+}
+
+.link img {
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	display: block;
+	height: 150px;
+	width: 150px;
+	margin: 0;
+	padding: 0;
+}
+
+
+#official-links {
+	top: 20%;
+	width:100%;
+	padding-bottom: 10%;
+	position: absolute;
+}
+
+#official-links table {
+	position: relative;
+	width: 100%;
+	height: 1px;
+	padding: 0px 200px;
+	border-collapse: separate;
+	border-spacing: 60px 40px;
+	table-layout: fixed;
+}
+
+#official-links table tr td {
+	background-color: rgba(0,0,0,.5);
+	height: 150px;
+	padding:0px;
+}
+
+@font-face {
+	font-family: Bebas;
+	src: url("../fonts/BebasNeueBold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Whitney;
+	src: url("../fonts/whitney-semibold.otf") format("opentype");
+}
