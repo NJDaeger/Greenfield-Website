@@ -38,6 +38,13 @@ body {
 	border-bottom: solid 2px white;
 }
 
+#header thead tr th {
+	opacity: 0;
+	animation: slideIn ease 1s;
+	animation-delay: calc(var(--animation-order) * 100ms); 
+	animation-fill-mode: forwards;
+}
+
 #header .map-version {
 	cursor: default;
 	background:none;
@@ -83,6 +90,13 @@ body {
 	font-family: Bebas;
 	font-size: calc(max(1vw, 2vh) * 2);
 	clip-path: all;
+}
+
+#downloads table tr td {
+	opacity: 0;
+	animation: slideIn ease 1s;
+	animation-delay: calc(var(--animation-order) * 100ms); 
+	animation-fill-mode: forwards;
 }
 
 ::-webkit-scrollbar {
@@ -173,4 +187,15 @@ body {
 @font-face {
 	font-family: Whitney;
 	src: url("../fonts/whitney-semibold.otf") format("opentype");
+}
+
+@keyframes slideIn {
+	0% {
+		padding-top: 20%;
+		opacity: 0;
+	}
+	100% {
+		padding-top: 0%;
+		opacity: 1;
+	}
 }

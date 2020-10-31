@@ -72,6 +72,11 @@
 	background-color: rgba(0,0,0,.5);
 	height: calc(max(1vw, 2vh) * 4);
 	padding: 0px;
+
+	opacity: 0;
+	animation: slideIn ease 1s;
+	animation-delay: calc(var(--animation-order) * 100ms); 
+	animation-fill-mode: forwards;
 }
 
 @font-face {
@@ -90,5 +95,16 @@
 	}
 	#official-links ul {
 		grid-template-columns: 1fr;
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		padding-top: 20%;
+		opacity: 0;
+	}
+	100% {
+		padding-top: 0%;
+		opacity: 1;
 	}
 }
