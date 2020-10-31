@@ -1,3 +1,24 @@
+::-webkit-scrollbar {
+	opacity: 0;
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(50,50,50,.5);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: lightgray;
+	background-clip: content-box;
+	border: 1px solid transparent;
+	border-radius: 40px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: white;
+	box-shadow: 0px 0px 3px rgba(255,255,255,.35);
+}
+
 #background {
 	position: fixed;
 	align-content: center;
@@ -42,11 +63,8 @@
 }
 
 .link p {
-	padding: 0px calc(max(1vw, 2vh) * 1);
+	padding: 0px max(1vw, 2vh);
 	margin: 0;
-	/*text-overflow: ellipsis;*/
-	/*white-space: nowrap;*/
-	/*overflow: hidden;*/
 	align-items: center;
 	display: inline-flex;
 	position: relative;
@@ -69,6 +87,7 @@
 
 
 #official-links {
+	overflow: auto;
 	height:70%;
 	top: 15%;
 	width: max(50vw, 70vh);
@@ -79,7 +98,7 @@
 	transform: translateX(-50%);
 	left: 50%;
 	position: fixed;
-	-webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%), linear-gradient(to top, transparent 0%, black 10%);
+	-webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
 }
 
 #official-links ul {
@@ -91,7 +110,7 @@
 
 #official-links ul li {
 	display: table-row-group;
-	margin: calc(max(1vw, 2vh) * 1) calc(max(1vw, 2vh) * 1.25);;
+	margin: calc(max(1vw, 2vh)) calc(max(1vw, 2vh) * 1.25);
 	background-color: rgba(0,0,0,.5);
 	height: calc(max(1vw, 2vh) * 4);
 	padding: 0px;
@@ -110,7 +129,6 @@
 @media only screen and (max-width: 550px) {
 	#official-links {
 		width: max(26vw, 41vh);
-		overflow-y: scroll;
 	}
 	#official-links ul {
 		grid-template-columns: 1fr;
