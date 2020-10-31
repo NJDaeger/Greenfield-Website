@@ -1,47 +1,124 @@
+
 <!doctype html>
 <html>
-
 	<head>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<title>Greenfield Minecraft - Home</title>
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="stylesheet" type="text/css" href="css/overlay.css">
+		<link rel="icon" href="images/logo.svg">
+		<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<script src="js/home.js"></script>
+		<script src="js/overlay.js"></script>
 	</head>
+	<!-- Overlay for basic things. toolbar/sidebar/menu -->
 	<body>
-		<header>
-			<p>Greenfield City</p>
-		</header>
-
-		<div class = "toolbar">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<!-- <li><a href="http://map.greenfieldmc.net" target="_blank">Dynmap</a></li> -->
-				<li><a href="https://www.planetminecraft.com/project/greenfield---new-life-size-city-project/" target="_blank">Planet Minecraft</a></li>
-				<li><a href="photos.html">Photography</a></li>
-				<li>Progress Images</li>
-				<li>Downloads</li>
-			</ul>
+		<script type="text/javascript">
+			document.body.classList.remove('js-stop-transition')
+		</script>
+		<div class="toolbar" class="js-stop-transition">
+			<div id="homeButton">
+				<a href="dyn.html"> 
+					<img src = "images/logo.svg" >
+				</a>
+			</div>
+			<div id="menuButton">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div id="links">
+				<ul>
+					<li ><a href="http://map.greenfieldmc.net" target="_blank">Dynmap</a></li>
+					<li id="large"><a href="http://apply.greenfieldmc.net" target="_blank">Apply</a></li>
+					<li id="large"><a href="/downloads">Downloads</a></li>
+					<li id="medium"><a href="http://patreon.greenfieldmc.net" target="_blank">Patreon</a></li>
+					<li id="medium"><a href="/about">About</a></li>
+				</ul>
+			</div>
+			<div id="menu">
+				<hr>
+				<div onclick="document.location.href='./about/'">
+					<span>About</span>
+				</div>
+				<hr>
+				<div onclick="document.location.href='./downloads/'">
+					<span>Downloads</span>
+				</div>
+				<hr>
+				<div onclick="window.open('http://apply.greenfieldmc.net','_blank')">
+					<span>Apply</span>
+				</div>
+				<hr>
+				<div onclick="document.location.href='./photography/'">
+					<span>Photography</span>
+				</div>
+				<hr>
+				<div onclick="document.location.href='./staff/'">
+					<span>Staff</span>
+				</div>
+				<hr>
+				<div onclick="document.location.href='./official-links/'">
+					<span>Official Links</span>
+				</div>
+				<hr>
+			</div>
+		</div>
+		<div class = "sidebar" class="js-stop-transition">
+			<div>
+				<div class="checked" page="welcome" index=0><span>Welcome</span></div>
+				<div page="project" index=1><span>The Project</span></div>
+				<div page="resource" index=2><span>The Resource Pack</span></div>
+				<div page="team" index=3><span>Join Us</span></div>
+			</div>
 		</div>
 
-		<div class = "content">
-			<h1>About Greenfield</h1>
-			<p>Greenfield City began in 2011 by a Minecraft player named THEJESTR. When he made the original posting
-				for the server on <a href="https://www.planetminecraft.com/project/greenfield---new-life-size-city-project/">PlanetMinecraft</a>, 
-				he soon got a following of several active members. The map finally bengan to take off and over time, slowly grew to the 
-				2,000,000+ views and nearly 1 million downloads of the map we have today. The offical server has over 450 members who are
-				whitelisted, and has been in continuous development since the beginning.</p>
+		<div class="page" id="welcome">
+			<img data-src="images/skyline.jpg" class="lozad">
+			<div class="title">
+				<h3 class="animateFirst">Welcome to</h3>
+				<h1 class="animateSecond">Greenfield</h1>
+			</div>
 		</div>
 
-		<div class = "content">
-			<h1>Our Goal</h1>
-			<p>Our goal is to completely fill the map we have created for ourselves. Until recently, our goal was undecided- we didn't know how far
-				we wanted to go before we considered our map complete. In a development over several months, and lots of Google Maps research, we
-				have finally decided on a size, and a geographic idea of what we wanted our final map to look like. This final map is 15,000x13,000
-				blocks, and we have started proposing final road network plans.</p>
+		<div class="page" id="project" style="top: 100%">
+			<img data-src="images/stadium.jpg" class="lozad">
+			<div class="title">
+				<h3>Current Map Release</h3>
+				<h1><span style="color: slateblue">v</span> 0.5.<span style="color: slateblue">3</span></h1>
+				<div class="button"><button type="button" onclick="window.open('./downloads/', '_top')">View Downloads</button></div>
+			</div>
 		</div>
+
+		<div class="page" id="resource" style="top: 100%">
+			<img data-src="images/railyard.jpg" class="lozad">
+			<div class="title">
+				<h3>Current Pack Release</h3>
+				<h1>1.16+</h1>
+				<div class="button"><button type="button" onclick="window.open('./downloads/', '_top')">View Downloads</button></div>
+			</div>
+		</div>
+
+		<div class="page" id="team" style="top: 100%">
+			<img data-src="images/MartyStation.jpg" class="lozad">
+			<div class="title">
+				<h3>Help us build!</h3>
+				<h1>Apply now</h1>
+				<div class="button"><button type="button" onclick="window.open('http://apply.greenfieldmc.net','_blank')">Application Form</button></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			const observer = lozad();
+			observer.observe();
+		</script>
 
 	</body>
 
-	<footer class = "footer">
-		<p>© 2020 Greenfield City
+	<footer>
+		<p>The Greenfield Minecraft Project © 2020</p>
+		<p>contact@greenfieldmc.net</p>
 	</footer>
-
 </html>
