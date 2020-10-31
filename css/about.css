@@ -19,6 +19,23 @@
 	text-align: center;
 }
 
+.description p a {
+	color: white;
+}
+
+.description ul li {
+	padding-top: 5px;
+}
+
+.description ul li a {
+	color: lightgray;
+	transition-duration: .2s;
+}
+
+.description ul li a:hover {
+	color: white;
+}
+
 .description hr {
 	margin: calc(min(2.25vw, 2vh) * 1.25) calc(1vmax * 1.5);;
 	position: relative;

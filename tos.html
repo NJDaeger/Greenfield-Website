@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+	<head>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<title>Greenfield Minecraft - About</title>
+		<link rel="stylesheet" type="text/css" href="css/overlay.css">
+		<link rel="stylesheet" type="text/css" href="css/about.css">
+		<link rel="icon" href="images/logo.svg">
+		<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<script src="js/overlay.js"></script>
+	</head>
+	<!-- Overlay for basic things. toolbar/sidebar/menu -->
+	<div id="background-blurred-dark">
+		<img class="lozad" data-src="images/Springfield.jpg">
+	</div>
+	<body>
+		<script type="text/javascript">
+			document.body.classList.remove('js-stop-transition')
+		</script>
+		<div class="toolbar" class="js-stop-transition">
+			<div id="homeButton">
+				<a href="dyn.html"> 
+					<img src = "images/logo.svg" >
+				</a>
+			</div>
+			<div id="menuButton">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div id="links">
+				<ul>
+					<li ><a href="http://map.greenfieldmc.net" target="_blank">Dynmap</a></li>
+					<li id="large"><a href="http://apply.greenfieldmc.net" target="_blank">Apply</a></li>
+					<li id="large"><a href="downloads.html">Downloads</a></li>
+					<li id="medium"><a href="http://patreon.greenfieldmc.net" target="_blank">Patreon</a></li>
+					<li id="medium"><a href="about.html">About</a></li>
+				</ul>
+			</div>
+			<div id="menu">
+				<hr>
+				<div onclick="document.location.href='about.html'">
+					<span>About</span>
+				</div>
+				<hr>
+				<div onclick="document.location.href='downloads.html'">
+					<span>Downloads</span>
+				</div>
+				<hr>
+				<div onclick="window.open('http://apply.greenfieldmc.net','_blank')">
+					<span>Apply</span>
+				</div>
+				<hr>
+				<div onclick="document.location.href='construction.html'">
+					<span>Photography</span>
+				</div>
+				<hr>
+				<div onclick="document.location.href='construction.html'">
+					<span>Staff</span>
+				</div>
+				<hr>
+				<div onclick="document.location.href='official.html'">
+					<span>Official Links</span>
+				</div>
+				<hr>
+			</div>
+		</div>
+
+		<div class="description" style="overflow-y: scroll;">
+			<h1>Terms and Conditions</h1>
+			<hr>
+			<ul>
+				<li>You must always use the <a href="http://textures.greenfieldmc.net" target="_blank">Greenfield Texture Pack</a> while on our build server.</li>
+				<li>You must treat people with respect on the server. We are all a team working towards a common goal.</li>
+				<li>You must always listen to Supervisors and Admins. They lead the project and they know what they're doing.</li>
+				<li>You must always obey the building codes and rules on the server. The codes and rules are subject to change- when changes occur, it is your job to keep up to date on them.</li>
+				<li>You must not advertise your own, or someone else's, project. This includes asking someone to join another Minecraft Server, recruiting members, or any other item which may deter build members from the Greenfield Minecraft Project.</li>
+				<li>Lying in any context will not be tolerated on the server.</li>
+				<li>Spamming, grief, or any other form of harm/harassment/destructive act will not be tolerated.</li>
+				<li>We are an English speaking server. All staff members are fluent in the English language and it is a requirement that you are able to understand and communicate with them via text.</li>
+				<li>Anything that you build or create on the Greenfield Minecraft Project Server and World (past, future, and present) and any copyright associated with your creations will be property of the Greenfield Minecraft Project.</li>
+				<li>Any media that is purposefully created to be used as official* promotional material for the project is owned by the Greenfield Minecraft Project. Any other media that is not official is owned by the creator of said media.</li>
+				<li>Any form of hate speech or discrimination on the server or map will not be tolerated.</li>
+				<li>Members who become inactive (does not build on the server for greater than 1 month), quit (either by choice or by passing), or become banned (for any reason) will, by default, have all copyrights associated with their builds become property of the Greenfield Minecraft Project, if they are not already.</li>
+				<!-- <li style="list-style: none;">&nbsp;</li> --><br>
+				<li style="font-size: calc(2vh * .75); list-style: none;">* Official media is media that has consciously been created by a staff member to be used as promotional material for one of the official media outlets. This does not include work done by staff members on their own</li>
+			</ul>
+			<hr>
+			<p>
+				Failure to comply with these terms and conditions on the server can result in a server ban (possibly includes the Discord guild depending on severity) or demotion. If you do not agree with out terms, you will not be accepted onto the build team. Changes done to this Terms of Service will be notified to you via email or Discord. If you change your contact method, it is your job to reflect that change to us.
+			</p>
+			<hr>
+		</div>
+
+		<script type="text/javascript">
+			const observer = lozad();
+			observer.observe();
+		</script>
+
+	</body>
+
+	<footer>
+		<p>The Greenfield Minecraft Project © 2020</p>
+		<p>contact@greenfieldmc.net</p>
+	</footer>
+</html>
