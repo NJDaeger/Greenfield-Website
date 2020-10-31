@@ -42,7 +42,7 @@
 }
 
 .link p {
-	padding: 0px calc(max(1vw, 2vh) * 1.5);
+	padding: 0px calc(max(1vw, 2vh) * 1);
 	margin: 0;
 	/*text-overflow: ellipsis;*/
 	/*white-space: nowrap;*/
@@ -61,16 +61,17 @@
 	justify-content: center;
 	position: relative;
 	display: block;
-	height: calc(max(1vw, 2vh) * 5);
-	width: calc(max(1vw, 2vh) * 5);
+	height: calc(max(1vw, 2vh) * 4);
+	width: calc(max(1vw, 2vh) * 4);
 	margin: 0;
 	padding: 0;
 }
 
 
 #official-links {
+	height:70%;
 	top: 15%;
-	width: max(60vw, 80vh);
+	width: max(50vw, 70vh);
 	justify-content: center;
 	align-items: center;
 	padding: 0px;
@@ -78,21 +79,22 @@
 	transform: translateX(-50%);
 	left: 50%;
 	position: fixed;
+	-webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%), linear-gradient(to top, transparent 0%, black 10%);
 }
 
-#official-links table {
-	position: relative;
-	width: 100%;
-	height: 1px;
-	border-collapse: separate;
-	border-spacing: calc(max(1vw, 2vh) * 2.25) calc(max(1vw, 2vh) * 1.5);;
-	table-layout: fixed;
+#official-links ul {
+	list-style: none;
+	padding: 0px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
-#official-links table tr td {
+#official-links ul li {
+	display: table-row-group;
+	margin: calc(max(1vw, 2vh) * 1) calc(max(1vw, 2vh) * 1.25);;
 	background-color: rgba(0,0,0,.5);
-	height: calc(max(1vw, 2vh) * 5);
-	padding:0px;
+	height: calc(max(1vw, 2vh) * 4);
+	padding: 0px;
 }
 
 @font-face {
@@ -103,4 +105,14 @@
 @font-face {
 	font-family: Whitney;
 	src: url("../fonts/whitney-semibold.otf") format("opentype");
+}
+
+@media only screen and (max-width: 550px) {
+	#official-links {
+		width: max(26vw, 41vh);
+		overflow-y: scroll;
+	}
+	#official-links ul {
+		grid-template-columns: 1fr;
+	}
 }
