@@ -2,27 +2,6 @@ body {
 	height: 100vh;
 }
 
-#background {
-	position: fixed;
-	align-content: center;
-	margin: 0;
-	width: 100%;
-	height: 100vh;
-	z-index: -10;
-	display: inline-block;
-}
-
-#background img {
-	z-index: 1;
-	width: 100%;
-	height: 100%;
-	display: block;
-	position: fixed;
-	object-fit: cover;
-	transform: scale(1.01);
-	filter: brightness(.5) blur(4px);
-}
-
 #main-buttons {
 	display: inline-flex;
 	position: absolute;

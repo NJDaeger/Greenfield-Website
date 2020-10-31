@@ -289,6 +289,87 @@ footer p {
 	animation-fill-mode: forwards;
 }
 
+#background-blurred-dark {
+	position: fixed;
+	align-content: center;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -10;
+	display: inline-block;
+}
+
+#background-blurred-dark img {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	object-fit: cover;
+	transform: scale(1.01);
+	filter: brightness(.5) blur(4px);
+}
+
+#background-clear-dark {
+	position: fixed;
+	align-content: center;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -10;
+	display: inline-block;
+}
+
+#background-clear-dark img {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	object-fit: cover;
+	filter: brightness(.5);
+}
+
+#background-blurred {
+	position: fixed;
+	align-content: center;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -10;
+	display: inline-block;
+}
+
+#background-blurred img {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	object-fit: cover;
+	transform: scale(1.01);
+	filter: blur(4px);
+}
+
+#background-clear {
+	position: fixed;
+	align-content: center;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -10;
+	display: inline-block;
+}
+
+#background-clear img {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	object-fit: cover;
+}
+
 @font-face {
 	font-family: Bebas;
 	src: url("../fonts/BebasNeueBold.otf") format("opentype");
