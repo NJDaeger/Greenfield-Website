@@ -18,12 +18,7 @@ body {
 	height: max(5vw, 10vh);
 }
 
-#main-buttons .button button {
-	word-wrap: normal;
-	white-space: normal;
-}
-
-#header {
+#display {
 	border-collapse: collapse;
 	table-layout: fixed;
 	position: relative;
@@ -38,26 +33,26 @@ body {
 	border-bottom: solid 2px white;
 }
 
-#header thead tr th {
+#display thead tr th {
 	opacity: 0;
 	animation: slideIn ease 1s;
 	animation-delay: calc(var(--animation-order) * 100ms); 
 	animation-fill-mode: forwards;
 }
 
-#header .map-version {
+#display .map-version {
 	cursor: default;
 	background:none;
 	color:white;
 }
 
-#header .pack-version {
+#display .pack-version {
 	cursor: default;
 	background:none;
 	color:white;
 }
 
-#header .version {
+#display .version {
 	cursor: default;
 	background:none;
 	color:white;

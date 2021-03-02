@@ -30,14 +30,28 @@ footer p {
 	display: block;
 	height: 100%;
 	width: calc(20vh + 5vw);
-	right: -25%;
+	right: -50%;
 	top: 0;
 	opacity: 0;
 	background-image: linear-gradient(90deg, rgba(0,0,0,.35), transparent);
 	box-shadow: 0px 0px 3px rgba(0,0,0,.35);
 }
 
-#menu hr {
+#menu ul {
+	list-style-type: none;
+	padding: 0px;
+	padding-top:9vh;
+}
+
+#menu ul li {
+	transition-duration: .2s;
+	z-index: 11;
+	padding: 2% 0%;
+	margin: 0% 5%;
+	position: relative;
+}
+
+#menu ul hr {
 	margin: 2px 5% 3px 5%;
 	z-index: 11;
 	position: relative;
@@ -47,16 +61,7 @@ footer p {
 	justify-content: center;
 }
 
-#menu div {
-	transition-duration: .2s;
-	z-index: 11;
-	padding: 2% 0%;
-	margin: 0% 5%;
-	position: relative;
-	top:10%;
-}
-
-#menu div:hover {
+#menu ul li:hover {
 	box-shadow: 0px 0px 3px rgba(255,255,255,.35);
 	cursor: pointer;
 	z-index: 11;
@@ -68,12 +73,14 @@ footer p {
 	background-color: rgba(255,255,255,.35);
 }
 
-#menu div span {
+#menu ul li a {
+	text-decoration: none;
 	padding: 0 5px;
 	font-family: Whitney;
 	font-size: 150%;
 	color: white;
 	text-shadow: 0px 0px 2px black;
+	display: flex;
 }
 
 .toolbar {
@@ -233,35 +240,34 @@ footer p {
 	top:32%;
 }
 
-.button button {
-	white-space: nowrap;
-	align-items: center;
+.button a {
 	justify-content: center;
+	align-items: center;
 	width: 100%;
 	font-family: Whitney;
 	font-size: calc(max(1vw, 2vh) * 1.25);
 	color: white;
 	text-shadow: 0px 0px 2px black;
 	height: 100%;
-	position: relative;
-	transform: translateX(0%);
-	transform-origin: center;
 	background-color: rgba(0, 0, 0, .45);
 	border-color: white;
 	border-style: solid;
 	border-width: 3px;
 	outline: none;
 	transition-duration: .2s;
+	text-decoration: none;
+	display: flex;
+	text-align: center;
 }
 
-.button button:hover, button:visited, button:focus {
+.button a:hover {
 	box-shadow: 0px 0px 2px white;
 	transition-duration: .2s;
 	transform: scale(1.025) translateX(0%);
 	cursor: pointer;
 }
 
-.button button:active {
+.button a:active {
 	box-shadow: 0px 0px 2px white;
 	transition-duration: .2s;
 	transform: scale(1.0) translateX(0%);

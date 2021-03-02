@@ -17,71 +17,19 @@
 		<img class="lozad" data-src="../images/Construction.jpg">
 	</div>
 	<body>
-		<script type="text/javascript">
-			document.body.classList.remove('js-stop-transition')
-		</script>
-		<div class="toolbar" class="js-stop-transition">
-			<div id="homeButton">
-				<a href="../"> 
-					<img src = "../images/logo.svg" >
-				</a>
-			</div>
-			<div id="menuButton">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div id="links">
-				<ul>
-					<li ><a href="http://map.greenfieldmc.net" target="_blank">Dynmap</a></li>
-					<li id="large"><a href="http://apply.greenfieldmc.net" target="_blank">Apply</a></li>
-					<li id="large"><a href="../downloads/">Downloads</a></li>
-					<li id="medium"><a href="http://patreon.greenfieldmc.net" target="_blank">Patreon</a></li>
-					<li id="medium"><a href="../about/">About</a></li>
-				</ul>
-			</div>
-			<div id="menu">
-				<hr>
-				<div onclick="document.location.href='../about/'">
-					<span>About</span>
-				</div>
-				<hr>
-				<div onclick="document.location.href='../downloads/'">
-					<span>Downloads</span>
-				</div>
-				<hr>
-				<div onclick="window.open('http://apply.greenfieldmc.net','_blank')">
-					<span>Apply</span>
-				</div>
-				<hr>
-				<div onclick="document.location.href='../photography/'">
-					<span>Photography</span>
-				</div>
-				<hr>
-				<div onclick="document.location.href='../staff/'">
-					<span>Staff</span>
-				</div>
-				<hr>
-				<div onclick="document.location.href='../official-links/'">
-					<span>Official Links</span>
-				</div>
-				<hr>
-			</div>
-		</div>
+		<div id="header"></div>
 
 		<div class="title">
 			<h3 class="animateFirst">This page is currently in development!</h3>
 		</div>
 
+		<div id="footer"></div>
+
 		<script type="text/javascript">
+			setHeaderAndFooter("..");
 			const observer = lozad();
 			observer.observe();
 		</script>
 
 	</body>
-
-	<footer>
-		<p>The Greenfield Minecraft Project © 2021</p>
-		<p>contact@greenfieldmc.net</p>
-	</footer>
 </html>
