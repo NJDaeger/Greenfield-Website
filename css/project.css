@@ -1,0 +1,128 @@
+body {
+	height: 100vh;
+}
+
+#introduction {
+    height: 75%;
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+#introduction img {
+    height:100%;
+    width: 100%;
+    position: relative;
+    display: block;
+    object-fit: cover;
+}
+
+#introduction h1 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+    color: white;
+    font-family: Whitney;
+    font-size: calc((2vw + 2vh)/1.25);
+    --anim-delay: .1s;
+    --anim-top: 30%;
+}
+
+#introduction .button2 {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    --anim-delay: .4s;
+    --anim-top: 42%;
+}
+
+#scale {
+    height: 75%;
+    width: 100%;
+    border-bottom: solid black 2px;
+}
+
+#scale .leftInfoBox, .rightInfoBox {
+    position: relative;
+    opacity: 0;
+}
+
+.leftInfoBox img {
+    height:100%;
+    width: 100%;
+    position: relative;
+    display: block;
+    object-fit: cover;
+}
+
+#scale .leftInfoBox {
+    --anim-delay: .25s;
+    --anim-top: 0%;
+}
+
+#scale .rightInfoBox {
+    --anim-delay: 0s;
+    --anim-top: 0%;
+}
+
+#scale .rightInfoBox h1 {
+    position: relative;
+    text-align: left;
+    color: black;
+    font-family: Bebas;
+    font-size: calc((2vw + 2vh));
+    margin-top: 20%;
+    padding:  0% 25% 0% 25%;
+}
+
+#scale .rightInfoBox p {
+    position: relative;
+    text-align: left;
+    color: black;
+    font-family: Whitney;
+    font-size: 20px;
+    font-kerning: 10px;
+    margin-top: 10%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#inspiration {
+    height: 75%;
+    width: 100%;
+    border-bottom: solid black 2px;
+    background-color: green;
+}
+
+#timeline {
+    height: 75%;
+    width: 100%;
+    border-bottom: solid black 2px;
+    background-color: blue;
+}
+
+#backstory {
+    height: 75%;
+    width: 100%;
+    border-bottom: solid black 2px;
+    background-color: cyan;
+}
+
+#downloads {
+    height: 75%;
+    width: 100%;
+    border-bottom: solid black 2px;
+    background-color: yellow;
+}
+
+@font-face {
+	font-family: Bebas;
+	src: url("../fonts/BebasNeueBold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Whitney;
+	src: url("../fonts/whitney-semibold.otf") format("opentype");
+}

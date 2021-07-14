@@ -1,0 +1,80 @@
+.button2 {
+	width: max(15vw, 22vh);
+	height: max(3vw, 5vh);
+    background-color: rgba(0, 0, 0, .45);
+    border-color: white;
+	border-style: solid;
+	border-width: 2px;
+    transition-duration: .2s;
+    transform: translateX(-50%);
+    transform-origin: left;
+}
+
+.button2:hover {
+    box-shadow: 0px 0px 3px white;
+    transform: scale(1.025) translateX(-50%);
+    transform-origin: left;
+    transition-duration: .2s;
+}
+
+.button2 a {
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-family: Whitney;
+	font-size: calc(max(1vw, 2vh) * 1.25);
+	color: white;
+	text-shadow: 0px 0px 2px black;
+	height: 100%;
+	outline: none;
+	transition-duration: .2s;
+	text-decoration: none;
+	display: flex;
+	text-align: center;
+    position: absolute;
+}
+
+.button2 a:hover {
+	transition-duration: .2s;
+	cursor: pointer;
+}
+
+.button2 a:active {
+	transition-duration: .2s;
+    transform: scale(1.0);
+	cursor: pointer;
+}
+
+.leftInfoBox {
+    width: 50%;
+    height: 75%;
+    left: 0%;
+    float: left;
+    margin: 0;
+}
+
+.rightInfoBox {
+    width: 50%;
+    height: 75%;
+    right: 0%;
+    float: right;
+    margin:0;
+}
+
+.animate {
+    opacity: 0;
+    animation: slideIn ease 1s;
+    animation-delay: var(--anim-delay);
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        top: calc(var(--anim-top) + 22%);
+    }
+    100% {
+        opacity: 1;
+        top: var(--anim-top);
+    }
+}
