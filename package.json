@@ -1,0 +1,23 @@
+{
+  "name": "gatsby-playground-repo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gatsby-playground-repo",
+  "author": "NJDaeger",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.0.0",
+    "gatsby-plugin-sitemap": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
