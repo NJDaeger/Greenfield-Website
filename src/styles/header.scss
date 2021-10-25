@@ -77,26 +77,26 @@ $action-size: 70px;
     span:nth-child(1) {
         top: 11%;
         transition: 0.2s ease-in-out;
-        transform-origin: left center;
+        transform-origin: right center;
     }
 
     span:nth-child(2) {
         top: 44%;
         transition: 0.2s ease-in-out;
-        transform-origin: left center;
+        transform-origin: right center;
     }
 
     span:nth-child(3) {
         top: 77%;
         transition: 0.2s ease-in-out;
-        transform-origin: left center;
+        transform-origin: right center;
     }
 
     &.active {
         span:nth-child(1) {
             height: 6px;
             width: 93%;
-            transform: rotate(45deg);
+            transform: rotate(-45deg);
         }
         span:nth-child(2) {
             opacity: 0;
@@ -104,7 +104,7 @@ $action-size: 70px;
         span:nth-child(3) {
             height: 6px;
             width: 93%;
-            transform: rotate(-45deg);
+            transform: rotate(45deg);
         }
     }
 }

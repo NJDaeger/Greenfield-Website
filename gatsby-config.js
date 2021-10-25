@@ -1,6 +1,6 @@
 module.exports = {
+  pathPrefix: "/gatsby-playground",
   siteMetadata: {
-    pathPrefix: "/gatsby-playground",
     siteUrl: "https://www.yourdomain.tld",
     title: "gatsby-playground-repo",
   },
