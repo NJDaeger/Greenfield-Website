@@ -1,0 +1,31 @@
+@charset "utf-8";
+@use "variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.swift-link {
+    position: relative;
+  	text-decoration: none;
+  	display: inline-block;
+
+    &::after {
+        display: block;
+        content: '';
+        border-bottom: solid 1px variables.$selected-text-color;
+        transform: scaleX(0) translateY(-2px);  
+        transition: transform .2s ease-in-out;
+        transform-origin: 100% 50%;
+    }
+
+    &:hover::after {
+        transform: scaleX(1) translateY(-2px);
+	    transform-origin: 0 50%;
+    }
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+    margin: 0;
+}

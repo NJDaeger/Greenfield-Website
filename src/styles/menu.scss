@@ -1,0 +1,140 @@
+@use "variables.scss";
+
+$menu-timing:  cubic-bezier(.61,0,.59,1);
+
+#menu {
+    z-index: 11;
+	display: block;
+	position: fixed;
+	right: 0%;
+	background-color: variables.$item-bg-color;
+	box-shadow: rgba(0,0,0,.7) 0px 0px 4px;
+
+	/* Blur background */
+	-webkit-backdrop-filter: variables.$blur;
+	backdrop-filter: variables.$blur;
+
+	animation-name: menuHide;
+	animation-timing-function: $menu-timing;
+	animation-duration: .35s;
+	animation-fill-mode: both;
+	animation-direction: normal;
+	opacity: 0;
+
+	max-width: 70vw;
+	border-radius: 5px;
+	margin: 5px;
+	height: calc(100% - 10px);
+
+    &.show {
+        animation-name: menuShow !important;
+        animation-timing-function: $menu-timing !important;
+        animation-duration: .35s !important;
+        animation-fill-mode: both !important;
+        animation-direction: normal !important;
+    }
+
+    ul {
+        display: block;
+        flex-direction: column;
+        list-style: none;
+        text-align: left;
+        margin-top: 100px;
+        padding: 0 20px;
+
+        li {
+            padding-top: 3px;
+            padding-bottom: 3px;
+            border-bottom-color: white;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+
+            &:first-child {
+                border-top-color: white;
+                border-top-style: solid;
+                border-top-width: 1px;
+            }
+
+            a {
+                display: block;
+                padding: 4px 5px;
+                border-radius: 5px;
+                font-family: Whitney !important;
+                font-size: 130% !important;
+                color: variables.$default-text-color;
+                transition-duration: .2s;
+                text-decoration: none;
+                width: 100%;
+
+                &:hover {
+                    background-color: rgba(255,255,255,.05);
+                    text-shadow: variables.$text-shadow-white;
+                    color: variables.$selected-text-color;
+                    transition-duration: .2s;
+                    text-decoration: none;
+                }
+            }
+            
+            span {
+                position: relative;
+                text-decoration: none;
+                padding-right: 100%;
+                display: inline-block;
+                white-space: nowrap;
+                display: grid;
+            }
+
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 20px;
+
+        p {
+            font-family: Whitney !important;
+            color: variables.$default-text-color;
+            text-shadow: 0px 0px 3px black, 0px 0px 3px black;
+            margin-bottom: 0;
+            align-self: center;
+        }
+    }
+}
+
+.no-anim {
+	animation: none !important;
+	transform: translateX(100%) !important;
+}
+
+@keyframes menuShow {
+	0% {
+		transform: translateX(100%) scale(.99);
+		opacity: 0;
+	}
+	50% {
+		transform: translateX(0%) scale(.99);
+		opacity: .5;
+	} 
+	100% {
+		transform: translateX(0%) scale(1);
+		opacity: 1;
+	}
+}
+
+
+@keyframes menuHide {
+	0% {
+		transform: translateX(0%) scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: translateX(0%) scale(.99);
+		opacity: .5;
+	} 
+	100% {
+		transform: translateX(100%) scale(.99);
+		opacity: 0;
+	}
+}

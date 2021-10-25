@@ -1,0 +1,27 @@
+$default-text-color: rgb(230, 230, 230);
+$selected-text-color: rgb(255, 255, 255);
+$item-bg-color: rgba(0,0,0,.2);
+$small-screen-bg-color: rgba(0,0,0,.5);
+
+$text-shadow-white: 0px 0px 2px rgba(255,255,255,.7);
+$text-shadow-dark: 0px 0px 20px rgba(0,0,0,.7);
+
+$blur: blur(6px);
+
+@media only screen and (max-width: 1025px) {
+	$item-bg-color: rgba(0,0,0,.5);
+}
+
+// @media only screen and (min-width: 1026px) {
+// 	$item-bg-color: rgba(0,0,0,.2);
+// }
+
+@font-face {
+	font-family: Whitney;
+	src: url("../fonts/whitney-semibold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Bebas;
+	src: url("../fonts/BebasNeueBold.otf") format("opentype");
+}
