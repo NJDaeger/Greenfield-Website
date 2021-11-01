@@ -9,6 +9,7 @@ import station from "../images/MartyStation.jpg"
 const parentStyle = {
   overflow: "scroll",
   scrollSnapType: "y mandatory",
+  scrollBehavior: "smooth",
   height: "100vh"
 }
 

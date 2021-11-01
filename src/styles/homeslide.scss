@@ -40,7 +40,8 @@
     position: relative;
     padding-left: 0;
     padding-right: 0;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
     
     .slide-content {
         text-shadow: projectVars.$text-shadow-dark;

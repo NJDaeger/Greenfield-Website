@@ -2,6 +2,11 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
+html {
+	scroll-behavior: smooth;
+	overscroll-behavior-y: none;
+}
+
 :root {
 	--item-bg-color-opacity: .2;
 
