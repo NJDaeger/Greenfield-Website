@@ -3,8 +3,6 @@ import '../styles/default.scss'
 import '../styles/menu.scss'
 
 const Menu = () => {
-
-
     return (
         <div id="menu" className="no-anim">
             <ul className="justify-content-end">

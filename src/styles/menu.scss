@@ -8,7 +8,8 @@ $menu-timing:  cubic-bezier(.61,0,.59,1);
 	position: fixed;
 	right: 0%;
 	background-color: variables.$item-bg-color;
-	box-shadow: rgba(0,0,0,.7) 0px 0px 4px;
+	box-shadow: variables.$glass-shadow;
+    transition-duration: .2s;
 
 	/* Blur background */
 	-webkit-backdrop-filter: variables.$blur;
@@ -60,7 +61,7 @@ $menu-timing:  cubic-bezier(.61,0,.59,1);
                 padding: 4px 5px;
                 border-radius: 5px;
                 font-family: Whitney !important;
-                font-size: 130% !important;
+                font-size: variables.$text-size !important;
                 color: variables.$default-text-color;
                 transition-duration: .2s;
                 text-decoration: none;

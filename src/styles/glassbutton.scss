@@ -1,0 +1,48 @@
+@use "variables.scss" as variables;
+
+.button {
+    transform: none;
+    display: block;
+    position: relative;
+    box-shadow: variables.$glass-shadow;
+    background-color: variables.$item-bg-color;
+    transform: scale(1);
+    transition-duration: .2s;
+    border-radius: 5px;
+    padding: 0;
+    z-index: 2;
+
+    /* Blur background */
+	-webkit-backdrop-filter: variables.$blur;
+	backdrop-filter: variables.$blur;
+
+    a {
+        display: inline-flex;
+
+        text-shadow: none;
+        text-align: center;
+        text-decoration: none;
+
+        font-family: Whitney !important;
+        font-size: variables.$text-size;
+
+        color: variables.$default-text-color;
+        width: 100%;
+        height: 60px;
+
+        transition-duration: .2s;
+        border-radius: 5px;
+    }
+
+    &:hover {
+        background-color: variables.$item-bg-color-hover;
+        transition-duration: .2s;
+        transform: scale(1.025);
+
+        a {
+            color: variables.$selected-text-color;
+            text-shadow: variables.$text-shadow-dark;
+            transition-duration: .2s;
+        }
+    }
+}

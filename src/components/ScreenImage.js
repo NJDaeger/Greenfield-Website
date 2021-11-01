@@ -1,5 +1,6 @@
 import * as React from "react"
 import '../styles/default.scss'
+import GlassButton from "./GlassButton"
 
 const style = {
     width: "100%",
@@ -11,7 +12,9 @@ const style = {
 
 const ScreenImage = (props) => {
     return (
-        <img src={props.src} alt={props.alt} className="align-content-center inline-block" style={style}></img>
+        <>
+            <img src={props.src} alt={props.alt} className="align-content-center inline-block" style={style}></img>
+        </>
     )
 }
 

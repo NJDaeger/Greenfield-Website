@@ -1,0 +1,95 @@
+@use "variables.scss" as projectVars;
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.fadeAway {
+	animation: slideOutFade ease .2s;
+	animation-fill-mode: forwards;
+}
+
+.animateFirst {
+    animation-delay: .0s !important;
+}
+
+.animateSecond {
+    animation-delay: .15s !important;
+}
+
+.animateThird {
+    animation-delay: .3s !important;
+}
+
+.visible {
+    .slide-content h3,h1,.button {
+        opacity: 0;
+        animation: slideInFade ease 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.slide:not(.visible) {
+    .slide-content h3,h1 {
+        animation: slideOutFade ease .5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.slide {
+    width: 100%;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    scroll-snap-align: start;
+    
+    .slide-content {
+        text-shadow: projectVars.$text-shadow-dark;
+        color: projectVars.$default-text-color;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+
+        h3, h1 {
+            position: relative;
+            font-family: Bebas;
+            transition-duration: .2s;
+        }
+
+        h3 { font-size: 20pt; }
+        h1 { font-size: 36pt; }
+
+        @include media-breakpoint-up(sm) {
+            h3 { font-size: 24pt; }
+            h1 { font-size: 40pt; }
+        }
+        @include media-breakpoint-up(md) {
+            h3 { font-size: 30pt; }
+            h1 { font-size: 52pt; }
+        }
+        @include media-breakpoint-up(lg) {
+            h3 {font-size: 38pt;} 
+            h1 {font-size: 76pt;}
+        }
+
+    }
+}
+
+@keyframes slideInFade {
+	0% {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes slideOutFade {
+	0% {
+		opacity: 1;
+	}
+	100% {		
+		opacity: 0;
+	}
+}

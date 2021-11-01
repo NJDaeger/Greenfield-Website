@@ -1,6 +1,8 @@
 @use "variables.scss";
 
-$action-size: 70px;
+$action-size: 46px;
+$burger-bar-size: 4px;
+$burger-spacing: calc(($action-size / 3));
 
 .navbar {
     position: absolute;
@@ -67,7 +69,7 @@ $action-size: 70px;
     span {
         position: absolute;
         opacity: 1;
-        height: 8px;
+        height: $burger-bar-size;
         width: $action-size;
         background: variables.$default-text-color;
         transition: 0.2s ease-in-out;
@@ -75,26 +77,26 @@ $action-size: 70px;
     }
 
     span:nth-child(1) {
-        top: 11%;
+        top: calc($burger-spacing - $burger-bar-size * 3);
         transition: 0.2s ease-in-out;
         transform-origin: right center;
     }
 
     span:nth-child(2) {
-        top: 44%;
+        top: calc(($burger-spacing * 2) - $burger-bar-size * 3);
         transition: 0.2s ease-in-out;
         transform-origin: right center;
     }
 
     span:nth-child(3) {
-        top: 77%;
+        top: calc(($burger-spacing * 3) - $burger-bar-size * 3);
         transition: 0.2s ease-in-out;
         transform-origin: right center;
     }
 
     &.active {
         span:nth-child(1) {
-            height: 6px;
+            height: $burger-bar-size;
             width: 93%;
             transform: rotate(-45deg);
         }
@@ -102,7 +104,7 @@ $action-size: 70px;
             opacity: 0;
         }
         span:nth-child(3) {
-            height: 6px;
+            height: $burger-bar-size;
             width: 93%;
             transform: rotate(45deg);
         }
