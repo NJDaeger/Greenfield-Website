@@ -1,0 +1,85 @@
+@use "../../styles/variables.scss" as variables;
+
+.button-base {
+    $local-outline-color: rgba(150,150,150,1);
+    $local-background-color: variables.$background-color;
+    $local-background-color-hover: variables.$background-color-hover;
+    $local-text-color: variables.$default-text-color;
+    $local-text-color-hover: variables.$selected-text-color;
+
+    &[data-type*="glass"] {
+        -webkit-backdrop-filter: blur(.375rem);
+        backdrop-filter: blur(.375rem);
+    }
+
+    &[data-type*="light"] {
+        background-color: transparent;
+
+        &:hover {
+            background-color: rgba(255,255,255,.05);
+        }
+    }
+
+    &[data-type*="nooutline"] {
+        outline-color: transparent !important;
+    }
+
+    justify-content: center;
+    all: unset;
+    display: flex;
+    border-radius: .25rem;
+    outline: .25rem solid transparent;
+    outline-offset: .1875rem;
+    transition-duration: variables.$t-duration;
+    background-color: $local-background-color;
+
+    a, button {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        font-family: Whitney, sans-serif !important;
+        font-size: variables.$text-size;
+        color: $local-text-color;
+        transition-duration: variables.$t-duration;
+        align-self: center;
+        text-decoration: none;
+        text-align: none;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    &:hover  {
+        outline: .0625rem solid $local-outline-color;
+        outline-offset: 0px;
+        background-color: $local-background-color-hover;
+        transition-duration: variables.$t-duration;
+
+        a, button {
+            color: $local-text-color-hover;
+            transition-duration: variables.$t-duration;
+        }
+    }
+}
+
+.ripple {
+    overflow: hidden;
+    position: relative;
+
+    >.ripple-effect {
+        position: absolute;
+        opacity: 1;
+        pointer-events: none;
+        border-radius: 50%;
+        transform: scale(0);
+        animation: ripple 1000ms linear;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}

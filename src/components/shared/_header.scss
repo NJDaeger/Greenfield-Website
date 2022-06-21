@@ -1,0 +1,113 @@
+@use "../../styles/variables.scss" as variables;
+
+$action-size: 46px;
+$burger-bar-size: 4px;
+$burger-spacing: calc((#{$action-size} / 3));
+
+.navbar {
+    z-index: 1050;
+    position: fixed;
+    background-color: transparent !important;
+    background-image: linear-gradient(180deg, rgba(0,0,0,.70), rgba(0,0,0,.55), rgba(0,0,0,.40), rgba(0,0,0,.25),rgba(0,0,0,.15), rgba(0,0,0,.08), rgba(0,0,0,.03), transparent);
+}
+
+#brand a {
+    width: $action-size;
+    height: $action-size;
+    transition-duration: .2s;
+
+    &:hover {
+        transition-duration: .2s;
+        transform: scale(1.025);
+        background-color: transparent !important;
+    }
+
+    img {
+        max-height: none !important;
+        width: $action-size;
+        height: $action-size;
+    }
+}
+
+#links ul {
+    flex-direction: row;
+    align-items: stretch;
+	justify-content: space-between;
+
+    li {
+        font-family: Whitney !important;
+        font-size: 20pt !important;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        a {
+            color: variables.$default-text-color !important;
+	        transition-duration: .2s;
+
+            &:hover {
+                color: variables.$selected-text-color;
+	            text-shadow: var(--hover-text-shadow);
+	            transition-duration: .2s;
+            }
+        }
+    }
+}
+
+#hamburger {
+    position: relative;
+    height: $action-size;
+    width: $action-size;
+    transition-duration: .2s;
+    cursor: pointer;
+
+    &:hover {
+        transition-duration: .2s;
+        transform: scale(1.025);
+        transform-origin: center;
+    }
+
+
+    span {
+        position: absolute;
+        opacity: 1;
+        height: $burger-bar-size;
+        width: $action-size;
+        background: variables.$default-text-color;
+        transition: 0.2s ease-in-out;
+        transform: rotate(0deg);
+    }
+
+    span:nth-child(1) {
+        top: calc(#{$burger-spacing} - #{$burger-bar-size} * 3);
+        transition: 0.2s ease-in-out;
+        transform-origin: right center;
+    }
+
+    span:nth-child(2) {
+        top: calc((#{$burger-spacing} * 2) - #{$burger-bar-size} * 3);
+        transition: 0.2s ease-in-out;
+        transform-origin: right center;
+    }
+
+    span:nth-child(3) {
+        top: calc((#{$burger-spacing} * 3) - #{$burger-bar-size} * 3);
+        transition: 0.2s ease-in-out;
+        transform-origin: right center;
+    }
+
+    &.active {
+        span:nth-child(1) {
+            height: $burger-bar-size;
+            width: 93%;
+            transform: rotate(-45deg);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+        }
+        span:nth-child(3) {
+            height: $burger-bar-size;
+            width: 93%;
+            transform: rotate(45deg);
+        }
+    }
+}

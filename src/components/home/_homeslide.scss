@@ -1,0 +1,128 @@
+@use "../../styles/variables.scss" as projectVars;
+
+.showing {//in the process of slidefading in
+    .slide-content h3,h1,.button-base {
+        animation-name: slideInFade;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        //animation: slideInFade ease 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.hiding {//in the process of fading away
+    .slide-content h3,h1,.button-base {
+        animation-name: fadeOut;
+        animation-timing-function: ease;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.hidden {
+    .slide-content h3,h1,.button-base {
+        opacity: 0;
+        // display: none;
+    }
+}
+
+// .visible {
+//     // .slide-content {
+//     //     opacity: 0;
+//     //     animation-name: fadeIn;
+//     //     animation-timing-function: ease;
+//     //     animation-duration: .2s;
+//     //     animation-fill-mode: forwards;
+//     // }
+//     .slide-content h3,h1 {
+//         opacity: 0;
+//         animation-delay: .2s;
+//         animation-name: slideInFade;
+//         animation-timing-function: ease;
+//         animation-duration: 1s;
+//         //animation: slideInFade ease 1s;
+//         animation-fill-mode: forwards;
+//     }
+
+//     .slide-content .button-base {
+//         opacity: 0;
+//         height: 60px;
+//         animation-delay: .2s;
+//         animation-name: slideInFade;
+//         animation-timing-function: ease;
+//         animation-duration: 1s;
+//         //animation: slideInFade ease 1s;
+//         animation-fill-mode: forwards;
+//     }
+// }
+
+// .slide:not(.visible) {
+//     // .slide-content {
+//     //     animation-name: fadeOut;
+//     //     animation-timing-function: ease;
+//     //     animation-duration: .2s;
+//     //     animation-fill-mode: forwards;
+//     //     opacity: 0;
+//     // }
+//     .slide-content h3,h1 {
+//         animation-name: fadeOut;
+//         animation-timing-function: ease;
+//         animation-duration: .5s;
+//         animation-fill-mode: forwards;
+//         opacity: 0;
+//     }
+
+//     .slide-content .button-base {
+//         animation-name: fadeOut;
+//         animation-timing-function: ease;
+//         animation-duration: .5s;
+//         animation-fill-mode: forwards;
+//         opacity: 0;
+//     }
+// }
+
+.slide {
+    width: 100%;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    
+    .slide-content {
+        text-shadow: projectVars.$text-shadow-dark;
+        color: projectVars.$default-text-color;
+        position: absolute;
+        align-items: center;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+
+        h3, h1 {
+            position: relative;
+            font-family: Bebas;
+            transition-duration: .2s;
+        }
+
+        .button-base {
+            height: 60px;
+        }
+
+        h3 { font-size: 20pt; }
+        h1 { font-size: 36pt; }
+
+        @include media-breakpoint-up(sm) {
+            h3 { font-size: 24pt; }
+            h1 { font-size: 40pt; }
+        }
+        @include media-breakpoint-up(md) {
+            h3 { font-size: 30pt; }
+            h1 { font-size: 52pt; }
+        }
+        @include media-breakpoint-up(lg) {
+            h3 {font-size: 38pt;} 
+            h1 {font-size: 76pt;}
+        }
+
+    }
+}

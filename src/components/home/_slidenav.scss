@@ -1,0 +1,47 @@
+@use "../../styles/variables.scss" as projectVars;
+
+#slidenav {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+
+    >div {
+        display: inline-flex;
+        width: fit-content;
+        flex-direction: row;
+        margin: .3125rem 0;
+
+        &:hover {
+            >.button-base {
+                opacity: 1;
+                transform: translateX(.25rem);
+                transition-duration: .2s;
+            }
+        }
+
+        &.active,&:hover {
+            >span {
+                background-color: projectVars.$selected-text-color;
+                transform: scale(1.1);
+                transition-duration: .2s;
+            }
+
+        }
+
+        >span {
+            width: .75rem;
+            height: 5rem;
+            background-color: projectVars.$default-text-color;
+            transform: scale(1);
+            transition-duration: .2s;
+            margin-left: .5rem;
+        }
+        >.button-base {
+            margin-left: .5rem;
+            opacity: 0;
+            transform: translateX(-.25rem);
+            //transform-origin: left;
+            transition-duration: .2s;
+        }
+    }
+}
