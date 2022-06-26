@@ -51,7 +51,6 @@ const IndexPage = () => {
         { goto: "#apply", text: "Apply" }
       ]}/>
       <div id="home" style={parentStyle}>
-        {console.log(window.innerHeight)}
         <title>Home Page</title>
         <HomeSlide
           src={skyline}
