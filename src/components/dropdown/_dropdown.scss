@@ -1,0 +1,138 @@
+.dropdown-base {
+    display: flex;
+    flex-direction: column;
+    
+    height: calc(40vh - 80px);
+
+    @include media-breakpoint-up(lg) {
+        height: 300px;
+    }
+    
+
+    >.button-base {
+        display: inline-table;
+    }
+    
+    >.dropdown-container {
+        width: 80%;
+        overflow-y: scroll;
+        padding: 4px;
+        padding-top: 1px;
+        max-height: calc(40vh - 80px);
+
+        >.dropdown-options {
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+            -webkit-backdrop-filter: blur(.375rem);
+            backdrop-filter: blur(.375rem);
+            border-radius: .25rem;
+            display: table;
+
+            .button-base {
+                animation: none;
+                opacity: 1;
+            }
+
+            >span {
+
+                &:not(:first-child):not(:last-child) {
+                    >.button-base {
+                        border-radius: 0;
+                    }
+                }
+        
+                &:first-child {
+                    >.button-base {
+                        border-bottom-left-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                }
+        
+                &:last-child {
+                    >.button-base {
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+                    }
+                }
+            }
+        }
+    }
+    .dropdown-selection {
+        width: 100%;
+        display: flex;
+        height: 60px;
+        
+        >span {
+            width: 80%;
+            text-align: center;
+        }
+    }
+
+    .dropdown-chevron {
+        height: inherit;
+        width: 20%;
+        transform: scale(.5);
+        transform-origin: center;
+        transition-duration: .25s;
+    
+        &.closed {
+            transform: scale(.5) rotateZ(90deg);
+        }
+    }
+}
+
+.dropdown-options-closed {
+    // display: none;
+    &.dropdown-options-opening {
+        display: flex;
+        animation-name: dropdownAppear;
+        animation-timing-function: ease;
+        animation-duration: .25s;
+        animation-fill-mode: forwards;
+    }
+
+    &.dropdown-options-closing {
+        animation-name: dropdownDisappear;
+        animation-timing-function: ease;
+        animation-duration: .25s;
+        animation-fill-mode: forwards;
+        >span>.button-base {
+            animation-delay: .25s;
+            animation-duration: .1s;
+            animation-fill-mode: forwards;
+            animation-name: dropdownButtonsDisappear;
+        }
+    }
+}
+
+@keyframes dropdownAppear {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(1px);
+      opacity: 1;
+    }
+}
+
+@keyframes dropdownDisappear {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(.95);
+        opacity: 0;
+    }
+}
+
+@keyframes dropdownButtonsDisappear {
+    0% {
+        height: inherit;
+    }
+    100% {
+        height: 0;
+    }
+}

@@ -13,8 +13,8 @@ const style = {
 const ScreenMedia = (props) => {
 
     useEffect(() => {
-        
-    }, [])
+        console.log(document.getElementsByClassName("screen-media")[0].height)
+    })
 
     if (props.src.endsWith(".mp4")) {
         return (
@@ -25,7 +25,9 @@ const ScreenMedia = (props) => {
         )
     } else {
         return (
-            <img className="screen-media" src={props.src} alt={props.alt} style={style}/>
+            <>
+                <img className="screen-media" src={props.src} alt={props.alt} style={style}/>
+            </>
         )
     }
 }

@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import Header from "../components/shared/Header"
 import ScreenMedia from "../components/screenmedia/ScreenMedia"
 import construction from "../images/Construction.jpg"
+import "../styles/style.scss";
 
 // markup
 const NotFoundPage = () => {

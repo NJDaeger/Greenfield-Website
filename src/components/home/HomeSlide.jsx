@@ -9,7 +9,7 @@ const HomeSlide = (props) => {
     }
 
     return (
-        <div className={"justify-content-center slide align-items-center d-flex " + (props.startHidden ? "hidden" : "showing")} id={props.id} index={props.index}>
+        <div className={"justify-content-center slide align-items-center d-flex " + (props.startHidden ? "hidden" : "hidden showing")} id={props.id} index={props.index}>
             <div className="slide-content">
                 <h3 className="justify-content-center d-flex animateFirst">{props.title}</h3>
                 <h1 className="justify-content-center d-flex animateSecond">{props.focus}</h1>

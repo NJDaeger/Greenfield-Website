@@ -18,7 +18,10 @@ const rippleClick = (e) => {
     elem.appendChild(circle);
 }
 
-
+/**
+ * 
+ * @param {{href: string, text: string, click: function, dataType: string, outerClass: classList, innerClass: classList}} props 
+ */
 const Button = (props) => {
     return (
         <div  className={"ripple button-base " + props.outerClass ?? ""} data-type={props.dataType}>
@@ -34,8 +37,9 @@ const Button = (props) => {
         </div>
     )
 }
+
 Button.defaultProps = {
-    href: "#",
+    href: null,
     text: "Button",
     click: () => {},
     dataType: "",

@@ -33,6 +33,11 @@
     transition-duration: variables.$t-duration;
     background-color: $local-background-color;
 
+    button {
+        all: unset;
+        cursor: pointer;
+    }
+
     a, button {
         width: 100%;
         height: 100%;

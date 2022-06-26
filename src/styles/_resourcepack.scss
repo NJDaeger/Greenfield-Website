@@ -1,31 +1,24 @@
-// #resourcepack-container {
-//     background-color: #222222;
-//     margin: 0;
-//     height: 100vh;
+.download-buttons {
+    top: 60%;
+    z-index: 100;
+    line-height: 60px;
 
-//     .the-blocks {
-//         width: 100%;
-//         height: 100%;
-//         object-fit: cover;
-//         overflow: hidden;
-//         display: flex;
-//         //flex-flow: wrap;
-//         //flex-flow: row;
-//         justify-content: space-around;
+    >div {
+        align-items: flex-start;
+    }
 
-//         //@media screen and (max-width: 1200px) {
-//         //    flex-basis: 12.5%;
-//         //}
-//         //
-//         //@media screen and (min-width: 1201px) {
-//         //    flex-basis: 16.666666%;
-//         //}
-//     }
+    >div>.button-base,>div>.dropdown-base {
+        width: 100%;
 
-//     .the-blocks .cube-container {
-//         //margin: 1%;
-//         display: inline-flex;
-//     }
-// }
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
 
-// #download
+        word-wrap: break-word;
+        margin: .25rem;
+
+        >a,>button {
+            word-break: keep-all;
+        }
+    }
+}
