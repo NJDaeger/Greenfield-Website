@@ -5,10 +5,21 @@ import Header from "../components/shared/Header";
 import resourcepack from "../images/resourcepack.png";
 import "../styles/style.scss";
 import Button from "../components/button/Button";
+import downloads from "../data/downloads.json";
+import { useState } from "react";
 
 
 // markup
 const Resourcepack = () => {
+    const [selectedDownload, setSelectedDownload] = useState(downloads.pack[downloads.pack.length - 1].mc_version);
+
+    const isLatest = (selection) => {
+        return downloads.pack[downloads.pack.length - 1].mc_version == selection;
+    }
+
+    const getDownload = (selection) => {
+        return downloads.pack.find(pack => pack.mc_version == selection).download;
+    }
 
     return (
         <>
@@ -21,8 +32,14 @@ const Resourcepack = () => {
           ></HomeSlide>
           <div className="w-100 d-flex position-absolute download-buttons hidden showing animateThird justify-content-center">
             <div className="d-flex col-8 col-md-6 col-lg-4 flex-column flex-lg-row">
-              <Button href="#" text="Download Latest"></Button>
-              <Dropdown options={["test1", "test2", "test3"]} id="testdropdown"></Dropdown>
+              <Button href={getDownload(selectedDownload)} text={isLatest(selectedDownload) ? "Download Latest" : "Download for " + selectedDownload}></Button>
+              <Dropdown 
+                options={downloads.pack.map(pck => pck.mc_version)} 
+                id="packversiondropdown" 
+                onSelect={setSelectedDownload} 
+                defaultOptionIndex={downloads.pack.length - 1}
+                prefixSelection="MC "
+                reverseOptions={true}></Dropdown>
             </div>
           </div>
           {/* <div>

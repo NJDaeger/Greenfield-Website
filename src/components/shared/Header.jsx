@@ -9,7 +9,7 @@ const Header = () => {
         <>
             <nav className="navbar fixed-top">
                 <div className="container-fluid justify-content-start column col-3" id="brand">
-                    <a href="#" className="navbar-brand">
+                    <a href="../" className="navbar-brand">
                         <img src={logo} alt="GFMC" />
                     </a>
                 </div>
