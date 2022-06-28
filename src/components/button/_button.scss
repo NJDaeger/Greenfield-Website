@@ -24,6 +24,11 @@
         outline-color: transparent !important;
     }
 
+    &:focus {
+        outline: .0625rem solid $local-outline-color;
+        outline-offset: 0px;
+    }
+
     justify-content: center;
     all: unset;
     display: flex;

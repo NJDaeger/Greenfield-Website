@@ -2,36 +2,57 @@
     display: flex;
     flex-direction: column;
     
-    height: calc(40vh - 80px);
+    height: 60px;
 
-    @include media-breakpoint-up(lg) {
-        height: 300px;
-    }
+    // @include media-breakpoint-up(lg) {
+    //     height: 300px;
+    // }
     
 
     >.button-base {
         display: inline-table;
     }
     
+    >.dropdown-container-blur {
+        position: relative;
+        // height: 300px;
+        // max-height: calc(40vh - 80px);
+        width: calc(80% - 8px);
+        top: 0;
+        left: 0;
+        padding: 4px;
+        padding-top: 1px;
+        padding-bottom: min(306px, calc(40vh - 80px));
+        -webkit-backdrop-filter: blur(.375rem);
+        backdrop-filter: blur(.375rem);
+    }
+
     >.dropdown-container {
         width: 80%;
         overflow-y: scroll;
         padding: 4px;
         padding-top: 1px;
         max-height: calc(40vh - 80px);
+        height: min(300px, calc(40vh - 80px));
+        overflow: hidden;
+        overflow-y: scroll;
+        margin: -4px;
+        // margin-top: -308px;
+        margin-top: max(-308px, calc(-1 * (40vh - 80px)));
+        // -webkit-backdrop-filter: blur(.375rem);
+        // backdrop-filter: blur(.375rem);
 
         >.dropdown-options {
             flex-direction: column;
             width: 100%;
             position: relative;
-            -webkit-backdrop-filter: blur(.375rem);
-            backdrop-filter: blur(.375rem);
+            // -webkit-backdrop-filter: blur(.375rem);
+            // backdrop-filter: blur(.375rem);
             border-radius: .25rem;
             display: table;
 
             .button-base {
-                animation: none;
-                opacity: 1;
+                opacity: 0;
             }
 
             .dropdown-selected {
@@ -107,6 +128,14 @@
         animation-timing-function: ease;
         animation-duration: .25s;
         animation-fill-mode: forwards;
+
+        &.dropdown-container-blur {
+            display: block;
+            animation-name: blurAppear;
+            animation-timing-function: ease;
+            animation-duration: .25s;
+            animation-fill-mode: forwards;
+        }
     }
 
     &.dropdown-options-closing {
@@ -114,42 +143,108 @@
         animation-timing-function: ease;
         animation-duration: .25s;
         animation-fill-mode: forwards;
-        >span>.button-base {
-            animation-delay: .25s;
-            animation-duration: .1s;
+
+        &.dropdown-container-blur {
+            animation-name: blurDisappear;
+            animation-timing-function: ease;
+            animation-duration: .25s;
             animation-fill-mode: forwards;
-            animation-name: dropdownButtonsDisappear;
         }
+
+        >.dropdown-options>span {
+            animation-name: changeHeight;
+            animation-timing-function: ease;
+            animation-duration: .25s;
+            animation-delay: .25s;
+            animation-fill-mode: forwards;
+            display: block;
+        }
+    }
+}
+
+@keyframes changeHeight {
+    0% {
+        height: initial;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes blurAppear {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    1% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(1px);
+        opacity: 1;
     }
 }
 
 @keyframes dropdownAppear {
     0% {
-      transform: translateY(10px);
-      opacity: 0;
+        height: initial;
+        padding-bottom: initial;
+        margin-bottom: initial;
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    1% {
+        height: initial;
+        padding-bottom: initial;
+        margin-bottom: initial;
+        transform: translateY(10px);
+        opacity: 0;
     }
     100% {
-      transform: translateY(1px);
-      opacity: 1;
+        height: initial;
+        padding-bottom: initial;
+        margin-bottom: initial;
+        transform: translateY(1px);
+        opacity: 1;
+    }
+}
+
+@keyframes blurDisappear {
+    0% {
+        transform-origin: center;
+        transform: scale(1);
+        opacity: 1;
+    }
+    99% {
+        transform-origin: center;
+        transform: translateY(1px) scale(.95);
+        opacity: 0;
+    }
+    100% {
+        transform-origin: center;
+        transform: translateY(1px) scale(.95);
+        opacity: 0;
     }
 }
 
 @keyframes dropdownDisappear {
     0% {
+        transform-origin: center;
         transform: scale(1);
         opacity: 1;
+        height: initial;
     }
-    100% {
-        transform: scale(.95);
+    99% {
+        transform-origin: center;
+        transform: translateY(1px) scale(.95);
         opacity: 0;
-    }
-}
-
-@keyframes dropdownButtonsDisappear {
-    0% {
-        height: inherit;
+        height: initial;
     }
     100% {
-        height: 0;
+        height: 0px;
+        transform: translateY(1px) scale(.95);
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 }

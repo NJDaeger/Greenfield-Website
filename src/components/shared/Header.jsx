@@ -33,11 +33,11 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="container-fluid justify-content-end col-3">
-                    <div id="hamburger" className={"col-12 " + menuOpen === undefined ? "" : menuOpen ? "active" : "" } onClick={(e) => setMenuOpen(menuOpen === undefined ? true : !menuOpen)}>
+                    <button id="hamburger" className={"col-12 " + menuOpen === undefined ? "" : menuOpen ? "active" : "" } onClick={(e) => setMenuOpen(menuOpen === undefined ? true : !menuOpen)}>
                         <span/>
                         <span/>
                         <span/>
-                    </div>
+                    </button>
                 </div>
             </nav>
             {menuOpen === undefined ? <></> : <Menu show={menuOpen}/>}

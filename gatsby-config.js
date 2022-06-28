@@ -4,5 +4,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "gatsby-playground-repo",
   },
-  plugins: ["gatsby-plugin-sitemap", "gatsby-plugin-sass", "gatsby-plugin-preload-fonts"],
+  plugins: ["gatsby-plugin-sitemap", "gatsby-plugin-sass", "gatsby-plugin-preload-fonts", "gatsby-plugin-image"],
 };

@@ -54,6 +54,7 @@ $burger-spacing: calc((#{$action-size} / 3));
 }
 
 #hamburger {
+    all:unset;
     position: relative;
     height: $action-size;
     width: $action-size;

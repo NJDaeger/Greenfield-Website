@@ -18,10 +18,11 @@ const Dropdown = (props) => {
                         </svg>
                     </span>
                 } dataType="glass"></Button>
-                <div className="dropdown-container">
-                    <div className={"dropdown-options dropdown-options-closed " + (open ? "dropdown-options-opening" : "dropdown-options-closing")}>
+                <div className={"dropdown-container-blur dropdown-options-closed " + (open ? "dropdown-options-opening" : "dropdown-options-closing")}></div>
+                <div className={"dropdown-container dropdown-options-closed flex-shrink-0 " + (open ? "dropdown-options-opening" : "dropdown-options-closing")}>
+                    <div className={"dropdown-options"}>
                         {options.map((option, index) => {
-                            return <span className={selected == option ? "dropdown-selected" : ""}>
+                            return <span className={selected == option ? "dropdown-selected" : ""} key={index}>
                                 <Button click={() => {setOpen(!open); setSelected(option); props.onSelect(option)}} text={option}></Button>
                             </span>
                         })}

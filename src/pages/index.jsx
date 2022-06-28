@@ -8,6 +8,7 @@ import station from "../images/MartyStation.jpg"
 import SlideNav from "../components/home/SlideNavigation";
 import "../styles/style.scss";
 import {useEffect, useState} from "react";
+import Button from "../components/button/Button";
 
 const parentStyle = {
   overflow: "scroll",
@@ -71,8 +72,7 @@ const IndexPage = () => {
           }
           startHidden={true}
           id="project"
-          btnLink="#"
-          btnText="Project Page"
+          thirdRowContent={<Button href="./project" text="Project Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
           index={1}>
         </HomeSlide>
         <HomeSlide
@@ -81,8 +81,7 @@ const IndexPage = () => {
           focus="1.17+"
           startHidden={true}
           id="pack"
-          btnLink="./resourcepack"
-          btnText="Resourcepack Page"
+          thirdRowContent={<Button href="./resourcepack" text="Resourcepack Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
           index={2}>
         </HomeSlide>
         <HomeSlide
@@ -91,8 +90,7 @@ const IndexPage = () => {
           focus="Apply Now"
           startHidden={true}
           id="apply"
-          btnLink="#"
-          btnText="Application Form"
+          thirdRowContent={<Button href="#" text="Application Form" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
           index={3}>
         </HomeSlide>
       </div>

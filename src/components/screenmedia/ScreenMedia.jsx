@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useEffect } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 const style = {
     width: "100%",
@@ -13,7 +14,7 @@ const style = {
 const ScreenMedia = (props) => {
 
     useEffect(() => {
-        console.log(document.getElementsByClassName("screen-media")[0].height)
+        // console.log(document.getElementsByClassName("screen-media")[0].height)
     })
 
     if (props.src.endsWith(".mp4")) {
