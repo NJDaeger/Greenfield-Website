@@ -7,6 +7,7 @@ const Menu = (props) => {
             <ul className="justify-content-end">
                 <li><Button href={"#"} text={"Downloads"} outerClass="" innerClass="py-1 ps-2" dataType="light nooutline"/></li>
                 <li><Button href={"#"} text={"Project Home"} outerClass="" innerClass="py-1 ps-2" dataType="light nooutline"/></li>
+                <li><Button href={"#"} text={"Project Wikipedia"} outerClass="" innerClass="py-1 ps-2" dataType="light nooutline"/></li>
                 <li><Button href={"#"} text={"Apply"} outerClass="" innerClass="py-1 ps-2" dataType="light nooutline"/></li>
                 <li><Button href={"#"} text={"Photography"} outerClass="" innerClass="py-1 ps-2" dataType="light nooutline"/></li>
                 <li><Button href={"#"} text={"Staff"} outerClass="" innerClass="py-1 ps-2" dataType="light nooutline"/></li>
