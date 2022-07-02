@@ -8,7 +8,8 @@ $burger-spacing: calc((#{$action-size} / 3));
     z-index: 1050;
     position: fixed;
     background-color: transparent !important;
-    background-image: linear-gradient(180deg, rgba(0,0,0,.70), rgba(0,0,0,.55), rgba(0,0,0,.40), rgba(0,0,0,.25),rgba(0,0,0,.15), rgba(0,0,0,.08), rgba(0,0,0,.03), transparent);
+    // background-image: linear-gradient(180deg, rgba(0,0,0,.70), rgba(0,0,0,.55), rgba(0,0,0,.40), rgba(0,0,0,.25),rgba(0,0,0,.15), rgba(0,0,0,.08), rgba(0,0,0,.03), transparent);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), transparent);
 }
 
 #brand a {
@@ -43,11 +44,13 @@ $burger-spacing: calc((#{$action-size} / 3));
         a {
             color: variables.$default-text-color !important;
 	        transition-duration: .2s;
+            text-shadow: 0 0 5px black, 0 0 2px black;
 
             &:hover {
                 color: variables.$selected-text-color;
-	            text-shadow: var(--hover-text-shadow);
+	            // text-shadow: var(--hover-text-shadow);
 	            transition-duration: .2s;
+                text-shadow: 0 0 5px gray;
             }
         }
     }
@@ -76,6 +79,7 @@ $burger-spacing: calc((#{$action-size} / 3));
         background: variables.$default-text-color;
         transition: 0.2s ease-in-out;
         transform: rotate(0deg);
+        box-shadow: 0 0 5px black;
     }
 
     span:nth-child(1) {
@@ -94,6 +98,10 @@ $burger-spacing: calc((#{$action-size} / 3));
         top: calc((#{$burger-spacing} * 3) - #{$burger-bar-size} * 3);
         transition: 0.2s ease-in-out;
         transform-origin: right center;
+    }
+
+    &:hover>span {
+        box-shadow: 0 0 2px white;
     }
 
     &.active {

@@ -7,16 +7,46 @@
     $local-text-color: variables.$default-text-color;
     $local-text-color-hover: variables.$selected-text-color;
 
+    &[data-type*="disabled"] {
+        background-color: rgba(0, 0, 0, .3);
+
+        @include media-breakpoint-down(md) {
+            background-color: rgba(0, 0, 0, .65);
+        }
+        
+        button, a {
+            cursor: not-allowed;
+            pointer-events: none;
+            color: darken(variables.$default-text-color, 30%);
+        }
+    }
+
     &[data-type*="glass"] {
         -webkit-backdrop-filter: blur(.375rem);
         backdrop-filter: blur(.375rem);
     }
 
-    &[data-type*="light"] {
+    &[data-type*="clear"] {
         background-color: transparent;
 
-        &:hover {
+        &:hover:not([data-type*="disabled"]) {
             background-color: rgba(255,255,255,.05);
+        }
+
+        &[data-type*="disabled"] {
+            background-color: rgba(0,0,0,.1);
+        }
+    }
+
+    &[data-type*="light"] {
+        background-color: rgba(255,255, 255, 0.15);
+
+        &:hover:not([data-type*="disabled"]) {
+            background-color: rgba(255,255, 255, 0.25);
+        }
+
+        &[data-type*="disabled"] {
+            background-color: rgba(0,0,0,.1);
         }
     }
 
@@ -24,7 +54,7 @@
         outline-color: transparent !important;
     }
 
-    &:focus {
+    &:focus:not([data-type*="disabled"]) {
         outline: .0625rem solid $local-outline-color;
         outline-offset: 0px;
     }
@@ -59,7 +89,7 @@
         white-space: nowrap;
     }
 
-    &:hover  {
+    &:hover:not([data-type*="disabled"]) {
         outline: .0625rem solid $local-outline-color;
         outline-offset: 0px;
         background-color: $local-background-color-hover;
@@ -68,6 +98,13 @@
         a, button {
             color: $local-text-color-hover;
             transition-duration: variables.$t-duration;
+        }
+    }
+    &:hover[data-type*="disabled"] {
+        button, a {
+            cursor: not-allowed;
+            pointer-events: none;
+            color: darken(variables.$default-text-color, 30%);
         }
     }
 }

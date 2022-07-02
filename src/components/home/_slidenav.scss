@@ -24,6 +24,7 @@
                 background-color: projectVars.$selected-text-color;
                 transform: scale(1.1);
                 transition-duration: .2s;
+                box-shadow: 0 0 5px white;
             }
 
         }

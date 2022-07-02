@@ -12,6 +12,7 @@
 @import "../components/shared/menu";
 @import "../components/shared/header";
 @import "../components/dropdown/dropdown";
+@import "../components/screenmedia/screenmedia";
 
 .swift-link {
   position: relative;
@@ -39,6 +40,7 @@
 
 body {
   margin: 0;
+  font-family: Whitney;
 }
 
 .animateFirst {
