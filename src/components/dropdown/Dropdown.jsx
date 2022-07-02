@@ -2,6 +2,10 @@ import { useState } from "react"
 import * as React from "react";
 import Button from "../button/Button";
 
+/**
+ * 
+ * @param {{id: string|null, options: [any], defaultOptionIndex: int, onSelect: function(selection), prefixSelection: string, reverseOptions: boolean}} props 
+ */
 const Dropdown = (props) => {
     const [open, setOpen] = useState(false);
     const [options, setOptions] = useState(props.reverseOptions ? [...props.options].reverse() : props.options);

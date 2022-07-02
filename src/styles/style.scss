@@ -34,6 +34,17 @@
   }
 }
 
+.link {
+  color: white;
+  transition-duration: .2s;
+  text-shadow: 0 0 5px black, 0 0 2px black;
+
+  &:hover {
+    color: white;
+    text-shadow: 0 0 5px grey;
+  }
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
