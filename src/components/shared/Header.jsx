@@ -10,7 +10,7 @@ const Header = () => {
         <>
             <nav className="navbar fixed-top">
                 <div className="container-fluid justify-content-start column col-3" id="brand">
-                    <a href="/" className="navbar-brand">
+                    <a href="./" className="navbar-brand">
                         <img src={logo} alt="GFMC" />
                     </a>
                 </div>
@@ -20,7 +20,7 @@ const Header = () => {
                             <a href={getLink("application")} className="nav-link d-none d-md-block swift-link">Apply</a>
                         </li>
                         <li className="navbar-item">
-                            <a href="/downloads" className="nav-link d-none d-sm-block swift-link">Downloads</a>
+                            <a href="./downloads" className="nav-link d-none d-sm-block swift-link">Downloads</a>
                         </li>
                         <li className="navbar-item">
                             <a href={getLink("dynmap")} className="nav-link swift-link">Dynmap</a>
@@ -29,7 +29,7 @@ const Header = () => {
                             <a href={getLink("patreon")} className="nav-link d-none d-sm-block swift-link">Patreon</a>
                         </li>
                         <li className="navbar-item">
-                            <a href="/about" className="nav-link d-none d-md-block swift-link">About</a>
+                            <a href="./about" className="nav-link d-none d-md-block swift-link">About</a>
                         </li>
                     </ul>
                 </div>
