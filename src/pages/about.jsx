@@ -10,6 +10,7 @@ import ScreenMedia from "../components/screenmedia/ScreenMedia";
 import megaGreenfield from "../images/megagreenfield.jpg"
 import { useState } from "react";
 import thejestr from "../images/thejestr.png";
+import "../styles/style.scss";
 
 
 const About = () => {

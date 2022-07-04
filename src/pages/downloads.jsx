@@ -7,6 +7,7 @@ import Dropdown from "../components/dropdown/Dropdown";
 import { useState } from "react";
 import downtown from "../images/downtown.jpg";
 import ScreenMedia from "../components/screenmedia/ScreenMedia";
+import "../styles/style.scss";
 
 const Downloads = () => {
 

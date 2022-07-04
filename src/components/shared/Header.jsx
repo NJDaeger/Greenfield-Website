@@ -3,6 +3,7 @@ import logo from "../../images/logo.svg"
 import Menu from "./Menu";
 import {useState} from "react";
 import { getLink } from "../../service/linkservice";
+import "../styles/style.scss";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(undefined);
