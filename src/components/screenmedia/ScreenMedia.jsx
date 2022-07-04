@@ -3,6 +3,10 @@ import { useEffect } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useState } from "react"
 
+/**
+ * 
+ * @param {{src: string, alt: string, poster: string}} props 
+ */
 const ScreenMedia = (props) => {
     const [changingImage, setChangingImage] = useState(false);
     const [currentImage, setCurrentImage] = useState(props.src);

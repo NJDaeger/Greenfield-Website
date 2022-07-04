@@ -1,0 +1,60 @@
+[
+    {
+        "id": "projectwiki",
+        "link": "https://wiki.greenfieldmc.net",
+        "name": "Project Wikipedia"
+    },
+    {
+        "id": "wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Greenfield_(Minecraft)",
+        "name": "Official Wikipedia"
+    },
+    {
+        "id": "application",
+        "link": "https://docs.google.com/forms/d/e/1FAIpQLSenockClC1TOL4zEOZo_UMQSXgbiSjlK7F9KLCF_lgqdGT1LQ/viewform",
+        "name": "Apply"
+    },
+    {
+        "id": "patreon",
+        "link": "https://patreon.greenfieldmc.net",
+        "name": "Patreon"
+    },
+    {
+        "id": "discord",
+        "link": "https://discord.gg/greenfieldmc",
+        "name": "Discord"
+    },
+    {
+        "id": "dynmap",
+        "link": "https://map.greenfieldmc.net"
+        
+    },
+    {
+        "id": "youtube",
+        "link": "https://www.youtube.com/channel/UCz2MGxUzFKoe4Djl1uhHf9w"
+    },
+    {
+        "id": "twitter",
+        "link": "https://twitter.com/Greenfield_City"
+    },
+    {
+        "id": "subreddit",
+        "link": "https://www.reddit.com/r/GreenfieldCity/"
+    },
+    {
+        "id": "instagram",
+        "link": "https://www.instagram.com/greenfieldcitymc/"
+    },
+    {
+        "id": "facebook",
+        "link": "https://www.facebook.com/greenfieldcityminecraft/"
+    },
+    {
+        "id": "mappmc",
+        "link": "https://www.planetminecraft.com/project/greenfield---new-life-size-city-project/"
+    },
+    {
+        "id": "packpmc",
+        "link": "https://www.planetminecraft.com/texture-pack/greenfield-official-texture-pack/"
+    }
+]

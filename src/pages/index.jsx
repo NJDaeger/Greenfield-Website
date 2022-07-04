@@ -72,7 +72,7 @@ const IndexPage = () => {
           }
           startHidden={true}
           id="project"
-          thirdRowContent={<Button href="./project" text="Project Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
+          thirdRowContent={<Button href="/project" text="Project Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
           index={1}>
         </HomeSlide>
         <HomeSlide
@@ -81,7 +81,7 @@ const IndexPage = () => {
           focus="1.17+"
           startHidden={true}
           id="pack"
-          thirdRowContent={<Button href="./resourcepack" text="Resourcepack Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
+          thirdRowContent={<Button href="/resourcepack" text="Resourcepack Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
           index={2}>
         </HomeSlide>
         <HomeSlide
