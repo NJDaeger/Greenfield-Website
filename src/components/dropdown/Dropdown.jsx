@@ -1,7 +1,6 @@
 import { useState } from "react"
 import * as React from "react";
 import Button from "../button/Button";
-import "../styles/style.scss";
 
 /**
  * 
