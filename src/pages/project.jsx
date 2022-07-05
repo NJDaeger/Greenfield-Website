@@ -14,7 +14,8 @@ import update046 from "../images/updates/0_4_6.jpg";
 import update045 from "../images/updates/0_4_5.jpg";
 import martyStation from "../images/MartyStation.jpg";
 
-const Project = () => {
+const Project = (location) => {
+    const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
     const imageMapping = [
         {
             local: "../images/update/0_5_3.jpg",
@@ -50,7 +51,6 @@ const Project = () => {
 
     const setSelectedVersion = (selection) => {
         const found = downloads.map.find(mp => mp.map_version===selection);
-        console.log(found);
         if (found == null) setSelectedDownload(downloads.map[downloads.map.length - 1]);
         else setSelectedDownload(found);
     }
@@ -64,7 +64,7 @@ const Project = () => {
 
     return (
         <>
-            <Header></Header>
+            <Header windowInfo={windowInfo}/>
             <span className="bottom-0 float-left fs-5 p-3 position-absolute text-white" style={{textShadow: "0 0 3px black, 0 0 5px black, 0 0 10px black", zIndex:100}}>Released {selectedDownload.released}</span>
             <HomeSlide
                 src={imageMapping.find(img => img.local === selectedDownload.image)?.static ?? martyStation}

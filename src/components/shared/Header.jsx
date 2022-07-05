@@ -2,15 +2,21 @@ import * as React from "react"
 import logo from "../../images/logo.svg"
 import Menu from "./Menu";
 import {useState} from "react";
-import { getLink } from "../../service/linkservice";
+import { getLink, getPageLink } from "../../service/linkservice";
 
-const Header = () => {
+/**
+ * 
+ * @param {object} windowInfo information about the current window location
+ * @returns 
+ */
+const Header = (props) => {
+    const [info, setInfo] = useState(props.windowInfo);
     const [menuOpen, setMenuOpen] = useState(undefined);
     return (
         <>
             <nav className="navbar fixed-top">
                 <div className="container-fluid justify-content-start column col-3" id="brand">
-                    <a href="./" className="navbar-brand">
+                    <a href={getPageLink(info, "./")} className="navbar-brand">
                         <img src={logo} alt="GFMC" />
                     </a>
                 </div>
@@ -20,7 +26,7 @@ const Header = () => {
                             <a href={getLink("application")} className="nav-link d-none d-md-block swift-link">Apply</a>
                         </li>
                         <li className="navbar-item">
-                            <a href="./downloads" className="nav-link d-none d-sm-block swift-link">Downloads</a>
+                            <a href={getPageLink(info, "./downloads")} className="nav-link d-none d-sm-block swift-link">Downloads</a>
                         </li>
                         <li className="navbar-item">
                             <a href={getLink("dynmap")} className="nav-link swift-link">Dynmap</a>
@@ -29,7 +35,7 @@ const Header = () => {
                             <a href={getLink("patreon")} className="nav-link d-none d-sm-block swift-link">Patreon</a>
                         </li>
                         <li className="navbar-item">
-                            <a href="./about" className="nav-link d-none d-md-block swift-link">About</a>
+                            <a href={getPageLink(info, "./about")} className="nav-link d-none d-md-block swift-link">About</a>
                         </li>
                     </ul>
                 </div>
@@ -41,7 +47,7 @@ const Header = () => {
                     </button>
                 </div>
             </nav>
-            {menuOpen === undefined ? <></> : <Menu show={menuOpen}/>}
+            {menuOpen === undefined ? <></> : <Menu windowInfo={info} show={menuOpen}/>}
         </>
     )
 }

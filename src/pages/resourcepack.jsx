@@ -10,7 +10,8 @@ import { useState } from "react";
 
 
 // markup
-const Resourcepack = () => {
+const Resourcepack = (location) => {
+    const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
     const [selectedDownload, setSelectedDownload] = useState(downloads.pack[downloads.pack.length - 1].mc_version);
 
     const isLatest = (selection) => {
@@ -23,7 +24,7 @@ const Resourcepack = () => {
 
     return (
         <>
-          <Header/>
+          <Header windowInfo={windowInfo}/>
           <HomeSlide
             src={resourcepack}
             title="The Official"

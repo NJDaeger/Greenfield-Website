@@ -10,10 +10,11 @@ import ScreenMedia from "../components/screenmedia/ScreenMedia";
 import { useState } from "react";
 
 
-const OfficialLinks = () => {
+const OfficialLinks = (location) => {
+  const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
     return (
         <>
-          <Header/>
+          <Header windowInfo={windowInfo}/>
           <ScreenMedia
             src=""
           ></ScreenMedia>

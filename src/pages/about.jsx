@@ -13,10 +13,11 @@ import thejestr from "../images/thejestr.png";
 import "../styles/style.scss";
 
 
-const About = () => {
+const About = (location) => {
+    const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
     return (
         <>
-          <Header/>
+          <Header windowInfo={windowInfo}/>
           <ScreenMedia
               src={megaGreenfield}
             ></ScreenMedia>

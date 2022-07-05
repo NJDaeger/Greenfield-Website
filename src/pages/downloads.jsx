@@ -8,8 +8,10 @@ import { useState } from "react";
 import downtown from "../images/downtown.jpg";
 import ScreenMedia from "../components/screenmedia/ScreenMedia";
 import "../styles/style.scss";
+import { getPageLink } from "../service/linkservice";
 
-const Downloads = () => {
+const Downloads = (location) => {
+    const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
 
     const getMcVersionList = () => {
         const versions = [];
@@ -36,7 +38,6 @@ const Downloads = () => {
         });
         var last = versions.pop();
         versions[versions.length] = last + " +";
-        console.log("TEST");
         return versions;
     }
 
@@ -44,7 +45,6 @@ const Downloads = () => {
     const [selectedVersion, setSelectedVersion] = useState(versions[versions.length-1])
 
     const getMapFromVersion = () => {
-        console.log("TEST2");
         return downloads.map.find(download => {
             console.log(download);
             var version = download.mc_version;
@@ -52,7 +52,6 @@ const Downloads = () => {
             if (version.includes("-")) {
                 var selected = selectedVersion.includes("+") ? selectedVersion.replace("+", "") : selectedVersion;
                 var selectedMinor = parseInt(selected.slice(selected.lastIndexOf(".") + 1))
-                console.log("SELECTED " + selectedMinor);
                 var splitVersions = version.split("-");
                 var first = splitVersions[0];
                 var firstMinor = parseInt(first.slice(first.lastIndexOf(".") + 1));
@@ -68,7 +67,6 @@ const Downloads = () => {
     }
 
     const getVersionSpan = () => {
-        console.log("TEST3");
         const map = getMapFromVersion();
         var version = map.map_version;
         
@@ -79,7 +77,7 @@ const Downloads = () => {
 
     return (
         <>
-            <Header></Header>
+            <Header windowInfo={windowInfo}/>
 
             <HomeSlide
                 src={downtown}
@@ -108,11 +106,11 @@ const Downloads = () => {
                     <div className="animateThird d-flex download-buttons hidden align-items-center showing flex-column flex-lg-row w-100" style={{maxWidth:"80vw"}}>
                         <div className="d-flex flex-column align-items-center w-75">
                             <Button text="Download Greenfield" dataType="glass" innerClass={"py-1"} outerClass={"m-3 w-75 px-3"}></Button>
-                            <a href="./project" className="swift-link fs-5 link" style={{lineHeight:"normal"}}>Download Older Greenfield Versions</a>
+                            <a href={getPageLink(windowInfo, "./project")} className="swift-link fs-5 link" style={{lineHeight:"normal"}}>Download Older Greenfield Versions</a>
                         </div>
                         <div className="d-flex flex-column align-items-center w-75">
                             <Button text="Download Resourcepack" dataType="glass" innerClass={"py-1"} outerClass={"m-3 w-75 px-3"}></Button>
-                            <a href="./resourcepack" className="swift-link fs-5 link" style={{lineHeight:"normal"}}>Download Older Resourcepack Versions</a>
+                            <a href={getPageLink(windowInfo, "./resourcepack")} className="swift-link fs-5 link" style={{lineHeight:"normal"}}>Download Older Resourcepack Versions</a>
                         </div>
                         {/* <div className="d-flex flex-column flex-lg-row align-items-center">
                             <Button text="Download Greenfield" dataType="glass" innerClass={"py-1"} outerClass={"m-3"}></Button>
