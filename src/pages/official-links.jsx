@@ -8,10 +8,11 @@ import Button from "../components/button/Button";
 import downloads from "../data/downloads.json";
 import ScreenMedia from "../components/screenmedia/ScreenMedia";
 import { useState } from "react";
+import {useLocation} from "@reach/router";
 
-
-const OfficialLinks = (location) => {
-  const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
+const OfficialLinks = () => {
+  const loc = useLocation();
+  const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
     return (
         <>
           <Header windowInfo={windowInfo}/>

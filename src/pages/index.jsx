@@ -10,6 +10,7 @@ import "../styles/style.scss";
 import {useEffect, useState} from "react";
 import Button from "../components/button/Button";
 import { getLink, getPageLink } from "../service/linkservice";
+import {useLocation} from "@reach/router";
 
 const parentStyle = {
   overflow: "scroll",
@@ -20,8 +21,9 @@ const parentStyle = {
 }
 
 // markup
-const IndexPage = (location) => {
-  const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
+const IndexPage = () => {
+  const loc = useLocation();
+  const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
 
   useEffect(() => {
     const slides = document.querySelectorAll(".slide");

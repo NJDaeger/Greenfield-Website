@@ -9,9 +9,11 @@ import downtown from "../images/downtown.jpg";
 import ScreenMedia from "../components/screenmedia/ScreenMedia";
 import "../styles/style.scss";
 import { getPageLink } from "../service/linkservice";
+import {useLocation} from "@reach/router";
 
-const Downloads = (location) => {
-    const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
+const Downloads = () => {
+    const loc = useLocation();
+    const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
 
     const getMcVersionList = () => {
         const versions = [];

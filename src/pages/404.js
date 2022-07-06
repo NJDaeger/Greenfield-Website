@@ -4,16 +4,22 @@ import ScreenMedia from "../components/screenmedia/ScreenMedia"
 import construction from "../images/Construction.jpg"
 import "../styles/style.scss";
 import Button from "../components/button/Button";
+import { getPageLink } from "../service/linkservice";
+import { useState } from "react";
+import {useLocation} from "@reach/router"
 
 // markup
 const NotFoundPage = () => {
+  const loc = useLocation();
+  const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
+
   return (
     <>
-      <Header></Header>
+      <Header windowInfo={{origin: "http://localhost:8000", href: "http://localhost:8000/"}}></Header>
       <div className="d-flex position-absolute text-white top-50 w-100 flex-column align-items-center" style={{zIndex:1}}>
-        <h1 style={{fontSize:"45pt", fontWeight:"bold", textShadow:"0 0 0.5rem black, 0 0 0.5rem black, 0 0 1rem black, 0 0 2rem black"}}>404</h1>
-        <h2 style={{fontSize:"35pt", fontWeight:"bold", textShadow:"0 0 0.5rem black, 0 0 0.5rem black, 0 0 1rem black, 0 0 2rem black"}}>This is not the shit you are looking for</h2>
-        <Button href="./" text="Go Home" innerClass={"py-2 px-4"} dataType="glass"></Button>
+        <h1 className="text-center" style={{fontSize:"45pt", fontWeight:"bold", textShadow:"0 0 0.5rem black, 0 0 0.5rem black, 0 0 1rem black, 0 0 2rem black"}}>404</h1>
+        <h2 className="text-center" style={{fontSize:"35pt", fontWeight:"bold", textShadow:"0 0 0.5rem black, 0 0 0.5rem black, 0 0 1rem black, 0 0 2rem black"}}>This is not the shit you are looking for</h2>
+        <Button href={getPageLink(windowInfo, "./")} text="Go Home" innerClass={"py-2 px-4"} dataType="glass"></Button>
       </div>
       <ScreenMedia 
         src={construction}

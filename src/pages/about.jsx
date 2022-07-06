@@ -11,10 +11,13 @@ import megaGreenfield from "../images/megagreenfield.jpg"
 import { useState } from "react";
 import thejestr from "../images/thejestr.png";
 import "../styles/style.scss";
+import {useLocation } from "@reach/router";
 
 
-const About = (location) => {
-    const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
+const About = () => {
+    const loc = useLocation();
+    const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
+
     return (
         <>
           <Header windowInfo={windowInfo}/>

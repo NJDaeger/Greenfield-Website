@@ -7,11 +7,12 @@ import "../styles/style.scss";
 import Button from "../components/button/Button";
 import downloads from "../data/downloads.json";
 import { useState } from "react";
-
+import {useLocation} from "@reach/router";
 
 // markup
-const Resourcepack = (location) => {
-    const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
+const Resourcepack = () => {
+    const loc = useLocation();
+    const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
     const [selectedDownload, setSelectedDownload] = useState(downloads.pack[downloads.pack.length - 1].mc_version);
 
     const isLatest = (selection) => {

@@ -15,7 +15,7 @@ page formats:
  */
 /**
  * 
- * @param {string} location window location
+ * @param {object} windowInfo window location
  * @param {string} page next page
  */
 export function getPageLink(windowInfo, page) {

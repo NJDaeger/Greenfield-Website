@@ -13,9 +13,11 @@ import update05 from "../images/updates/0_5.jpg";
 import update046 from "../images/updates/0_4_6.jpg";
 import update045 from "../images/updates/0_4_5.jpg";
 import martyStation from "../images/MartyStation.jpg";
+import {useLocation} from "@reach/router";
 
-const Project = (location) => {
-    const [windowInfo, setWindowLocation] = useState({origin: location.location.origin, href: location.location.href});
+const Project = () => {
+    const loc = useLocation();
+    const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
     const imageMapping = [
         {
             local: "../images/update/0_5_3.jpg",
