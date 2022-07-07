@@ -8,12 +8,10 @@ import { useState } from "react";
 import downtown from "../images/downtown.jpg";
 import ScreenMedia from "../components/screenmedia/ScreenMedia";
 import "../styles/style.scss";
-import { getPageLink } from "../service/linkservice";
+import { GetPageLink } from "../service/linkservice";
 import {useLocation} from "@reach/router";
 
 const Downloads = () => {
-    const loc = useLocation();
-    const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
 
     const getMcVersionList = () => {
         const versions = [];
@@ -79,7 +77,7 @@ const Downloads = () => {
 
     return (
         <>
-            <Header windowInfo={windowInfo}/>
+            <Header/>
 
             <HomeSlide
                 src={downtown}
@@ -108,11 +106,11 @@ const Downloads = () => {
                     <div className="animateThird d-flex download-buttons hidden align-items-center showing flex-column flex-lg-row w-100" style={{maxWidth:"80vw"}}>
                         <div className="d-flex flex-column align-items-center w-75">
                             <Button text="Download Greenfield" dataType="glass" innerClass={"py-1"} outerClass={"m-3 w-75 px-3"}></Button>
-                            <a href={getPageLink(windowInfo, "./project")} className="swift-link fs-5 link" style={{lineHeight:"normal"}}>Download Older Greenfield Versions</a>
+                            <a href={GetPageLink("./project")} className="swift-link fs-5 link text-center" style={{lineHeight:"normal"}}>Download Older Greenfield Versions</a>
                         </div>
                         <div className="d-flex flex-column align-items-center w-75">
                             <Button text="Download Resourcepack" dataType="glass" innerClass={"py-1"} outerClass={"m-3 w-75 px-3"}></Button>
-                            <a href={getPageLink(windowInfo, "./resourcepack")} className="swift-link fs-5 link" style={{lineHeight:"normal"}}>Download Older Resourcepack Versions</a>
+                            <a href={GetPageLink("./resourcepack")} className="swift-link fs-5 link text-center" style={{lineHeight:"normal"}}>Download Older Resourcepack Versions</a>
                         </div>
                         {/* <div className="d-flex flex-column flex-lg-row align-items-center">
                             <Button text="Download Greenfield" dataType="glass" innerClass={"py-1"} outerClass={"m-3"}></Button>

@@ -15,84 +15,43 @@ import {useLocation } from "@reach/router";
 
 
 const About = () => {
-    const loc = useLocation();
-    const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
-
     return (
         <>
-          <Header windowInfo={windowInfo}/>
+          <Header/>
           <ScreenMedia
               src={megaGreenfield}
             ></ScreenMedia>
-          
-          <div className="d-flex flex-column position-absolute top-0" style={{zIndex:"2"}}>
-            <h1 className="alert-light position-absolute align-self-center top-50">MEGA IN PROGRESS PAGE</h1>
-            <div className="d-flex align-self-center justify-content-center w-75 ps-5 pe-5 pb-5" style={{paddingTop: "8rem"}}>
-              <p>Greenfield is a Minecraft city built like no other. We build to the finest detail, but also carefully plan our city on a large scale. We are designed on a 1:1 scale, meaning one block is equivalent to 1 real world meter. By using this scale, we can provide an immersive experience for our end users since the buildings we produce are in similar scale and nature to those you would find in a real life city. While the city is only 20% complete, we are arguably one of the most complete and detailed cities that currently exists within Minecraft. Being comprised of thousands of unique, fully interiored, builds, there is a seemingly endless stream of opportunities of explorations.</p>
-            </div>
-            <div className="w-75 h-50 d-flex flex-row bg-secondary align-self-center">
-              <div className="d-flex align-items-center justify-content-end w-50 p-5">
-                <img src={thejestr} alt="THEJESTR"/>
-              </div>
-              <div className="d-flex align-items-center justify-content-start w-100 p-5">
-                <p className="w-75">Greenfield was founded by <a href="https://namemc.com/profile/THEJESTR11.1" className="link swift-link">THEJESTR</a> back in mid 2011. The map started with a single gas station, built by THEJESTR, that still resides in its original form and location in Hunterspoint. THEJESTR has been the leader of the project since the beginning, and now leads a team of 10 staff members and 170 additional build members. The map has expanded multiple times its original size, and now sits at about 6500x8800 blocks, or about 57 square kilometers.</p>
-              </div>
-            </div>
-            
-            {/* <div className="w-100 h-50 d-flex flex-row pt-5">
-              <div className="d-flex align-items-center justify-content-end w-50 p-5">
-                <img src={thejestr} alt="THEJESTR"/>
-              </div>
-              <div className="d-flex align-items-center justify-content-start w-75 p-5">
-                <p className="w-75">Greenfield was founded by <a href="https://namemc.com/profile/THEJESTR11.1" className="link swift-link">THEJESTR</a> back in mid 2011. The map started with a single gas station, built by THEJESTR, that still resides in its original form and location in Hunterspoint. THEJESTR has been the leader of the project since the beginning, and now leads a team of 10 staff members and 170 additional build members. The map has expanded multiple times its original size, and now sits at about 6500x8800 blocks, or about 57 square kilometers.</p>
-              </div>
-            </div>
-            <div className="w-100 h-50 d-flex flex-row pt-5">
-              <div className="d-flex align-items-center justify-content-end w-50 p-5">
-                <img src={thejestr} alt="THEJESTR"/>
-              </div>
-              <div className="d-flex align-items-center justify-content-start w-75 p-5">
-                <p className="w-75">Greenfield was founded by <a href="https://namemc.com/profile/THEJESTR11.1" className="link swift-link">THEJESTR</a> back in mid 2011. The map started with a single gas station, built by THEJESTR, that still resides in its original form and location in Hunterspoint. THEJESTR has been the leader of the project since the beginning, and now leads a team of 10 staff members and 170 additional build members. The map has expanded multiple times its original size, and now sits at about 6500x8800 blocks, or about 57 square kilometers.</p>
-              </div>
-            </div>
-            <div className="w-100 h-50 d-flex flex-row pt-5">
-              <div className="d-flex align-items-center justify-content-end w-50 p-5">
-                <img src={thejestr} alt="THEJESTR"/>
-              </div>
-              <div className="d-flex align-items-center justify-content-start w-75 p-5">
-                <p className="w-75">Greenfield was founded by <a href="https://namemc.com/profile/THEJESTR11.1" className="link swift-link">THEJESTR</a> back in mid 2011. The map started with a single gas station, built by THEJESTR, that still resides in its original form and location in Hunterspoint. THEJESTR has been the leader of the project since the beginning, and now leads a team of 10 staff members and 170 additional build members. The map has expanded multiple times its original size, and now sits at about 6500x8800 blocks, or about 57 square kilometers.</p>
-              </div>
-            </div>
-            <div className="w-100 h-50 d-flex flex-row pt-5">
-              <div className="d-flex align-items-center justify-content-end w-50 p-5">
-                <img src={thejestr} alt="THEJESTR"/>
-              </div>
-              <div className="d-flex align-items-center justify-content-start w-75 p-5">
-                <p className="w-75">Greenfield was founded by <a href="https://namemc.com/profile/THEJESTR11.1" className="link swift-link">THEJESTR</a> back in mid 2011. The map started with a single gas station, built by THEJESTR, that still resides in its original form and location in Hunterspoint. THEJESTR has been the leader of the project since the beginning, and now leads a team of 10 staff members and 170 additional build members. The map has expanded multiple times its original size, and now sits at about 6500x8800 blocks, or about 57 square kilometers.</p>
-              </div>
-            </div> */}
-          </div>
-          {/* <HomeSlide
-            src={resourcepack}
-            title="The Official"
-            focus="Greenfield Resource Pack"
-            startHidden={false}
-            thirdRowContent={
-              <div className="animateThird col-11 col-lg-8 col-md-10 d-flex download-buttons hidden justify-content-center showing">
-                <div className="d-flex w-100 flex-column flex-lg-row">
-                  <Button href={getDownload(selectedDownload)} text={isLatest(selectedDownload) ? "Download Latest" : "Download for " + selectedDownload}></Button>
-                  <Dropdown 
-                    options={downloads.pack.map(pck => pck.mc_version)} 
-                    id="packversiondropdown" 
-                    onSelect={setSelectedDownload} 
-                    defaultOptionIndex={downloads.pack.length - 1}
-                    prefixSelection="MC "
-                    reverseOptions={true}></Dropdown>
+          <div className="position-absolute w-100 h-100 top-0 d-flex">
+            <div className="about-container align-items-center d-xl-flex h-100 justify-content-center overflow-scroll position-absolute w-100">
+              <div className="about-card-container d-flex flex-column flex-xl-row justify-content-center overflow-scroll position-absolute w-100 pt-5">
+                <div className="about-card d-flex flex-column col-sm-8 col-lg-6 col-xl-3 m-5 mx-auto mx-xl-5">
+                  <span className="fs-1 bebas">Founder</span>
+                  <hr />
+                  <p>Greenfield was founded by <a href="https://namemc.com/profile/THEJESTR11.1" className="link swift-link">THEJESTR</a> back in 
+                  August 2011. The map started with a single gas station, built by him, that still resides in its original form and location in 
+                  Hunterspoint. In the last 11 years, he has led over 20 different staff members and 400+ builders to make the map what it is today.</p>
+                </div>
+
+                <div className="about-card d-flex flex-column col-sm-8 col-lg-6 col-xl-3 m-5 mx-auto mx-xl-5">
+                  <span className="fs-1 bebas">The City</span>
+                  <hr />
+                  <p>Greenfield is a fictional city designed to resemble the West Coast of America, laboriously inspired by Los Angeles. Built to 
+                    a one-to-one scale, every single building in Greenfield has substantial detail with carefully detailed elaborate surroundings. 
+                    With a substantially sizable airport to lavish homes and businesses, Greenfield is one of the most largely complex and 
+                    intricate cities in Minecraft. As of July 2022, the in-progress map is now about 6500x8800 blocks, or about 57 square kilometers.</p>
+                </div>
+
+                <div className="about-card d-flex flex-column col-sm-8 col-lg-6 col-xl-3 m-5 mx-auto mx-xl-5">
+                  <span className="fs-1 bebas">Our Builders</span>
+                  <hr />
+                  <p>Our builders are an essential part to the production of our map. Over the past 11 years, we have seen hundreds of builders 
+                    come and go, helping us reach our current project state. They range from high school students to retirees and come from a 
+                    wide variety of backgrounds and education. Some of us are software engineers, others are architect students- our builders'
+                    backgrounds all combine together to create an interesting atmosphere on the server and create a product everyone enjoys.</p>
                 </div>
               </div>
-            }
-          ></HomeSlide> */}
-          
+            </div>
+          </div>
         </>
     )
 }

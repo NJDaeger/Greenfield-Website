@@ -11,8 +11,6 @@ import {useLocation} from "@reach/router";
 
 // markup
 const Resourcepack = () => {
-    const loc = useLocation();
-    const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
     const [selectedDownload, setSelectedDownload] = useState(downloads.pack[downloads.pack.length - 1].mc_version);
 
     const isLatest = (selection) => {
@@ -25,7 +23,7 @@ const Resourcepack = () => {
 
     return (
         <>
-          <Header windowInfo={windowInfo}/>
+          <Header/>
           <HomeSlide
             src={resourcepack}
             title="The Official"

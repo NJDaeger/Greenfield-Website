@@ -1,0 +1,36 @@
+@use "../styles/_variables.scss";
+
+.about-container {
+    margin-top: auto;
+    margin-bottom: auto;
+
+    .about-card-container {
+        max-width: 95%;
+        @include media-breakpoint-down(xl) {
+            transform: translateX(2.5%);
+        }
+    }
+}
+
+.about-card {
+    color: white;
+    backdrop-filter: blur(3rem);
+    border-radius: 10px;
+    font-size: 14pt;
+    overflow-y: scroll;
+    padding: 1rem;
+    text-align: center;
+    // width: min(130vh, 80vw);
+    // max-height: 80%;
+    // min-width: 50%;
+    // max-width: 90%;
+    // transition-duration: .2s;
+
+    // margin-block: 2rem;
+
+    // @include media-breakpoint-down(md) {
+    //     width: 80%;
+    //     height: inherit;
+    //     background-color: rgba(0, 0, 0, .45);
+    // }
+}

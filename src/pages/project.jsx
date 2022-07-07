@@ -16,8 +16,6 @@ import martyStation from "../images/MartyStation.jpg";
 import {useLocation} from "@reach/router";
 
 const Project = () => {
-    const loc = useLocation();
-    const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
     const imageMapping = [
         {
             local: "../images/update/0_5_3.jpg",
@@ -66,7 +64,7 @@ const Project = () => {
 
     return (
         <>
-            <Header windowInfo={windowInfo}/>
+            <Header/>
             <span className="bottom-0 float-left fs-5 p-3 position-absolute text-white" style={{textShadow: "0 0 3px black, 0 0 5px black, 0 0 10px black", zIndex:100}}>Released {selectedDownload.released}</span>
             <HomeSlide
                 src={imageMapping.find(img => img.local === selectedDownload.image)?.static ?? martyStation}

@@ -9,7 +9,7 @@ import SlideNav from "../components/home/SlideNavigation";
 import "../styles/style.scss";
 import {useEffect, useState} from "react";
 import Button from "../components/button/Button";
-import { getLink, getPageLink } from "../service/linkservice";
+import { getLink, GetPageLink } from "../service/linkservice";
 import {useLocation} from "@reach/router";
 
 const parentStyle = {
@@ -22,8 +22,6 @@ const parentStyle = {
 
 // markup
 const IndexPage = () => {
-  const loc = useLocation();
-  const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
 
   useEffect(() => {
     const slides = document.querySelectorAll(".slide");
@@ -49,7 +47,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <Header windowInfo={windowInfo}/>
+      <Header/>
       <SlideNav links={[
         { goto: "#welcome", text: "Welcome"},
         { goto: "#project", text: "Project" },
@@ -77,7 +75,7 @@ const IndexPage = () => {
           }
           startHidden={true}
           id="project"
-          thirdRowContent={<Button href={getPageLink(windowInfo, "./project")} text="Project Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
+          thirdRowContent={<Button href={GetPageLink("./project")} text="Project Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
           index={1}>
         </HomeSlide>
         <HomeSlide
@@ -86,7 +84,7 @@ const IndexPage = () => {
           focus="1.17+"
           startHidden={true}
           id="pack"
-          thirdRowContent={<Button href={getPageLink(windowInfo, "./resourcepack")} text="Resourcepack Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
+          thirdRowContent={<Button href={GetPageLink("./resourcepack")} text="Resourcepack Page" outerClass={"animateThird"} innerClass="p-3" dataType="glass"></Button>}
           index={2}>
         </HomeSlide>
         <HomeSlide

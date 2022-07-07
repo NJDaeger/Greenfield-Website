@@ -11,11 +11,9 @@ import { useState } from "react";
 import {useLocation} from "@reach/router";
 
 const OfficialLinks = () => {
-  const loc = useLocation();
-  const [windowInfo, setWindowLocation] = useState({origin: loc.origin, href: loc.href});
     return (
         <>
-          <Header windowInfo={windowInfo}/>
+          <Header/>
           <ScreenMedia
             src=""
           ></ScreenMedia>
