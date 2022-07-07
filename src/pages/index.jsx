@@ -10,7 +10,6 @@ import "../styles/style.scss";
 import {useEffect, useState} from "react";
 import Button from "../components/button/Button";
 import { getLink, GetPageLink } from "../service/linkservice";
-import {useLocation} from "@reach/router";
 
 const parentStyle = {
   overflow: "scroll",

@@ -5,8 +5,6 @@ import construction from "../images/Construction.jpg"
 import "../styles/style.scss";
 import Button from "../components/button/Button";
 import { GetPageLink } from "../service/linkservice";
-import { useState } from "react";
-import {useLocation} from "@reach/router"
 
 // markup
 const NotFoundPage = () => {

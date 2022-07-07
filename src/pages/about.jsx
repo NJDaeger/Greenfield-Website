@@ -1,17 +1,9 @@
 import * as React from "react"
-import HomeSlide from "../components/home/HomeSlide";
-import Dropdown from "../components/dropdown/Dropdown"
 import Header from "../components/shared/Header";
-import resourcepack from "../images/resourcepack.png";
 import "../styles/style.scss";
-import Button from "../components/button/Button";
-import downloads from "../data/downloads.json";
 import ScreenMedia from "../components/screenmedia/ScreenMedia";
-import megaGreenfield from "../images/megagreenfield.jpg"
-import { useState } from "react";
-import thejestr from "../images/thejestr.png";
+import megaGreenfield from "../images/megagreenfield.jpg";
 import "../styles/style.scss";
-import {useLocation } from "@reach/router";
 
 
 const About = () => {

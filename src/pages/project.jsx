@@ -13,7 +13,6 @@ import update05 from "../images/updates/0_5.jpg";
 import update046 from "../images/updates/0_4_6.jpg";
 import update045 from "../images/updates/0_4_5.jpg";
 import martyStation from "../images/MartyStation.jpg";
-import {useLocation} from "@reach/router";
 
 const Project = () => {
     const imageMapping = [
@@ -68,7 +67,6 @@ const Project = () => {
             <span className="bottom-0 float-left fs-5 p-3 position-absolute text-white" style={{textShadow: "0 0 3px black, 0 0 5px black, 0 0 10px black", zIndex:100}}>Released {selectedDownload.released}</span>
             <HomeSlide
                 src={imageMapping.find(img => img.local === selectedDownload.image)?.static ?? martyStation}
-                // title={<span className="d-flex flex-column"><small className="mt-0 fs-3">{selectedDownload.mc_version !== undefined ? "For Minecraft " + selectedDownload.mc_version : ""}</small></span>}
                 focus={<>Greenfield&nbsp;{getVersionSpan()}</>}
                 thirdRowContent={
                     <div className="animateThird col-11 col-md-10 col-lg-8 d-flex download-buttons hidden justify-content-center showing flex-column">
