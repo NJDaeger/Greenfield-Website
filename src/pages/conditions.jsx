@@ -46,7 +46,7 @@ const Conditions = () => {
             ></ScreenMedia>
             <div className="w-100 h-100 position-absolute top-0 d-flex align-items-center flex-column overflow-scroll pt-5">
                 {/* <h1 className="text-white">Terms and Conditions</h1> */}
-                <div className="d-flex flex-column col-10 text-white justify-content-center flex-xl-row">
+                <div className="d-flex flex-column col-10 text-white justify-content-center flex-xl-row align-items-center">
                     <div className="d-block col-10 col-xl-5 m-5 p-4 condition-section" id="#content-conditions">
                         <h3 className="text-center d-flex flex-row">Map &amp; Resourcepack Usage Conditions<Button text="*" outerClass={"asterisk"} dataType="glass clear" click={() => {setShowMsg1(true)}}></Button></h3>
                         <hr />
