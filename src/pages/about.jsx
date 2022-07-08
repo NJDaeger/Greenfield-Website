@@ -29,8 +29,8 @@ const About = () => {
                   <hr />
                   <p>Greenfield is a fictional city designed to resemble the West Coast of America, laboriously inspired by Los Angeles. Built to 
                     a one-to-one scale, every single building in Greenfield has substantial detail with carefully detailed elaborate surroundings. 
-                    With a substantially sizable airport to lavish homes and businesses, Greenfield is one of the most largely complex and 
-                    intricate cities in Minecraft. As of July 2022, the in-progress map is now about 6500x8800 blocks, or about 57 square kilometers.</p>
+                    With a substantially sizable airport to lavish homes and businesses, Greenfield is one of the largest, most complex, and 
+                    detailed original cities in Minecraft. As of July 2022, the in-progress map is now about 6500x8800 blocks, or about 57 square kilometers.</p>
                 </div>
 
                 <div className="about-card d-flex flex-column col-sm-8 col-lg-6 col-xl-3 m-5 mx-auto mx-xl-5">

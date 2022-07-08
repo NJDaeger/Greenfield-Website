@@ -12,7 +12,7 @@ const Menu = (props) => {
 
     return (
         <div id="menu" className={props.show ? "show" : ""}>
-            <ul className="justify-content-end">
+            <ul className="justify-content-end overflow-scroll">
                 <li><Button href={GetPageLink("./downloads")} text={"Downloads"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 <li><Button href={GetPageLink("./project")} text={"Project Home"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 <li><Button href={GetPageLink("./resourcepack")} text={"Resourcepack Home"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
@@ -20,7 +20,7 @@ const Menu = (props) => {
                 <li><Button href={getLink("application")} text={"Apply"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 <li><Button href={GetPageLink("./photography")} text={"Photography"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 <li><Button href={GetPageLink("./staff")} text={"Staff"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
-                <li><Button href={GetPageLink("./links")} text={"Official Links"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
+                <li><Button href={GetPageLink("./official-links")} text={"Official Links"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 <li><Button href={GetPageLink("./about")} text={"About"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 <li><Button href={GetPageLink("./conditions")} text={"Terms of Use"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
             </ul>

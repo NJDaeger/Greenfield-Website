@@ -26,6 +26,11 @@
         backdrop-filter: blur(.375rem);
     }
 
+    &[data-type*="frosted"] {
+        -webkit-backdrop-filter: blur(3rem);
+        backdrop-filter: blur(3rem);
+    }
+
     &[data-type*="clear"] {
         background-color: transparent;
 

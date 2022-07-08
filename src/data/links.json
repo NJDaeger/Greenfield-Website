@@ -2,59 +2,79 @@
     {
         "id": "projectwiki",
         "link": "https://wiki.greenfieldmc.net",
-        "name": "Project Wikipedia"
+        "name": "Project Wikipedia",
+        "social": true
     },
     {
         "id": "wikipedia",
         "link": "https://en.wikipedia.org/wiki/Greenfield_(Minecraft)",
-        "name": "Official Wikipedia"
+        "name": "Official Wikipedia",
+        "social": true
     },
     {
         "id": "application",
         "link": "https://docs.google.com/forms/d/e/1FAIpQLSenockClC1TOL4zEOZo_UMQSXgbiSjlK7F9KLCF_lgqdGT1LQ/viewform",
-        "name": "Apply"
+        "name": "Apply",
+        "social": false
     },
     {
         "id": "patreon",
         "link": "https://patreon.greenfieldmc.net",
-        "name": "Patreon"
+        "name": "Patreon",
+        "social": true
     },
     {
         "id": "discord",
         "link": "https://discord.gg/greenfieldmc",
-        "name": "Discord"
+        "name": "Discord",
+        "social": true
     },
     {
         "id": "dynmap",
-        "link": "https://map.greenfieldmc.net"
-        
+        "link": "https://map.greenfieldmc.net",
+        "name": "Dynmap",
+        "social": true
     },
     {
         "id": "youtube",
-        "link": "https://www.youtube.com/channel/UCz2MGxUzFKoe4Djl1uhHf9w"
+        "link": "https://www.youtube.com/channel/UCz2MGxUzFKoe4Djl1uhHf9w",
+        "name": "YouTube",
+        "social": true
     },
     {
         "id": "twitter",
-        "link": "https://twitter.com/Greenfield_City"
+        "link": "https://twitter.com/Greenfield_City",
+        "name": "Twitter",
+        "social": true
     },
     {
         "id": "subreddit",
-        "link": "https://www.reddit.com/r/GreenfieldCity/"
+        "link": "https://www.reddit.com/r/GreenfieldCity/",
+        "name": "Subreddit",
+        "social": true
     },
     {
         "id": "instagram",
-        "link": "https://www.instagram.com/greenfieldcitymc/"
+        "link": "https://www.instagram.com/greenfieldcitymc/",
+        "name": "Instagram",
+        "social": true
     },
     {
         "id": "facebook",
-        "link": "https://www.facebook.com/greenfieldcityminecraft/"
+        "link": "https://www.facebook.com/greenfieldcityminecraft/",
+        "name": "Facebook",
+        "social": true
     },
     {
         "id": "mappmc",
-        "link": "https://www.planetminecraft.com/project/greenfield---new-life-size-city-project/"
+        "link": "https://www.planetminecraft.com/project/greenfield---new-life-size-city-project/",
+        "name": "Map PMC Page",
+        "social": true
     },
     {
         "id": "packpmc",
-        "link": "https://www.planetminecraft.com/texture-pack/greenfield-official-texture-pack/"
+        "link": "https://www.planetminecraft.com/texture-pack/greenfield-official-texture-pack/",
+        "name": "Resourcepack PMC Page",
+        "social": true
     }
 ]

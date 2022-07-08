@@ -1,0 +1,61 @@
+.button-official-link {
+    width: 10rem !important;
+    height: 14rem !important;
+    margin: 1rem !important;
+
+    >a {
+        flex-direction: column;
+        padding: .5rem;
+    }
+
+    .logo-container {
+        width: 10rem;
+        height: 10rem;
+        justify-content: space-around;
+        display: flex;
+
+        >img {
+            width: 100%;
+            object-fit: contain;
+            padding: 1.5rem;
+        }
+    }
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+    span {
+        font-size: 16pt !important;
+        color: white;
+    }
+}
+
+.official-link {
+    all: unset;
+    width: 14rem;
+    height: 17rem;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(3rem);
+    box-shadow: 0px 0px .5rem -.25rem black;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    align-items: center;
+    transition-duration: .2s;
+
+    >img {
+        width: 100%;
+    }
+    >span {
+        font-size: 20pt;
+        color: white;
+    }
+
+    &:hover {
+        transform-origin: center;
+        transform: scale(1.01);
+    }
+}

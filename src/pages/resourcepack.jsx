@@ -2,7 +2,7 @@ import * as React from "react"
 import HomeSlide from "../components/home/HomeSlide";
 import Dropdown from "../components/dropdown/Dropdown"
 import Header from "../components/shared/Header";
-import resourcepack from "../images/resourcepack.png";
+import resourcepack from "../images/resourcepack.jpg";
 import "../styles/style.scss";
 import Button from "../components/button/Button";
 import downloads from "../data/downloads.json";
