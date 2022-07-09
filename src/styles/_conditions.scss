@@ -12,13 +12,15 @@
     align-items: center;
     width: 1rem !important;
     height: 1rem !important;
-
+    transform: translateY(5px) !important;
     border-radius: .5rem !important;
 
     >button {
         align-items: center;
         display: flex;
-        padding-top: 50% !important;
+        >svg {
+            transform: scale(1.1);
+        }
     }
 }
 
