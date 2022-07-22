@@ -20,6 +20,7 @@ const Downloads = () => {
 
     return (
         <>
+            <title>Download Portal</title>
             <Header/>
             <HomeSlide
                 src={downtown}

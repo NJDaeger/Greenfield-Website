@@ -11,6 +11,7 @@ const NotFoundPage = () => {
 
   return (
     <>
+      <title>Page not found</title>
       <Header></Header>
       <div className="d-flex position-absolute text-white top-50 w-100 flex-column align-items-center" style={{zIndex:1}}>
         <h1 className="text-center" style={{fontSize:"45pt", fontWeight:"bold", textShadow:"0 0 0.5rem black, 0 0 0.5rem black, 0 0 1rem black, 0 0 2rem black"}}>404</h1>

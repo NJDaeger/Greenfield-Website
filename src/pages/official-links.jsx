@@ -82,6 +82,7 @@ const OfficialLinks = () => {
 
     return (
         <>
+          <title>Link Portal</title>
           <Header/>
           <ScreenMedia
             src={station}

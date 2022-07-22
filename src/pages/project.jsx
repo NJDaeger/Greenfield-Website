@@ -64,6 +64,7 @@ const Project = () => {
 
     return (
         <>
+            <title>Project Page</title>
             <Header/>
             <span className="bottom-0 float-left fs-5 p-3 position-absolute text-white" style={{textShadow: "0 0 3px black, 0 0 5px black, 0 0 10px black", zIndex:100}}>Released {selectedDownload.released}</span>
             <HomeSlide

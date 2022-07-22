@@ -9,6 +9,7 @@ import "../styles/style.scss";
 const About = () => {
     return (
         <>
+          <title>About us</title>
           <Header/>
           <ScreenMedia
               src={megaGreenfield}

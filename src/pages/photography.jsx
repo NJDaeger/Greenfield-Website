@@ -11,6 +11,7 @@ import { useState } from "react";
 // markup
 const Photography = () => {
     return <>
+        <title>Photography</title>
         <Header />
         <div className="photo-page-container">
             <div className="photo-card-container">

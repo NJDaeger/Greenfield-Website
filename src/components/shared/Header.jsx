@@ -1,5 +1,6 @@
 import * as React from "react"
 import logo from "../../images/logo.svg"
+import favicon from "../../images/favicon.ico";
 import Menu from "./Menu";
 import {useState} from "react";
 import { GetHomePage, getLink, GetPageLink } from "../../service/linkservice";

@@ -46,6 +46,7 @@ const IndexPage = () => {
 
   return (
     <>
+      <title>Home Page</title>
       <Header/>
       <SlideNav links={[
         { goto: "#welcome", text: "Welcome"},
@@ -54,7 +55,6 @@ const IndexPage = () => {
         { goto: "#apply", text: "Apply" }
       ]}/>
       <div id="home" style={parentStyle}>
-        <title>Home Page</title>
         <HomeSlide
           src={skyline}
           title="Welcome To"

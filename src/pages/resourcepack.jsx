@@ -23,6 +23,7 @@ const Resourcepack = () => {
 
     return (
         <>
+          <title>Resourcepack Page</title>
           <Header/>
           <HomeSlide
             src={resourcepack}

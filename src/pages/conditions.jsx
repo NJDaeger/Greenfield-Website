@@ -40,6 +40,7 @@ const Conditions = () => {
 
     return (
         <>
+            <title>Terms and Conditions</title>
             <Header />
             <ScreenMedia
                 src={station}
