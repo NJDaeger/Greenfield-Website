@@ -20,7 +20,7 @@ page formats:
 export function GetPageLink(page) {
     const loc = useLocation();
     if (loc === undefined) {
-        console.log("using window location");
+        // console.log("using window location");
         loc = window.location;
     }
     var href = loc.href;
@@ -29,17 +29,17 @@ export function GetPageLink(page) {
     var origin = loc.origin;
     // if (windowInfo.origin === undefined) origin = "";
     // else origin = windowInfo.origin;
-    console.log(origin);
+    // console.log(origin);
     if (origin === undefined || origin.includes("njdaeger.github.io")) origin = "https://njdaeger.github.io/gatsby-playground";
     // if (origin?.includes("njdaeger.github.io")) origin += "/gatsby-playground"
-    console.log(origin);
-    console.log(page);
+    // console.log(origin);
+    // console.log(page);
     if (page.startsWith("..")) return href + page;
     else if (page.startsWith("/")) return href + page.slice(1);
     else {
         var slice = page.slice(2);
-        console.log(slice);
-        console.log(origin + "/" + slice ?? "")
+        // console.log(slice);
+        // console.log(origin + "/" + slice ?? "")
         return origin + "/" + page.slice(2) ?? "";
     }
     

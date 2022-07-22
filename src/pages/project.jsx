@@ -86,6 +86,7 @@ const Project = () => {
                 }
                 startHidden={false}
             ></HomeSlide>
+            <h6 className="text-center w-100 bottom-0 mb-2 text-white position-absolute"><a href={GetPageLink('./conditions')} className="link swift-link" target="_blank">By downloading the Greenfield Map, you agree to follow our Terms and Conditions</a></h6>
         </>
     )
 

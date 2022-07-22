@@ -16,7 +16,7 @@ const Menu = (props) => {
                 <li><Button href={GetPageLink("./downloads")} text={"Downloads"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 <li><Button href={GetPageLink("./project")} text={"Project Home"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 <li><Button href={GetPageLink("./resourcepack")} text={"Resourcepack Home"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
-                <li><Button href={getLink("projectwiki")} text={"Project Wikipedia"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
+                <li><Button href={getLink("projectwiki")} text={"Project Wiki"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 <li><Button href={getLink("application")} text={"Apply"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li>
                 {/* <li><Button href={GetPageLink("./photography")} text={"Photography"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li> */}
                 {/* <li><Button href={GetPageLink("./staff")} text={"Staff"} outerClass="" innerClass="py-1 ps-2" dataType="clear nooutline"/></li> */}

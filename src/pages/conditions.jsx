@@ -53,12 +53,12 @@ const Conditions = () => {
                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                                 <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                             </svg>
-                        } outerClass={"asterisk"} dataType="glass clear" click={() => {setShowMsg1(true)}}></Button></h3>
+                        } outerClass={"asterisk ml-1_5"} dataType="glass clear" click={() => {setShowMsg1(true)}}></Button></h3>
                         <hr />
                         <div>
                             <h5>Map &amp; Resourcepack Usage on a Server</h5>
-                            <span className="ms-3 li">If you are using the Greenfield Map or Resourcepack on a public or private server, you must provide a location that is deemed visible
-                                and readable that links to <a href={GetPageLink("./")} className="link swift-link">this website</a>.</span>
+                            <span className="ms-3 li">If you are using the Greenfield Map or Resourcepack on a public or private server, you must provide link to <a href={GetPageLink("./")} className="link swift-link">this website</a>
+                             at a location that is deemed visible and readable.</span>
                         </div>
                         <hr />
                         <div>
@@ -69,7 +69,7 @@ const Conditions = () => {
                         <hr />
                         <div>
                             <h5>Other Projects using the Greenfield Map</h5>
-                            <span className="ms-3 li">If you are using the Greenfield Map for a project, and <span style={{ textDecoration: "underline" }}>intend to distribute</span> that project (with specififc builds or sections of Greenfield),
+                            <span className="ms-3 li">If you are using the Greenfield Map for a project, and <span style={{ textDecoration: "underline" }}>intend to distribute</span> that project (with specific builds or sections of Greenfield),
                                 you MUST email us at <span style={{ textDecoration: "underline" }}>contact@greenfieldmc.net</span> and receive a reply granting permission of use. You may reapply for permission upon denial.</span>
                         </div>
                         <hr />
@@ -88,7 +88,7 @@ const Conditions = () => {
                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                                 <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                             </svg>
-                        } outerClass={"asterisk"} dataType="glass clear" click={() => {setShowMsg2(true)}}></Button></h3>
+                        } outerClass={"asterisk ml-1_5"} dataType="glass clear" click={() => {setShowMsg2(true)}}></Button></h3>
                         <hr />
                         <div>
                             <h5>Build Server Conditions</h5>
