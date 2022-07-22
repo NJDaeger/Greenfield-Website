@@ -13,6 +13,7 @@ import update05 from "../images/updates/0_5.jpg";
 import update046 from "../images/updates/0_4_6.jpg";
 import update045 from "../images/updates/0_4_5.jpg";
 import martyStation from "../images/MartyStation.jpg";
+import { GetPageLink } from "../service/linkservice";
 
 const Project = () => {
     const imageMapping = [

@@ -7,6 +7,7 @@ import "../styles/style.scss";
 import Button from "../components/button/Button";
 import downloads from "../data/downloads.json";
 import { useState } from "react";
+import { GetPageLink } from "../service/linkservice";
 
 // markup
 const Resourcepack = () => {
