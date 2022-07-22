@@ -47,7 +47,7 @@ const Conditions = () => {
             <div className="w-100 h-100 position-absolute top-0 d-flex align-items-center flex-column overflow-scroll pt-5">
                 {/* <h1 className="text-white">Terms and Conditions</h1> */}
                 <div className="d-flex flex-column col-10 text-white justify-content-center flex-xl-row align-items-center">
-                    <div className="d-block col-10 col-xl-5 m-5 p-4 condition-section" id="#content-conditions">
+                    <div className="d-block col-12 col-xl-5 m-5 p-4 condition-section" id="#content-conditions">
                         <h3 className="text-center d-flex flex-row">Map &amp; Resourcepack Usage Conditions<Button text={
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -70,7 +70,7 @@ const Conditions = () => {
                         <div>
                             <h5>Other Projects using the Greenfield Map</h5>
                             <span className="ms-3 li">If you are using the Greenfield Map for a project, and <span style={{ textDecoration: "underline" }}>intend to distribute</span> that project (with specififc builds or sections of Greenfield),
-                                you MUST email us at <span style={{ textDecoration: "underline" }}>contact@greenfieldmc.net</span> and receive a reply granting permission of use. You may reapply for permission after the denial.</span>
+                                you MUST email us at <span style={{ textDecoration: "underline" }}>contact@greenfieldmc.net</span> and receive a reply granting permission of use. You may reapply for permission upon denial.</span>
                         </div>
                         <hr />
                         <div>
@@ -82,7 +82,7 @@ const Conditions = () => {
                                 the unmodified resourcepack MUST link to the <a href={GetPageLink("./resourcepack")} className="link swift-link">resourcepack page</a> on this website.</span>
                         </div>
                     </div>
-                    <div className="d-block col-10 col-xl-5 m-5 p-4 condition-section" id="#builder-conditions">
+                    <div className="d-block col-12 col-xl-5 m-5 p-4 condition-section" id="#builder-conditions">
                         <h3 className="text-center d-flex flex-row">Build Member Conditions<Button text={
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -106,6 +106,7 @@ const Conditions = () => {
                             <h5>General Conditions</h5>
                             <span className="ms-3 mb-0 li">You must treat people with respect both on and off of the server. We are all a team working towards a common goal.</span>
                             <span className="ms-3 mb-0 li">You must always listen to Supervisors and Admins. They lead the project and they know what they're doing.</span>
+                            <span className="ms-3 mb-0 li">You must remain in the official Discord server to remain a part of this project.</span>
                             <span className="ms-3 mb-0 li">You must not advertise your own, or someone else's, project. This includes asking someone to join another Minecraft Server, recruiting
                                 members, or any other message which may deter build members from the Greenfield Minecraft Project.</span>
                             <span className="ms-3 mb-0 li">Lying in any form or context will not be tolerated.</span>
@@ -158,7 +159,7 @@ const Conditions = () => {
                     <p className="p-3 fs-5 mb-0">The Terms and Conditions listed under the "Build Member Conditions" ("this section", "conditions") apply to the build members that are currently or were an active member 
                     of The Greenfield Project. By becoming, or having been, a member of Greenfield, you must comply to these conditions listed within this section of Terms and Conditions. Failure to comply 
                     with these conditions may result in a project ban (that potentially includes a Discord guild ban depending on the severity) or a demotion of rank status. If you do not agree with our 
-                    conditions, you will not be accepted onto the build team. If you apply to join The Greenfield Project, you consent to the terms listed in this section.</p>
+                    conditions, you will not be accepted onto the build team or you will be removed from the build team. If you apply to join The Greenfield Project, you consent to the terms listed in this section.</p>
                 </div>
             </div>
 

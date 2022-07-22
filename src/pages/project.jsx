@@ -67,7 +67,7 @@ const Project = () => {
             <span className="bottom-0 float-left fs-5 p-3 position-absolute text-white" style={{textShadow: "0 0 3px black, 0 0 5px black, 0 0 10px black", zIndex:100}}>Released {selectedDownload.released}</span>
             <HomeSlide
                 src={imageMapping.find(img => img.local === selectedDownload.image)?.static ?? martyStation}
-                focus={<>Greenfield&nbsp;{getVersionSpan()}</>}
+                focus={<>&nbsp;&nbsp;&nbsp;&nbsp;Greenfield&nbsp;{getVersionSpan()}&nbsp;&nbsp;&nbsp;&nbsp;</>}
                 thirdRowContent={
                     <div className="animateThird col-11 col-md-10 col-lg-8 d-flex download-buttons hidden justify-content-center showing flex-column">
                         <div className="d-flex w-100 flex-column flex-lg-row">
