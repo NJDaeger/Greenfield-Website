@@ -18,6 +18,13 @@
 @import "../components/dropdown/dropdown";
 @import "../components/screenmedia/screenmedia";
 
+.text-outline {
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 5px black;
+  >.link {
+    text-shadow: unset;
+  }
+}
+
 .swift-link {
   position: relative;
   text-decoration: none;
