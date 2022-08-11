@@ -29,13 +29,13 @@
         {
             "map_version": "0.3.3",
             "mc_version": "1.4",
-            "download": "http://www.mediafire.com/file/6qvpz49t4hake99/Greenfield_v0.3.3.zip/file",
+            "download": "https://www.mediafire.com/file/6qvpz49t4hake99/Greenfield_v0.3.3.zip/file",
             "released": "December 23, 2012"
         },
         {
             "map_version": "0.3.4",
             "mc_version": "1.5",
-            "download": "http://www.mediafire.com/file/cdbho4lbuyaot3n/Greenfield_v0.3.4.zip/file",
+            "download": "https://www.mediafire.com/file/cdbho4lbuyaot3n/Greenfield_v0.3.4.zip/file",
             "released": "April 28, 2013"
         },
         {
@@ -49,7 +49,7 @@
             "map_version": "0.4.5",
             "pack_version": "1",
             "mc_version": "1.7",
-            "download": "http://www.mediafire.com/file/5gdhj0mrubdou2i/Greenfield_v0.4.5_MC1.7.4.zip/file",
+            "download": "https://www.mediafire.com/file/5gdhj0mrubdou2i/Greenfield_v0.4.5_MC1.7.4.zip/file",
             "released": "March 28, 2014",
             "color": "#4896b7",
             "image": "../images/update/0_4_5.jpg"
@@ -58,7 +58,7 @@
             "map_version": "0.4.6",
             "pack_version": "2,3",
             "mc_version": "1.8 - 1.10",
-            "download": "http://www.mediafire.com/file/ouc0uvu0jebemuh/Greenfield_v0.4.6.zip/file",
+            "download": "https://www.mediafire.com/file/ouc0uvu0jebemuh/Greenfield_v0.4.6.zip/file",
             "released": "February 6, 2015",
             "color": "#ffffff",
             "image": "../images/update/0_4_6.jpg"
@@ -68,7 +68,7 @@
             "pack_version": "4",
             "mc_version": "1.11",
             "color": "#009795",
-            "download": "http://www.mediafire.com/file/w6ipzks8zjjsi7r/Greenfield_v0.5.zip/file",
+            "download": "https://www.mediafire.com/file/w6ipzks8zjjsi7r/Greenfield_v0.5.zip/file",
             "released": "March 16, 2017",
             "image": "../images/update/0_5.jpg"
         },
@@ -77,7 +77,7 @@
             "pack_version": "5",
             "mc_version": "1.12",
             "color": "#d0920b",
-            "download": "http://www.mediafire.com/file/4yk6702zmzpvvlk/Greenfield_v0.5.1.zip/file",
+            "download": "https://www.mediafire.com/file/4yk6702zmzpvvlk/Greenfield_v0.5.1.zip/file",
             "released": "March 20, 2018",
             "image": "../images/update/0_5_1.jpg"
         },
@@ -86,7 +86,7 @@
             "pack_version": "6",
             "mc_version": "1.13",
             "color": "#e74c3d",
-            "download": "http://www.mediafire.com/file/3ao7a50qbc5zjnx/Greenfield_v0.5.2.1.zip/file",
+            "download": "https://www.mediafire.com/file/3ao7a50qbc5zjnx/Greenfield_v0.5.2.1.zip/file",
             "released": "July 12, 2019",
             "image": "../images/update/0_5_2.jpg"
         },
@@ -95,7 +95,7 @@
             "pack_version": "7,8",
             "mc_version": "1.14 - 1.16",
             "color": "#7851a9",
-            "download": "http://www.mediafire.com/file/mwtt3gnxxshprpe/Greenfield_v0.5.3.zip/file",
+            "download": "https://www.mediafire.com/file/mwtt3gnxxshprpe/Greenfield_v0.5.3.zip/file",
             "released": "May 31, 2020",
             "image": "../images/update/0_5_3.jpg"
         }
