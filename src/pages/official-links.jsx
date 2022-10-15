@@ -2,7 +2,7 @@ import * as React from "react"
 import HomeSlide from "../components/home/HomeSlide";
 import Dropdown from "../components/dropdown/Dropdown"
 import Header from "../components/shared/Header";
-import station from "../images/MartyStation.jpg";
+import rockwell from "../images/rockwell.jpg";
 import "../styles/style.scss";
 import Button from "../components/button/Button";
 import downloads from "../data/downloads.json";
@@ -85,7 +85,7 @@ const OfficialLinks = () => {
           <title>Link Portal</title>
           <Header/>
           <ScreenMedia
-            src={station}
+            src={rockwell}
           ></ScreenMedia>
           <div className="d-flex flex-column w-100 position-absolute h-100 top-0 overflow-scroll pt-5 justify-content-xxl-center">
             <div className="d-flex flex-row justify-content-center align-content-center align-self-center overflow-scroll flex-wrap col-12 col-xl-8 overflow-hidden">

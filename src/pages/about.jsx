@@ -2,7 +2,7 @@ import * as React from "react"
 import Header from "../components/shared/Header";
 import "../styles/style.scss";
 import ScreenMedia from "../components/screenmedia/ScreenMedia";
-import megaGreenfield from "../images/megagreenfield.jpg";
+import megaGreenfield from "../images/megagreenfield2.jpg";
 import "../styles/style.scss";
 
 

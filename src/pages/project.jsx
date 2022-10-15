@@ -6,6 +6,7 @@ import downloads from "../data/downloads.json";
 import HomeSlide from "../components/home/HomeSlide";
 import Dropdown from "../components/dropdown/Dropdown";
 import { useState } from "react";
+import update054 from "../images/updates/0_5_4.jpg";
 import update053 from "../images/updates/0_5_3.jpg";
 import update052 from "../images/updates/0_5_2.jpg";
 import update051 from "../images/updates/0_5_1.jpg";
@@ -17,6 +18,10 @@ import { GetPageLink } from "../service/linkservice";
 
 const Project = () => {
     const imageMapping = [
+        {
+            local: "../images/update/0_5_4.jpg",
+            static: update054
+        },
         {
             local: "../images/update/0_5_3.jpg",
             static: update053
