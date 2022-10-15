@@ -3,7 +3,7 @@ import Header from "../components/shared/Header";
 import Button from "../components/button/Button";
 import downloads from "../data/downloads.json";
 import HomeSlide from "../components/home/HomeSlide";
-import downtown from "../images/downtown.jpg";
+import stack from "../images/rockwell.jpg";
 import "../styles/style.scss";
 import { GetPageLink } from "../service/linkservice";
 
@@ -23,7 +23,7 @@ const Downloads = () => {
             <title>Download Portal</title>
             <Header/>
             <HomeSlide
-                src={downtown}
+                src={stack}
                 focus={<span style={{textShadow:"0 0 2px black, 0 0 10px black"}}>Download Greenfield {getVersionSpan()}</span>}
                 thirdRowContent={
                     <div className="animateThird d-flex download-buttons hidden align-items-center showing flex-column flex-lg-row w-100" style={{maxWidth:"80vw"}}>
