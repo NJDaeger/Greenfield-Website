@@ -27,7 +27,7 @@ export function GetPageLink(page) {
     // if (windowInfo.href === undefined) href = "";
     // else href = windowInfo.href?.endsWith("/") ? windowInfo.href : windowInfo.href + "/";
     var origin = loc.origin;
-    // if (windowInfo.origin === undefined) origin = "";
+    // if (windowInfo.origin === undefined) origin = ""; 
     // else origin = windowInfo.origin;
     // console.log(origin);
     if (origin === undefined || origin.includes("njdaeger.github.io")) origin = "https://test.greenfieldmc.net";
