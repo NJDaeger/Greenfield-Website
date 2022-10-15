@@ -92,12 +92,21 @@
         },
         {
             "map_version": "0.5.3",
-            "pack_version": "7,8",
+            "pack_version": "7,8,9",
             "mc_version": "1.14 - 1.16",
             "color": "#7851a9",
             "download": "https://www.mediafire.com/file/mwtt3gnxxshprpe/Greenfield_v0.5.3.zip/file",
             "released": "May 31, 2020",
             "image": "../images/update/0_5_3.jpg"
+        },
+		{
+            "map_version": "0.5.4",
+            "pack_version": "10",
+            "mc_version": "1.17",
+            "color": "#ffd800",
+            "download": "https://www.mediafire.com/file/mwtt3gnxxshprpe/Greenfield_v0.5.3.zip/file",
+            "released": "October 15, 2022",
+            "image": "../images/update/0_5_4.jpg"
         }
     ],
     "pack": [

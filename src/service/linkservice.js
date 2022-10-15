@@ -25,7 +25,7 @@ export function GetPageLink(page) {
     }
     var href = loc.href;
     // if (windowInfo.href === undefined) href = "";
-    // else href = windowInfo.href?.endsWith("/") ? windowInfo.href : windowInfo.href + "/";
+    // else href = windowInfo.href?.endsWith("/") ? wrindowInfo.href : windowInfo.href + "/";
     var origin = loc.origin;
     // if (windowInfo.origin === undefined) origin = "";
     // else origin = windowInfo.origin;

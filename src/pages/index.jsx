@@ -1,10 +1,10 @@
 import * as React from "react"
 import Header from "../components/shared/Header";
 import HomeSlide from "../components/home/HomeSlide";
-import skyline from "../images/skyline.jpg"
-import stadium from "../images/stadium.jpg"
-import railyard from "../images/railyard.jpg"
-import station from "../images/MartyStation.jpg"
+import rockwell from "../images/rockwell.jpg"
+import skyliners from "../images/skyliners.jpg"
+import tower from "../images/tower.jpg"
+import main from "../images/updates/0_5_4.jpg"
 import SlideNav from "../components/home/SlideNavigation";
 import "../styles/style.scss";
 import {useEffect, useState} from "react";
@@ -56,20 +56,20 @@ const IndexPage = () => {
       ]}/>
       <div id="home" style={parentStyle}>
         <HomeSlide
-          src={skyline}
+          src={main}
           title="Welcome To"
           focus="Greenfield"
           startHidden={true}
           id="welcome">
         </HomeSlide>
         <HomeSlide
-          src={stadium}
+          src={tower}
           title="Current Map Release"
           focus={
             <>
-              <span style={{color: "slateblue"}}>v </span>
+              <span style={{color: "#ffd800"}}>v </span>
               0.5.
-              <span style={{color: "slateblue"}}>3</span>
+              <span style={{color: "#ffd800"}}>4</span>
             </>
           }
           startHidden={true}
@@ -78,7 +78,7 @@ const IndexPage = () => {
           index={1}>
         </HomeSlide>
         <HomeSlide
-          src={railyard}
+          src={skyliners}
           title="Current Resourcepack Release"
           focus="1.17+"
           startHidden={true}
@@ -87,7 +87,7 @@ const IndexPage = () => {
           index={2}>
         </HomeSlide>
         <HomeSlide
-          src={station}
+          src={rockwell}
           title="Help Us Build!"
           focus="Apply Now"
           startHidden={true}
