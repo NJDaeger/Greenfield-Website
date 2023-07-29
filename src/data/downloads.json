@@ -159,6 +159,11 @@
             "mc_version": "1.17",
             "released": "2021",
             "download": "https://github.com/GreenfieldMC/Greenfield-Texturepack/releases/download/v1.17/Greenfield.Texture.Pack.1.17.zip"
+        },
+        {
+            "mc_version": "1.20",
+            "released": "2023",
+            "download": "https://github.com/GreenfieldMC/Greenfield-Texturepack/releases/download/v1.20/Greenfield.Pack.1.20.zip"
         }
     ]
 }

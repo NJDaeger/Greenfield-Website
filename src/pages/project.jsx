@@ -88,7 +88,7 @@ const Project = () => {
                                 reverseOptions={true}
                             ></Dropdown>
                         </div>
-                        <span className="fs-4 text-center" style={{textShadow: "0 0 3px black, 0 0 5px black"}}>{selectedDownload.mc_version !== undefined ? "For Minecraft " + selectedDownload.mc_version : ""}</span>
+                        <span className="fs-4 text-center" style={{textShadow: "0 0 4px black, 0 0 4px black, 0 0 8px black, 0 0 8px black, 0 0 12px black, 0 0 20px black"}}>{selectedDownload.mc_version !== undefined ? "For Minecraft " + selectedDownload.mc_version : ""}</span>
                     </div>
                 }
                 startHidden={false}
