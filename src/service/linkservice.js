@@ -30,7 +30,7 @@ export function GetPageLink(page) {
     // if (windowInfo.origin === undefined) origin = ""; 
     // else origin = windowInfo.origin;
     // console.log(origin);
-    if (origin === undefined || origin.includes("njdaeger.github.io")) origin = "https://test.greenfieldmc.net";
+    if (origin === undefined || origin.includes("njdaeger.github.io")) origin = "https://www.greenfieldmc.net";
     // if (origin?.includes("njdaeger.github.io")) origin += "/gatsby-playground"
     // console.log(origin);
     // console.log(page);
